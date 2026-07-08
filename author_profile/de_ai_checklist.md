@@ -62,6 +62,23 @@ Elsewhere, convert to a declarative claim.
 
 ### A8. Exclamation marks — BANNED (inherited from base profile).
 
+### A9. Grandiose empty setup sentences — BANNED
+Sentences that announce importance and defer the payoff: `Two commitments no predecessor made set this
+grammar apart.`, `What sets X apart is`, `The key insight is`. State the commitment or insight directly.
+- ✗ `Two commitments no predecessor made set this grammar apart.`
+- ✓ `The grammar specifies the bottleneck precisely and shares it across workflows; each route is approximate.`
+
+### A10. Branded / evocative metaphor filler — BANNED
+Impressive-sounding metaphors with no operational content: `the machine that runs any admissible spec`,
+`draw their power from backends they do not build`, `at the heart of`, `under the hood`. Use the mechanism.
+- ✗ `The architecture: the machine that runs any admissible spec.`
+- ✓ `The architecture: how the abstraction becomes a running system.`
+
+### A11. Vague-mechanism verbs — AUDIT (not auto-ban)
+`keeps X from Y`, `stands in the way of`, `unlocks`, `powers`. They often hide an unstated mechanism.
+- ✗ `intent bloat that keeps intents from transferring`
+- ✓ `intent bloat that widens the ideation-to-data-generation gap`
+
 ---
 
 ## Part B — The Shenker register (what to write INSTEAD)
@@ -99,7 +116,11 @@ Before claiming any `.tex` edit is clean, run:
 # 1. Em-dashes (must return nothing)
 grep -rn -- '---' sections/*.tex ; grep -rn $'—\|–' sections/*.tex
 # 2. Antithesis / editorializing flourishes (inspect each hit)
-grep -rnoE ", not [a-z]|not only .* but|rather than|is the point|whatever it is|in effect|in a sense|means nothing|at its core|exactly the kind" sections/*.tex
+#    NOTE: the "not" branch matches a digit, letter, OR a \macro after "not" — so
+#    "not 168 ..." and "not \NumImplGap ..." are caught (the old [a-z] missed both).
+grep -rnoE ",? not [0-9A-Za-z\\]|not only .* but|rather than|is the point|whatever it is|in effect|in a sense|means nothing|at its core|exactly the kind" sections/*.tex
+# 2b. Grandiose empty setups, evocative metaphors, vague mechanisms (A9-A11; inspect each hit)
+grep -rnoE "set(s)? .* apart|no (predecessor|one) .* (made|posed)|the key (insight|idea) is|the machine that|draw(s)? .* power from|at (its|the) (heart|core)|under the hood|keeps .* from|stands? in the way" sections/*.tex
 # 3. Throat-clearing openers
 grep -rnE "^(Moreover|Furthermore|Additionally|Notably|Importantly|Indeed|Ultimately|Crucially)" sections/*.tex
 # 4. Banned adjectives

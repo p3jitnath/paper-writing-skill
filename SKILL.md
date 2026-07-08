@@ -85,6 +85,9 @@ Claude MUST read these files from this skill's directory. They contain the detai
 | `author_profile/compression_patterns.md` | 7 compression operations with before/after examples and quantitative benchmarks |
 | `author_profile/rhetorical_moves.md` | Cross-section move sequences for introduction (6 moves), design (5 moves), evaluation (6 moves), related work (3 moves) |
 | `author_profile/intervention_types.md` | 7 types of advisor interventions — use this to simulate advisor feedback on drafts |
+| `author_profile/accessibility_checklist.md` | **G1–G6 semantic gate** (what greps can't catch): accessibility (define terms before use), thesis-tie / no-new-threads, term-introduction order, directness, cross-section non-duplication, requirement↔closure. |
+| `red_team_protocol.md` | **Independent adversarial red-team** (evidence-gated): after the mechanical audit, a reviewer that did NOT write the text re-runs the greps + G1–G6 and must return CLEAN before text ships. |
+| `loop_mode.md` | Resumable `/loop` audit-and-fix protocol: a disk-backed ledger, one section per iteration, self-terminating when clean. |
 
 ### Quick Reference: Non-Negotiable Voice Rules
 
@@ -127,9 +130,11 @@ The audit checks every changed sentence against `author_profile/voice_profile.md
 6. **Passive voice**: "accuracy was achieved by X" → "X achieves". "Experiments were conducted on X" → "We evaluate on X". Active voice everywhere — no exceptions.
 7. **Missing citations**: Technical claims restated from other sections must carry forward their citations (Principle 14).
 
-**Process**: After writing, (a) run the mechanical grep gate in `de_ai_checklist.md` Part D and fix every hit, then (b) read the changed text line by line for the items above. Report a summary table of violations found and fixed (category, count), INCLUDING the grep counts (em-dashes, flourishes) — not just "audited". Never claim the audit passed on a mental pass alone. Only then present the draft or commit.
+**Process**: After writing, (a) run the mechanical grep gate in `de_ai_checklist.md` Part D and fix every hit, then (b) read the changed text line by line for the items above. Report a summary table of violations found and fixed (category, count), INCLUDING the grep counts (em-dashes, flourishes) — not just "audited". Never claim the audit passed on a mental pass alone. Then (c) run the **independent adversarial red-team** (`red_team_protocol.md`): a reviewer that did NOT write the text re-runs the Part D greps and applies `author_profile/accessibility_checklist.md` (G1–G6) with a fresh-reader lens, returning a findings list, not a yes/no. Only text that survives (a) + (b) + (c), with the grep output pasted as evidence, is presented or committed.
 
 This gate is SEPARATE from and IN ADDITION TO the structural section checklists below.
+
+**Loop mode.** When invoked via `/loop` (e.g. "apply the paper-writing skill iteratively", "audit with loop"), follow `loop_mode.md`: a resumable, ledger-backed audit → red-team → fix cycle that processes one section per iteration and stops itself when every in-scope section is clean. The user need not specify which checks to run or when to stop — the protocol supplies those.
 
 ---
 
@@ -357,5 +362,5 @@ Fix what can be fixed automatically (e.g., adding `~` before `\cite`). Flag what
 4. Select the generation backend: AI image generation (for visually rich figures like architecture overviews and concept illustrations) or TikZ (for precise structural figures like pipeline flows and taxonomy matrices). The guide has defaults per archetype, but the student can override.
 5. Run spec mode — walk through archetype-specific questions to produce a `figure_spec.md`
 6. Run generate mode — assemble an AI prompt or TikZ code, produce the figure
-7. Run critique mode — check against claims, venue formatting, and design principles
+7. Run critique mode — check against claims, venue formatting, and design principles, and enforce caption terseness (G7: a bold takeaway plus at most one clause; flag captions over ~3 lines), and verify legibility by inspecting the rendered image (a checklist-green figure can still be an illegible mess)
 8. **NOTE**: Data figures (CDFs, scatter plots, bar charts, heatmaps) should go through `/viz`, not through figure synthesis
