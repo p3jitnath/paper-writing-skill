@@ -65,6 +65,23 @@ claim before the reader was given what they need. This catches forward-reference
 not-yet-seen figures, terms used before their gloss, and "that number / this gap / the third
 metric" with an unresolvable antecedent. Run it as a red-team lens (see Part F).
 
+### B4. Parse-accessibility: the hard-to-parse constructions term-glossing misses
+Glossing every jargon term is NOT enough. A sentence can be all common words and still
+unparseable. Term-focused red-teams repeatedly pass prose that a reader cannot parse. Hunt and
+fix these explicitly (the followability reviewer must test each sentence for them, not only for
+undefined terms):
+- **Reduced relative clauses / dropped "who/that"**: "an operator told an embedding is anisotropic
+  still cannot say..." forces the reader to reconstruct "an operator *who is* told *that*...".
+  Restore the omitted words or front the participle ("Told only that X, an operator cannot...").
+- **Opaque idioms a literal reader cannot decode**: "it ties the two", "stop short of the
+  operator's question", "in which company", "earns its keep / has not earned its cost", "the map
+  it yields", "the models that survive", "reads at two altitudes", "cannot package", "rides a
+  capture artifact", "graded sweep". Replace each with its literal meaning.
+- **Overloaded coined verbs/nouns**: reserve one meaning per word. "read/reading" used for the
+  model's input strategy, the probe's recovered value, and the act of measuring is three meanings
+  a non-expert cannot disambiguate. Pick one; rename the others.
+- **Compressed multi-clause sentences** that pack a definition + a claim + a hedge into one breath.
+
 ---
 
 ## Part C — Rigor: mappability and grounding
