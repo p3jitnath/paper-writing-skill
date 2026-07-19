@@ -1,7 +1,7 @@
 # Figure Spec: [Figure Name]
 
 <!-- This template captures everything needed to generate a non-data figure. -->
-<!-- Fill it in by running /paper-writing figure spec mode, or manually. -->
+<!-- Fill it in by running $paper-writing figure spec mode, or manually. -->
 
 ## Identity
 
@@ -64,7 +64,7 @@
 
 **Assembled prompt:**
 
-<!-- Claude fills this in during generate mode by combining the content spec above -->
+<!-- Codex fills this in during generate mode by combining the content spec above -->
 <!-- with the AI prompt styling block from venue_styles.md. -->
 <!-- The student can also paste this prompt directly into Gemini/DALL-E. -->
 

@@ -1,7 +1,7 @@
 # Cross-project refinement strategy: paper-writing skill, viz skill, voice profile
 
 *Synthesizes writing-process feedback Arpit gave across three projects (June 2026) into a concrete
-plan for refining the `/paper-writing` skill, the `/viz` (data-visualization) skill, and the voice
+plan for refining the `$paper-writing` skill, the `/viz` (data-visualization) skill, and the voice
 profile. Written 2026-06-25.*
 
 ## Sources consolidated
@@ -86,7 +86,7 @@ two directions makes these the safest, highest-priority changes.
 
 ## Refinement plan, per target
 
-### A. `/paper-writing` skill
+### A. `$paper-writing` skill
 **New files**
 - `author_profile/ai_tell_audit.md` (P0) — the consolidated AI-tell catalog (Cluster 1), run as a
   distinct GATE dimension on every prose edit. Format: quote offending sentence → name the tell →
@@ -139,6 +139,6 @@ two directions makes these the safest, highest-priority changes.
 
 ## One-line synthesis
 Across three projects the constant is the same: the skill builds the argument well but does not yet make
-Claude sound like *this author, in this register, without sounding like AI*. The fix is a per-artifact
+Codex sound like *this author, in this register, without sounding like AI*. The fix is a per-artifact
 exemplar voice profile plus an anti-AI audit whose default repair is adding first-person agency, run
 with an external critic that is filtered, never obeyed.

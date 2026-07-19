@@ -1,0 +1,7 @@
+interface:
+  display_name: "Paper Writing"
+  short_description: "Draft and revise research papers rigorously"
+  default_prompt: "Use $paper-writing to help me draft, review, or revise a research paper."
+
+policy:
+  allow_implicit_invocation: true

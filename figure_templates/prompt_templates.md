@@ -216,7 +216,7 @@ SIZE: {{width}} inches wide.
 
 ## Assembling the Final Prompt
 
-When Claude runs generate mode, it:
+When Codex runs generate mode, it:
 
 1. Reads the `figure_spec.md` for the target figure
 2. Selects the matching archetype template from this file
@@ -230,7 +230,7 @@ The student can then:
 - Use the prompt as a brief for manual creation in Figma, draw.io, or Inkscape
 - Run it through a local script if they have API access configured
 
-If the student has a Gemini API key available, Claude can generate the figure directly by running a Python script:
+If the student has a Gemini API key available, Codex can generate the figure directly by running a Python script:
 
 ```python
 # Requires: pip install google-genai

@@ -6,7 +6,7 @@ This skill offloads that scaffolding to the machine. It encodes 14 editorial pri
 
 **Who this is for:** PhD students and researchers writing conference or journal papers. Tuned for systems and networking (SIGCOMM, NSDI, CoNEXT, IMC) and ML venues (NeurIPS, ICLR, ICML). Adaptable to any field — see [Customize for Your Field](#customize-for-your-field).
 
-Built on [Claude Code](https://docs.anthropic.com/en/docs/claude-code).
+Built for [Codex](https://developers.openai.com/codex/).
 
 ## Versions
 
@@ -41,44 +41,43 @@ cd paper-writing-skill
 ./setup
 ```
 
-This installs the skill to `~/.claude/skills/paper-writing/`. Then:
+This installs the skill to `${CODEX_HOME:-~/.codex}/skills/paper-writing/`. Then:
 
 1. `cd` into your paper's working directory
-2. Run `claude` to launch Claude Code
-3. Type `/paper-writing`
+2. Run `codex` to launch Codex
+3. Ask Codex to use `$paper-writing`
 
-If a `project_context.md` exists, Claude loads it and picks up where you left off. If not, Claude walks you through a structured brainstorming session — 34 pointed questions across 6 phases — to create one.
+If a `project_context.md` exists, Codex loads it and picks up where you left off. If not, Codex walks you through a structured brainstorming session — 34 pointed questions across 6 phases — to create one.
 
 ### Prerequisites
 
-You need **Claude Code** installed on your machine. If you don't have it yet:
+You need **Codex** installed on your machine. If you don't have it yet:
 
-1. Go to https://docs.claude.com and follow the installation instructions for your OS
-2. Run `claude` in your terminal to verify it works — you should see the Claude Code prompt
-3. Make sure you're signed in (Claude Code will prompt you on first launch)
+1. Follow the [Codex setup guide](https://developers.openai.com/codex/cli/)
+2. Run `codex` in your terminal and sign in when prompted
 
 ### Manual Install
 
-Copy `SKILL.md` to `~/.claude/skills/paper-writing/SKILL.md`. Copy `brainstorming_guide.md`, `figure_synthesis_guide.md`, `author_profile/`, `writing_checklists/`, `section_rhetorical_moves/`, `figure_templates/`, and `examples/` alongside it.
+Copy this skill directory to `${CODEX_HOME:-~/.codex}/skills/paper-writing/`, keeping `SKILL.md`, `agents/`, and all referenced resource directories together.
 
 ## How the Skill Works
 
-When you type `/paper-writing`, Claude loads the editorial rules, checklists, and rhetorical move guides. Every draft is checked against the same checklists used to review papers in the SNL lab. Every section follows a move sequence extracted from accepted papers. Voice rules — sentence length, hedging, filler words, claim-first paragraphs — are enforced automatically.
+When you ask Codex to use `$paper-writing`, it loads the editorial rules, checklists, and rhetorical move guides. Every draft is checked against the same checklists used to review papers in the SNL lab. Every section follows a move sequence extracted from accepted papers. Voice rules — sentence length, hedging, filler words, claim-first paragraphs — are enforced automatically.
 
 ### Common Workflows
 
-- "Help me write the evaluation section" — Claude generates a draft following the 6-move evaluation sequence, then runs the evaluation checklist and flags violations
-- "Review this introduction" — Claude reads your draft, applies the 7 intervention types in order, and gives numbered feedback with severity levels and concrete rewrites
-- "Compress section 4" — Claude applies 7 compression operations and reports before/after character counts
-- "I need an architecture diagram for the design section" — Claude walks through the figure synthesis spec, generates a prompt or TikZ code, and critiques the result
-- "Help me respond to these reviews" — paste in reviewer comments and Claude classifies each concern and drafts responses
-- "I have a new paper idea about X" — Claude runs the full brainstorming workflow to create a fresh project context
+- "Help me write the evaluation section" — Codex generates a draft following the 6-move evaluation sequence, then runs the evaluation checklist and flags violations
+- "Review this introduction" — Codex reads your draft, applies the 7 intervention types in order, and gives numbered feedback with severity levels and concrete rewrites
+- "Compress section 4" — Codex applies 7 compression operations and reports before/after character counts
+- "I need an architecture diagram for the design section" — Codex walks through the figure synthesis spec, generates a prompt or TikZ code, and critiques the result
+- "Help me respond to these reviews" — paste in reviewer comments and Codex classifies each concern and drafts responses
+- "I have a new paper idea about X" — Codex runs the full brainstorming workflow to create a fresh project context
 
 ## The Five-Stage Pipeline
 
 Every paper goes through these stages in order:
 
-**Stage 1 — Structured Brainstorming.** The skill's centerpiece. Claude walks you through 34 questions across 6 phases: Problem Discovery, Contribution Crystallization, Evaluation Design, Positioning and Framing, Architecture and Constraints, and Narrative Spine. Each phase forces externalization — vague intuitions become concrete, falsifiable statements. The output is a `project_context.md` that serves as the binding contract for all subsequent writing sessions.
+**Stage 1 — Structured Brainstorming.** The skill's centerpiece. Codex walks you through 34 questions across 6 phases: Problem Discovery, Contribution Crystallization, Evaluation Design, Positioning and Framing, Architecture and Constraints, and Narrative Spine. Each phase forces externalization — vague intuitions become concrete, falsifiable statements. The output is a `project_context.md` that serves as the binding contract for all subsequent writing sessions.
 
 **Stage 2 — Architecture.** Section outline with claim assignments, per-section narrative arcs, figure/table plan, and page budget. The evaluation plan must exist before the introduction is outlined. Non-data figures (architecture diagrams, pipeline illustrations, concept diagrams) are routed to the figure synthesis workflow; data figures (plots from experimental results) are handled separately.
 
@@ -106,13 +105,13 @@ The skill includes a figure synthesis workflow for **non-data figures** — arch
 
 ### Three Modes
 
-**Spec** (`/paper-writing figure spec`). Reads `project_context.md`, classifies each planned figure by archetype, and walks through archetype-specific questions to produce a structured `figure_spec.md`. The spec captures components, connections, groupings, layout, color mapping, and a draft caption.
+**Spec** (`$paper-writing figure spec`). Reads `project_context.md`, classifies each planned figure by archetype, and walks through archetype-specific questions to produce a structured `figure_spec.md`. The spec captures components, connections, groupings, layout, color mapping, and a draft caption.
 
-**Generate** (`/paper-writing figure generate`). Routes to the appropriate backend based on archetype:
-- **AI image generation** (architecture overviews, concept illustrations, comparison schematics, deployment diagrams): assembles a detailed prompt with venue-appropriate styling that the student can paste into Gemini, DALL-E, or another image generation tool. If a Gemini API key is available, Claude generates the image directly.
+**Generate** (`$paper-writing figure generate`). Routes to the appropriate backend based on archetype:
+- **AI image generation** (architecture overviews, concept illustrations, comparison schematics, deployment diagrams): assembles a detailed prompt with venue-appropriate styling that the student can paste into Gemini, DALL-E, or another image generation tool. If a Gemini API key is available, Codex generates the image directly.
 - **TikZ** (pipeline flows, component details, taxonomy/classification figures): customizes a starter template into compilable LaTeX code that integrates directly with the paper.
 
-**Critique** (`/paper-writing figure critique`). Reviews the generated figure against five checks: claim alignment (does it support the specified claim?), completeness (all components present?), venue formatting (column widths, font sizes, print safety), design principles (data-ink ratio, self-containment, consistency with other figures), and caption quality (interpretive, claim-first).
+**Critique** (`$paper-writing figure critique`). Reviews the generated figure against five checks: claim alignment (does it support the specified claim?), completeness (all components present?), venue formatting (column widths, font sizes, print safety), design principles (data-ink ratio, self-containment, consistency with other figures), and caption quality (interpretive, claim-first).
 
 ### Seven Archetypes
 
@@ -194,7 +193,7 @@ The taxonomy serves two purposes. First, it structures the skill's draft review 
 
 ```
 paper-writing-skill/
-├── SKILL.md                              # Main skill file (Claude reads this)
+├── SKILL.md                              # Main skill file (Codex reads this)
 ├── brainstorming_guide.md                # 34 questions across 6 phases
 ├── figure_synthesis_guide.md             # Non-data figure workflow (spec/generate/critique)
 ├── setup                                 # One-command installer
@@ -245,7 +244,7 @@ Per-section guides with concrete examples from accepted and rejected papers. Int
 
 `figure_synthesis_guide.md` defines the three-mode workflow for non-data figures. `figure_templates/` contains venue-specific styling defaults, AI image generation prompt templates for four archetypes, TikZ starter templates for three archetypes, and the per-figure specification template.
 
-### Use These Materials Without Claude Code
+### Use These Materials Without Codex
 
 The editorial principles, rhetorical move guides, and checklists work independently of the skill runtime. Print `editorial_principles.md` for a lab writing workshop. Use the section checklists as self-review guides before submitting a draft to your advisor. Use `brainstorming_guide.md` to structure a whiteboard session for a new paper idea. The figure synthesis prompt templates can be used directly with any image generation tool.
 
@@ -276,13 +275,13 @@ Students don't need to configure anything. The skill produces output consistent 
 
 ## Troubleshooting
 
-**"Claude doesn't recognize /paper-writing"** — Run `./setup` again. The skill files need to be in `~/.claude/skills/paper-writing/`. Check: `ls ~/.claude/skills/paper-writing/SKILL.md`
+**"Codex doesn't recognize $paper-writing"** — Run `./setup` again. The skill files need to be in `${CODEX_HOME:-~/.codex}/skills/paper-writing/`. Check that `SKILL.md` exists there, then start a new Codex session.
 
-**"Claude isn't following the writing rules"** — Make sure you typed `/paper-writing` at the start of the conversation. The skill only activates when explicitly invoked. Check that `author_profile/` files exist in the skill directory.
+**"Codex isn't following the writing rules"** — Make sure you typed `$paper-writing` at the start of the conversation. The skill only activates when explicitly invoked. Check that `author_profile/` files exist in the skill directory.
 
-**"I want to start over with a paper's context"** — Delete `project_context.md` in your paper's directory and invoke `/paper-writing` again.
+**"I want to start over with a paper's context"** — Delete `project_context.md` in your paper's directory and invoke `$paper-writing` again.
 
-**"I updated the repo but Claude is using old rules"** — Run `./setup` again after pulling. The setup script copies files to the skill directory.
+**"I updated the repo but Codex is using old rules"** — Run `./setup` again after pulling. The setup script copies files to the skill directory.
 
 **"I want v1 without figure synthesis"** — `git checkout v1` then `./setup`.
 
@@ -294,7 +293,7 @@ git pull
 ./setup
 ```
 
-Always edit files in this repo directory, not directly in `~/.claude/skills/`. Running `./setup` copies changes to the right place.
+Always edit files in this repo directory, not directly in `~/.codex/skills/`. Running `./setup` copies changes to the right place.
 
 ## Intellectual Lineage
 
@@ -324,7 +323,7 @@ If you use this skill in your research workflow:
 ```
 @misc{paper-writing-skill,
   author = {Gupta, Arpit},
-  title = {paper-writing-skill: A Claude Code skill for research paper writing},
+  title = {paper-writing-skill: A Codex skill for research paper writing},
   year = {2026},
   publisher = {GitHub},
   url = {https://github.com/SNL-UCSB/paper-writing-skill}

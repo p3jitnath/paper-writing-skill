@@ -4,7 +4,7 @@
 
 The biggest obstacle for students isn't writing skill — it's that their ideas live as unstructured intuitions. They know *something* is interesting but can't articulate *what* or *why*. This guide walks through a series of pointed questions that force clarity. By the end, you'll have a `project_context.md` precise enough to drive every section of your paper.
 
-**How to use this**: Claude will walk you through these questions interactively when you invoke `/paper-writing` on a new project. Answer honestly — "I don't know" is a valid and useful answer. The questions are designed to reveal gaps early, when they're cheap to fix.
+**How to use this**: Codex will walk you through these questions interactively when you invoke `$paper-writing` on a new project. Answer honestly — "I don't know" is a valid and useful answer. The questions are designed to reveal gaps early, when they're cheap to fix.
 
 ---
 
@@ -156,7 +156,7 @@ The "what if it fails" column is critical. If an experiment could fail and you h
 
 ## After Brainstorming: What Comes Next
 
-Once you've answered these questions, Claude will generate a `project_context.md` file that captures:
+Once you've answered these questions, Codex will generate a `project_context.md` file that captures:
 
 - Your identity sentence (from Q8-10)
 - Your venue and constraints (from Q21-22, Q29-30)
@@ -167,7 +167,7 @@ Once you've answered these questions, Claude will generate a `project_context.md
 - Your locked decisions and open questions (from Q29-30)
 - Your key figures needed (from Q31)
 
-This `project_context.md` becomes the binding contract for all writing sessions. Every time you invoke `/paper-writing`, Claude reads it and holds you to it. If something changes (new results, revised framing, shifted venue), update the context file — don't just tell Claude in conversation.
+This `project_context.md` becomes the binding contract for all writing sessions. Every time you invoke `$paper-writing`, Codex reads it and holds you to it. If something changes (new results, revised framing, shifted venue), update the context file — don't just tell Codex in conversation.
 
 See `examples/netburst_project_context.md` for what a complete, real project context looks like.
 

@@ -1,10 +1,10 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides repository guidance to Codex when working in this repository.
 
 ## What This Repo Is
 
-A Claude Code **skill** (invoked via `/paper-writing`) that encodes the writing methodology of the [Systems and Networking Lab (SNL)](https://github.com/SNL-UCSB) at UC Santa Barbara. Part of a [three-skill family](https://github.com/SNL-UCSB) (literature-survey, data-visualization, paper-writing) that compresses the operational middle of the research pipeline. It is not a traditional codebase — there is no build system, no tests, and no application code. The repo contains markdown files that Claude reads at runtime to enforce editorial rules, rhetorical move sequences, and a structured writing pipeline.
+A Codex **skill** (invoked via `$paper-writing`) that encodes the writing methodology of the [Systems and Networking Lab (SNL)](https://github.com/SNL-UCSB) at UC Santa Barbara. Part of a [three-skill family](https://github.com/SNL-UCSB) (literature-survey, data-visualization, paper-writing) that compresses the operational middle of the research pipeline. It is not a traditional codebase — there is no build system, no tests, and no application code. The repo contains markdown files that Codex reads at runtime to enforce editorial rules, rhetorical move sequences, and a structured writing pipeline.
 
 ## Installation
 
@@ -12,11 +12,11 @@ A Claude Code **skill** (invoked via `/paper-writing`) that encodes the writing 
 ./setup
 ```
 
-This copies skill files into `~/.claude/skills/paper-writing/`. Always edit files in this repo, then re-run `./setup` to propagate changes.
+This copies skill files into `${CODEX_HOME:-~/.codex}/skills/paper-writing/`. Always edit files in this repo, then re-run `./setup` to propagate changes.
 
 ## Architecture
 
-**SKILL.md** is the main entry point Claude reads when `/paper-writing` is invoked. It defines:
+**SKILL.md** is the main entry point Codex reads when `$paper-writing` is invoked. It defines:
 - The three-layer model: fixed pipeline → customizable voice/editorial rules → per-paper project context
 - The five-stage writing pipeline: Brainstorming → Architecture → Section Drafts → Integration → Compression
 - The mandatory style audit gate (runs on every tex edit)
