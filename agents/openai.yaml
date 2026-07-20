@@ -1,7 +1,7 @@
 interface:
-  display_name: "Paper Writing"
-  short_description: "Draft and revise research papers rigorously"
-  default_prompt: "Use $paper-writing to help me draft, review, or revise a research paper."
+  display_name: "AI Weather and Climate Papers"
+  short_description: "Write rigorous AI weather and climate papers"
+  default_prompt: "Use $paper-writing to plan, draft, or scientifically audit my AI weather or climate paper."
 
 policy:
   allow_implicit_invocation: true

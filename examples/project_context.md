@@ -1,118 +1,146 @@
 # Project Context: [Paper Name]
 
-<!-- This template maps to the Brain Dump questions in the skill. -->
-<!-- Fill this in by running /paper-writing and answering the Brain Dump prompts, -->
-<!-- or copy this file into your paper directory and fill it in manually. -->
-<!-- See examples/netburst_project_context.md for a real, complete example. -->
-
 ## Identity
 
-<!-- Round 1, Question 1: One sentence. Use the template: -->
-<!-- "This paper shows that [X] by [Y], enabling [Z]." -->
+- **Central claim:** This paper shows that [claim].
+- **Falsifier:** The claim would be weakened or rejected if [result].
+- **Contribution form:** [finding / model-method / benchmark-resource / protocol / calibration / capability / synthesis / theory-mechanism]
+- **Success criterion for this form:**
+- **Primary task family:** [forecasting / emulation / downscaling / projection / data assimilation / extremes / impacts-risk / scientific understanding]
+- **Secondary families:** [optional]
 
-[Your identity sentence here]
+## Scientific Coordinates
 
-<!-- Round 1, Question 2: What PROBLEM does this solve? Who is affected? -->
+- **Phenomenon and users:**
+- **Target variables and units:**
+- **Spatial domain and grid:**
+- **Vertical coordinate:**
+- **Temporal resolution:**
+- **Initialization and lead times:**
+- **Seasons, regimes, scenarios, or thresholds:**
+- **Physical constraints or expected balances:**
+- **Out of scope:**
 
-<!-- Round 1, Question 3: What should a reader remember after 60 seconds? -->
+## Venue and Voice
 
-## Venue
+- **Target venue and article type:**
+- **Venue track:** [Earth-science journal / ML conference / interdisciplinary]
+- **Paper genre:** [benchmark / flagship result / model development / calibration / intercomparison protocol / review / theory-mechanism / foundation model / standard article]
+- **Deadline and length limit:**
+- **Required statements and supplements:**
+- **Voice profile:** [dueben / hartmann / emanuel]
 
-- **Target:** [e.g., SIGCOMM 2027]
-- **Deadline:** [e.g., January 31, 2027]
-- **Page limit:** [e.g., 12 pages + references]
-- **Format:** [Systems venue / ML venue / Workshop. Note venue conventions.]
+## Data Provenance
 
-## Contributions (as claims with evidence)
+| Product and version | Product type | Role | Period/domain | Resolution | Known limitations |
+|---|---|---|---|---|---|
+| | observation/reanalysis/simulation/forecast/derived | train/tune/test/initialize/force/verify | | | |
 
-<!-- Round 2: Write each as a RESULT, not an action. -->
-<!-- "We show that X" not "We propose X." -->
+## Split and Leakage Controls
 
-### Claim 1: [Section reference — e.g., §4.2]
-[State the claim with a specific number or concrete finding]
-- **Evidence:** [Figure/table/experiment that proves it]
-- **Dataset:** [What data supports this]
-- **Status:** [STRONG / NEEDS WORK / MISSING]
+- **Training:**
+- **Validation:**
+- **Testing:**
+- **Held-out regions, events, models, or regimes:**
+- **Dependence across boundaries:**
+- **Preprocessing fit scope:**
+- **Potential leakage paths and controls:**
+- **Event-level split before frame/window construction:**
+- **Seen versus unseen stations/sensors/platforms:**
 
-### Claim 2: [Section reference]
-[...]
-- **Evidence:** [...]
-- **Dataset:** [...]
-- **Status:** [...]
+## Claims and Evidence
 
-### Claim 3: [Section reference]
-[...]
+| Claim | Figure/table/diagnostic | Reference | Uncertainty | Disaggregation | Failure condition | Status |
+|---|---|---|---|---|---|---|
+| | | | | | | planned/running/complete |
 
-## Framing
+## Baselines
 
-<!-- Round 3: Venue and competitive positioning -->
+| Baseline | Why required | Inputs/resolution match | Claim tested |
+|---|---|---|---|
+| Persistence | | | |
+| Climatology | | | |
+| Dynamical or operational reference | | | |
+| Statistical or ML reference | | | |
 
-- **Paper type:** [Systems (contribution = what you built) / Measurement (contribution = what you found)]
-- **Closest competing works:**
-  1. [Work A] — structurally different because [...]
-  2. [Work B] — structurally different because [...]
-  3. [Work C] — structurally different because [...]
+## Verification Plan
 
-## Section Architecture
+- **Deterministic metrics and aggregation:**
+- **Probabilistic metrics and calibration:**
+- **Represented uncertainty sources:** [initial condition / model-process / observation / boundary / forcing / parameter / sampling]
+- **Ensemble generation, size, and size sensitivity:**
+- **Marginal versus joint spatial-temporal diagnostics:**
+- **Limited-area boundary source, latency, uncertainty, and evaluation mask:**
+- **Physical diagnostics:**
+- **Extreme-event metrics:**
+- **Dependence-aware uncertainty method:**
+- **Lead-time/region/level/season/regime disaggregation:**
+- **Offline or one-step evidence:**
+- **Coupled online/prognostic evidence:**
+- **Long-rollout/stability evidence:**
+- **Cascade stage-wise and end-to-end evidence:**
+- **Issuance-time availability of every conditioning input:**
+- **Lead-zero state-estimation versus forecast-dynamics evidence:**
+- **Observation outage, drift, platform-turnover, and new-sensor tests:**
+- **Domain metrics beyond image similarity:**
+- **Reference hierarchy and target mismatches:**
+- **Prescribed-boundary versus interactively coupled evidence:**
+- **Coupling interface, cadence, remapping, and conservation:**
+- **Historical tracking versus controlled forcing sensitivity:**
+- **Checkpoint/seed selection objective and untouched final test:**
+- **Internal-variability or sampling-noise floor:**
+- **Impact chain and tail control, if applicable:** [physical driver → hazard distribution → exposure → vulnerability/loss → consequence]
 
-<!-- Round 4, Question 10: Evaluation plan first, then the rest. -->
+## Genre-Specific Contract
 
-| Section | Pages | Key Claim | Figures/Tables |
-|---------|-------|-----------|----------------|
-| §1 Introduction | | All contributions | |
-| §2 Background | | Problem definition | |
-| §3 Design | | Contribution 1-2 | |
-| §4 Evaluation | | Contribution 1-3 | |
-| §5 Related Work | | Positioning | |
-| §6 Conclusion | | Synthesis | |
+- **Benchmark/resource:** Versions, protected test data, baseline ladder, evaluation code, adoption/reuse criteria.
+- **Calibration:** Priors, observation operator, measurement error, model discrepancy, posterior checks.
+- **Protocol:** Scientific question → experiment tier → requested output → diagnostic mapping.
+- **Review:** Evidence classes, governing framework, exceptions, unresolved questions.
+- **Systems-history review:** Progress measure, interacting pillars, comparability breaks, attribution boundary, and future dependency map.
+- **Theory/mechanism:** Prevailing picture, unresolved inconsistency, assumptions, proposed constraint, discriminating tests, failure regime.
+- **Impacts/risk:** Hazard, exposure, vulnerability/loss, tail dependence, uncertainty propagation, decision-relevant quantity.
+- **Foundation model:** Capability matrix across products, missingness, transfer, downstream tasks, extremes, physics, and stability.
+- **Foundation transfer:** Scratch/no-diversity/frozen-or-lightweight/full-fine-tune controls; downstream data and compute curves; updated parameters; separated scaling factors.
+- **Pretraining mixture:** Product dependence/duplication, fidelity, resolution, period, variables, sampling and loss weights, downstream overlap.
+- **Subsystem and omitted exogenous drivers:**
+- **Climate emulator:** Component and coupled tests, vertical and slow-mode fidelity, spin-up/drift, budgets, forced sensitivities, internal-variability floor, and stability–accuracy trade-offs.
+- **Selected requirements:**
+
+## Uncertainty and Limitations
+
+- **Aleatoric or initial-condition uncertainty:**
+- **Model/structural uncertainty:**
+- **Internal variability:**
+- **Scenario/forcing uncertainty:**
+- **Known data and observing-system biases:**
+- **Interpolation versus extrapolation boundary:**
+- **Operational or societal limitations:**
+
+## Reproducibility
+
+- **Code and license:**
+- **Exact archived version/DOI:**
+- **Data access and licenses:**
+- **Weights/checkpoints:**
+- **Environment and random seeds:**
+- **Training and postprocessing scripts:**
+- **Figure-generation scripts:**
+- **Hardware, precision, runtime, and system boundary:**
+- **Operational stack included/excluded:** [observations / QC / assimilation-initialization / forecast core / ensembles / postprocessing / dissemination / decision interface]
+- **Training / deployment / evaluation boundaries:**
+- **End-to-end tuning target and non-target trade-offs:**
+
+## Paper Architecture
+
+| Section | Key claim or purpose | Evidence | Figures/tables | Word/page budget |
+|---|---|---|---|---|
+| [Genre-appropriate section] | | | | |
 
 ## Locked Decisions
 
-<!-- Round 4, Question 11: Things NOT up for debate. -->
+1.
 
-1. [...]
-2. [...]
-3. [...]
+## Open Questions and Blockers
 
-## Open Questions
-
-<!-- Round 4, Question 12: Things you genuinely don't know yet. -->
-
-1. [...]
-2. [...]
-
-## Key Figures Needed
-
-<!-- Classify each figure as DATA or NON-DATA. -->
-<!-- DATA figures (CDFs, scatter plots, bar charts, heatmaps) → /viz skill. -->
-<!-- NON-DATA figures (architecture, pipeline, concept diagrams) → /paper-writing figure synthesis. -->
-<!-- The boundary: if it requires experimental data to render, it's DATA. -->
-<!-- If it illustrates structure, flow, or concepts, it's NON-DATA. -->
-
-### Non-Data Figures (architecture, pipeline, concept diagrams)
-
-<!-- For each: name, section, archetype, what it shows, which claim it supports. -->
-<!-- Archetypes: architecture_overview | pipeline_flow | component_detail | -->
-<!-- concept_illustration | comparison_schematic | taxonomy | deployment_diagram -->
-
-1. **[Figure name]** — §[section]
-   - **Archetype:** [archetype]
-   - **Shows:** [what the reader should understand]
-   - **Claim supported:** [which contribution claim]
-
-### Data Figures (plots from experimental results)
-
-<!-- For each: name, section, data source, what it shows. -->
-<!-- These go through /viz — brainstorm → plan → execute → analyze. -->
-
-1. **[Figure name]** — §[section]
-   - **Shows:** [what the reader should understand]
-   - **Data source:** [which dataset/experiment]
-
-## Timeline
-
-| Date | Milestone |
-|------|-----------|
-| [Date] | [What should be done] |
-| [Date] | [What should be done] |
-| [Deadline] | Submission |
+1.

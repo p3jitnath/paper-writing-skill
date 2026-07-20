@@ -1,55 +1,22 @@
-# AGENTS.md
+# Repository Guidance
 
-This file provides repository guidance to Codex when working in this repository.
+This repository contains a Codex skill for AI weather and climate paper writing. It is a Markdown resource bundle, not an application.
 
-## What This Repo Is
+## Source of truth
 
-A Codex **skill** (invoked via `$paper-writing`) that encodes the writing methodology of the [Systems and Networking Lab (SNL)](https://github.com/SNL-UCSB) at UC Santa Barbara. Part of a [three-skill family](https://github.com/SNL-UCSB) (literature-survey, data-visualization, paper-writing) that compresses the operational middle of the research pipeline. It is not a traditional codebase — there is no build system, no tests, and no application code. The repo contains markdown files that Codex reads at runtime to enforce editorial rules, rhetorical move sequences, and a structured writing pipeline.
+- `SKILL.md` controls triggering, routing, and workflow.
+- `references/scientific_rigor.md` controls scientific validity checks.
+- `references/paper_genres.md` controls genre-specific architecture; do not collapse all papers into IMRaD.
+- `references/corpus_style.md` records robust house-style patterns from the twenty-paper audit corpus above optional author overlays.
+- `author_profile/` contains the base voice plus Düben, Hartmann, and Emanuel overlays.
+- `section_rhetorical_moves/` and `writing_checklists/` must remain aligned.
+- `setup` defines the installed resource set.
 
-## Installation
+## Editing rules
 
-```bash
-./setup
-```
-
-This copies skill files into `${CODEX_HOME:-~/.codex}/skills/paper-writing/`. Always edit files in this repo, then re-run `./setup` to propagate changes.
-
-## Architecture
-
-**SKILL.md** is the main entry point Codex reads when `$paper-writing` is invoked. It defines:
-- The three-layer model: fixed pipeline → customizable voice/editorial rules → per-paper project context
-- The five-stage writing pipeline: Brainstorming → Architecture → Section Drafts → Integration → Compression
-- The mandatory style audit gate (runs on every tex edit)
-- Section checklist and rhetorical move dispatch tables
-
-**author_profile/** contains the editorial rules (source of truth for all style enforcement):
-- `editorial_principles.md` — 14 cross-paper principles with evidence from forensic revision analysis
-- `voice_profile.md` — sentence-level style rules (~21-word mean, zero hedging, claim-first, banned words)
-- `compression_patterns.md` — 7 compression operations with before/after examples
-- `rhetorical_moves.md` — cross-section move sequences
-- `intervention_types.md` — 7 advisor intervention types for draft review
-
-**writing_checklists/** contains post-draft structural checklists (intro, evaluation, design, related work). These run automatically after every section draft.
-
-**section_rhetorical_moves/** contains detailed per-section move sequences with concrete examples from accepted/rejected papers.
-
-**brainstorming_guide.md** defines the 34-question, 6-phase brainstorming workflow that produces a `project_context.md`.
-
-**figure_synthesis_guide.md** defines the 3-mode workflow (spec → generate → critique) for non-data figures — architecture diagrams, pipeline illustrations, concept diagrams, comparison schematics. Uses a hybrid approach: AI image generation prompts (Gemini/DALL-E) for visually rich figures, TikZ for precise structural figures.
-
-**figure_templates/** contains supporting files for figure synthesis:
-- `venue_styles.md` — column widths, fonts, color palette, and styling blocks for NSDI/SIGCOMM/IMC
-- `prompt_templates.md` — AI image generation prompt skeletons per archetype (architecture overview, concept illustration, comparison schematic, deployment diagram)
-- `tikz_skeletons.md` — TikZ starter templates per archetype (pipeline flow, component detail, taxonomy)
-- `figure_spec_template.md` — per-figure spec template (filled during spec mode, consumed during generate mode)
-
-**examples/** contains the `project_context.md` template and a real completed example (NetBurst).
-
-## Key Design Decisions
-
-- **Introduction-twice** is the most impactful principle. The introduction is written twice: Draft 0 (framing scaffold) before the evaluation, then the final introduction rewritten from scratch after the evaluation. Section drafts follow: Draft 0 Introduction → Evaluation → Design → Background → Related Work → Final Introduction → Abstract.
-- **`project_context.md`** is generated per-paper in the user's working directory (not in this repo). It should be gitignored.
-- The `setup` script copies a specific subset of files (SKILL.md, brainstorming_guide.md, figure_synthesis_guide.md, author_profile/, writing_checklists/, section_rhetorical_moves/, figure_templates/, examples/) — it intentionally excludes README.md and setup itself.
-- Voice rules ship as defaults from the SNL lab. Students customize by editing `author_profile/` files after installation.
-- **Signposting through claims**: section preambles are encouraged when they state the section's conclusion, but banned when content-free ("In this section, we describe...").
-- **Topic-sentence-first drafting**: before writing full prose for any section, write all topic sentences and verify they form a coherent argument. This intermediate scaffolding step sits between Architecture (section outline) and full drafting.
+- Keep `SKILL.md` under 500 lines and move detailed domain guidance into references.
+- Do not state current venue limits or policies from memory; direct the runtime agent to verify them.
+- Do not use completed numerical claims in illustrative examples unless they are sourced and labeled.
+- Keep observations, analyses, reanalyses, simulations, and forecasts distinct.
+- Preserve calibrated uncertainty language; do not reinstate a blanket ban on hedging or passive voice.
+- After changes, run the skill validator, `bash -n setup`, an isolated installer test, reference checks, and `git diff --check`.

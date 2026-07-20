@@ -1,0 +1,30 @@
+# Results and Verification Checklist
+
+- Does each subsection open with a question rather than a metric or figure number?
+- Is the primary comparison against a scientifically meaningful reference?
+- Are effect size and uncertainty reported together?
+- Is skill shown across relevant lead times, regions, levels, seasons, regimes, intensities, and events?
+- Are probabilistic forecasts evaluated for calibration, resolution, and sharpness?
+- Are ensemble-mean accuracy, marginal distributional skill, and joint spatial-temporal coherence reported separately?
+- Do calibration conclusions survive ensemble-size sensitivity, and are rank/spread diagnostics interpreted with the represented uncertainty sources?
+- Are proper-score gains checked for smoothing, noise, spectral distortion, or other coherence artifacts?
+- Do foundation-model results include matched scratch, single-source/no-diversity, frozen/lightweight, and full-fine-tuning controls where feasible?
+- Are transfer curves shown against downstream data and adaptation compute, with model-size, data-diversity, resolution, and recipe effects separated?
+- Are subsystem and exogenous-driver limits respected for interventions, shocks, policies, and unseen scenarios?
+- Are image-similarity scores complemented by meteorological, event, and decision-relevant metrics?
+- For diffusion models, are multiple samples evaluated as an ensemble rather than presenting one selected realization?
+- Are cascade results reported end to end with realistic upstream forecast inputs and error propagation?
+- Are physical claims tested with appropriate budgets, spectra, covariance, stability, or process diagnostics?
+- Do ablations distinguish architecture effects from data, resolution, and compute effects?
+- Is coupled or prognostic behavior evaluated separately from offline component skill?
+- Are prescribed-boundary component results separated from interactively coupled behavior and emergent modes?
+- Are combined historical tracking and individual forcing sensitivities evaluated as different claims?
+- Is emulator error compared with internal-variability or sampling noise where that limits agreement?
+- Are negative, neutral, and failure results visible?
+- Does each result include the local interpretation required to understand it?
+- Does every takeaway stay within the evaluated domain and period?
+- Is lead-zero state-estimation error separated from later forecast-error growth and checked against independent observations where possible?
+- Are observation outages, coverage/latency changes, sensor drift or replacement, and unseen-location transfer tested for deployment claims?
+- Does targeted end-to-end fine-tuning report degradation outside the optimized region, variable, location set, and lead time?
+- For risk results, are hazard, exposure, vulnerability/loss, event dependence, and tail sampling separated?
+- For mechanism results, does the evidence discriminate the proposed constraint from plausible alternatives and identify its failure regime?

@@ -1,51 +1,17 @@
-# Loop Mode — Iterative Audit-and-Fix (for the `/loop` feature)
+# Resumable Paper Audit
 
-> Purpose: let a user run `/loop apply the paper-writing skill iteratively` (or "audit with loop") and have
-> the skill run a RESUMABLE audit → red-team → fix cycle with NO further instructions. Each loop iteration is
-> a self-contained unit that reads its state from disk, does the next chunk of work, and updates state — so
-> progress survives context loss between iterations. The loop ends itself when the paper is clean.
-> Added 2026-07 from a live-review audit (`notes/PAPER_WRITING_SKILL_GAPS.md`).
+For long papers, maintain `notes/AUDIT_LEDGER.md` with one row per section.
 
-## What the user types (invocation)
-- `/loop apply the paper-writing skill iteratively`   ← self-paced; recommended
-- `/loop audit with the paper-writing skill until clean`
-- Scoped: `/loop audit §2 and §3 with the paper-writing skill`
-No other detail is needed — this file supplies the obvious parts (which checks, in what order, when to stop).
+| Section | Claim/evidence | Data/leakage | Verification | Physics/uncertainty | Reproducibility | Prose | Status |
+|---|---|---|---|---|---|---|---|
 
-## The durable ledger (memory across iterations)
-Maintain `notes/AUDIT_LEDGER.md` in the paper directory: one row per section, one column per gate.
+Process one section per iteration:
 
-| Section | Mechanical (de-AI Part D) | Accessibility/Coherence (G1–G6) | Independent red-team | Status |
-|---------|---------------------------|---------------------------------|----------------------|--------|
+1. Read `project_context.md` and the ledger.
+2. Select the next section with `PENDING` or `FINDINGS` status.
+3. Apply `references/scientific_rigor.md`, the section checklist, and `red_team_protocol.md`.
+4. Fix authorized prose or report experiments/data needed for findings that cannot be fixed editorially.
+5. Re-run affected checks and update the ledger with evidence.
+6. Rebuild and visually inspect figures or PDF pages changed by the revision.
 
-Statuses: `PENDING` / `FINDINGS(n)` / `CLEAN`. Record, per section, the pasted grep counts and the last
-red-team findings. This ledger IS the loop's memory — read it fresh at the start of every iteration.
-
-## One iteration (the repeatable unit)
-1. Read `notes/AUDIT_LEDGER.md` (create it from the section list if absent) and `project_context.md`
-   (the paper's controlling idea).
-2. Select the next unit of work: the highest-priority section not yet `CLEAN` through all three gates
-   (respect any user scope).
-3. Run the three gates on that section (see `red_team_protocol.md`):
-   a. MECHANICAL — run ALL `author_profile/de_ai_checklist.md` Part D greps; paste the counts.
-   b. ACCESSIBILITY/COHERENCE — apply `author_profile/accessibility_checklist.md` (G1–G6).
-   b2. CRAFT — apply `author_profile/elements_of_style_checklist.md`: run its `[MECH]` grep gate
-       (active voice, needless words, pompous usage, qualifiers) and read for its `[JUDGE]` items.
-   c. INDEPENDENT RED-TEAM — spawn a FRESH reviewer (subagent) that did NOT write the text; it returns findings.
-4. FIX every finding in the section's text.
-5. Re-run the gates on the fixed text. Zero surviving findings → mark the section `CLEAN`; else `FINDINGS(n)`.
-6. Update `notes/AUDIT_LEDGER.md` (grep counts, findings, fixes, status). Rebuild the PDF if a section changed.
-7. Emit a one-line iteration summary (section, findings fixed, status).
-
-## Stop condition (the loop ends itself)
-End when EVERY in-scope section is `CLEAN` through all three gates (ledger all green): report the final
-ledger and stop. If two consecutive iterations make no progress (the same findings survive), STOP and
-surface the blocker instead of spinning.
-
-## Rules
-- The independent red-team MUST be a separate reviewer (fresh subagent), never the author self-checking —
-  self-audit is the exact failure mode this protocol fixes.
-- Keep each iteration small (one section, or one gate on a large section) so it fits a single loop tick.
-- For FIGURES, "clean" requires a rendered-image inspection, not a checklist pass (a checklist-green figure
-  can still be an illegible mess — verify by looking).
-- Default section order = the paper's order; override with the user's scope.
+Stop when all in-scope rows are `CLEAN`, or when the same blocker survives two iterations and requires new evidence or user direction.

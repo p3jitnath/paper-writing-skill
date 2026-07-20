@@ -11,7 +11,7 @@
 #   Copies the skill into ${CODEX_HOME:-~/.codex}/skills/paper-writing/ so Codex
 #   can discover and invoke it when you mention $paper-writing.
 #
-# The skill works immediately with the SNL lab's writing rules as defaults.
+# The skill works immediately with AI weather and climate writing rules as defaults.
 # To customize, edit the files in author_profile/ — see the README.
 #
 
@@ -42,7 +42,7 @@ mkdir -p "$SKILL_DIR"
 
 # Copy all skill files (everything except setup, README, .git, examples)
 echo "Installing skill files..."
-for item in SKILL.md agents brainstorming_guide.md figure_synthesis_guide.md red_team_protocol.md loop_mode.md author_profile writing_checklists section_rhetorical_moves figure_templates; do
+for item in SKILL.md agents brainstorming_guide.md figure_synthesis_guide.md red_team_protocol.md loop_mode.md references author_profile writing_checklists section_rhetorical_moves figure_templates; do
     if [ -e "$SCRIPT_DIR/$item" ]; then
         cp -r "$SCRIPT_DIR/$item" "$SKILL_DIR/$item"
     fi
@@ -55,7 +55,7 @@ cp -r "$SCRIPT_DIR/examples/"* "$SKILL_DIR/examples/"
 echo ""
 echo "Installed to $SKILL_DIR"
 echo ""
-echo "The skill is ready to use with the SNL lab's writing rules."
+echo "The skill is ready for AI weather and climate paper writing."
 echo ""
 echo 'To use: open Codex in any project directory and mention $paper-writing'
 echo ""
