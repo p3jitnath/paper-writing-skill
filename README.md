@@ -20,6 +20,7 @@ The installer copies the skill to `${CODEX_HOME:-~/.codex}/skills/paper-writing/
 - Routes the paper by scientific task and publication culture.
 - Routes benchmark, flagship-result, model-development, calibration, intercomparison, review, theory/mechanism, foundation-model, and standard research papers separately.
 - Audits temporal and spatial leakage, product provenance, baseline fairness, physical consistency, uncertainty, and reproducibility.
+- Standardizes BibTeX keys as `author_papershortname_year` (for example, `nath_replacing_2026`).
 - Supports Earth-science-journal and ML-conference structures.
 - Uses one of three scientific prose profiles:
   - Peter Düben for Earth-system modeling and operational AI forecasting.

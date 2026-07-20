@@ -195,3 +195,13 @@ Classify each comment as scientific validity, missing evidence, interpretation, 
 ### Prepare a submission
 
 Verify venue requirements, availability statements, ethical or AI-use disclosures, figure resolution, references, supplement links, and all numbers shared across abstract, text, tables, and figures.
+
+## Bibliography Keys
+
+For every `.bib` file created or edited, use citation keys in the form `author_papershortname_year`, for example `nath_replacing_2026`.
+
+- Use the first author's family name, lowercase ASCII, followed by a short distinctive title slug and the four-digit year.
+- Join components with underscores; remove spaces, punctuation, diacritics, braces, and LaTeX commands.
+- Omit articles and generic stopwords from the title slug. Keep it short while remaining recognizable within the bibliography.
+- Resolve collisions deterministically with a lowercase letter after the year: `author_shortname_2026a`, `author_shortname_2026b`.
+- When renaming an existing key, update every corresponding `\cite`, `\citep`, `\citet`, `\autocite`, or other citation command across the paper. Never leave duplicate keys or broken references.

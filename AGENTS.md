@@ -18,5 +18,6 @@ This repository contains a Codex skill for AI weather and climate paper writing.
 - Do not state current venue limits or policies from memory; direct the runtime agent to verify them.
 - Do not use completed numerical claims in illustrative examples unless they are sourced and labeled.
 - Keep observations, analyses, reanalyses, simulations, and forecasts distinct.
+- Use `author_papershortname_year` keys in every `.bib` file, with deterministic year-letter suffixes for collisions, and update all citation commands when keys change.
 - Preserve calibrated uncertainty language; do not reinstate a blanket ban on hedging or passive voice.
 - After changes, run the skill validator, `bash -n setup`, an isolated installer test, reference checks, and `git diff --check`.
