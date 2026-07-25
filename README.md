@@ -9,7 +9,7 @@ The skill covers weather forecasting and nowcasting, Earth-system emulation, cli
 ```bash
 git clone https://github.com/p3jitnath/paper-writing-skill.git
 cd paper-writing-skill
-./setup
+./setup.sh
 ```
 
 The installer copies the skill to `${CODEX_HOME:-~/.codex}/skills/paper-writing/`. Start a new Codex session in a paper directory and ask Codex to use `$paper-writing`.
@@ -82,7 +82,7 @@ The profiles encode recurring reasoning and exposition patterns, not phrases to 
 
 ```bash
 python3 /path/to/skill-creator/scripts/quick_validate.py .
-bash -n setup
+bash -n setup.sh
 ```
 
 ## License

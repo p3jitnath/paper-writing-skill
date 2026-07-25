@@ -5,7 +5,7 @@
 # Usage:
 #   git clone <repo-url>
 #   cd paper-writing-skill
-#   ./setup
+#   ./setup.sh
 #
 # What this does:
 #   Copies the skill into ${CODEX_HOME:-~/.codex}/skills/paper-writing/ so Codex
@@ -40,7 +40,7 @@ fi
 # Create the skill directory
 mkdir -p "$SKILL_DIR"
 
-# Copy all skill files (everything except setup, README, .git, examples)
+# Copy all skill files (everything except setup.sh, README, .git, examples)
 echo "Installing skill files..."
 for item in SKILL.md agents brainstorming_guide.md figure_synthesis_guide.md red_team_protocol.md loop_mode.md references author_profile writing_checklists section_rhetorical_moves figure_templates; do
     if [ -e "$SCRIPT_DIR/$item" ]; then

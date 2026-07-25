@@ -28,3 +28,4 @@
 - Does targeted end-to-end fine-tuning report degradation outside the optimized region, variable, location set, and lead time?
 - For risk results, are hazard, exposure, vulnerability/loss, event dependence, and tail sampling separated?
 - For mechanism results, does the evidence discriminate the proposed constraint from plausible alternatives and identify its failure regime?
+- In the rendered paper, does every figure have at least one substantive interpretive paragraph after it before the next heading or document end?

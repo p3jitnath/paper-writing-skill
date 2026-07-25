@@ -37,3 +37,5 @@ For mechanism papers, test the proposed constraint against the competing explana
 State exactly what the evidence establishes and what it does not. Do not use aggregate score gains to claim mechanism, climate credibility, or operational readiness.
 
 Interpret the result locally: explain the physical or methodological reason supported by this diagnostic and name important exceptions. Leave only cross-result synthesis and competing explanations for Discussion.
+
+Position each figure so that its local interpretation follows it in the rendered paper. Never end a subsection, section, or paper with a dangling figure; move the float source or use venue-permitted placement controls until at least one substantive interpretive paragraph appears after it.

@@ -10,7 +10,7 @@ This repository contains a Codex skill for AI weather and climate paper writing.
 - `references/corpus_style.md` records robust house-style patterns from the twenty-paper audit corpus above optional author overlays.
 - `author_profile/` contains the base voice plus Düben, Hartmann, and Emanuel overlays.
 - `section_rhetorical_moves/` and `writing_checklists/` must remain aligned.
-- `setup` defines the installed resource set.
+- `setup.sh` defines the installed resource set.
 
 ## Editing rules
 
@@ -21,4 +21,4 @@ This repository contains a Codex skill for AI weather and climate paper writing.
 - Use `author_papershortname_year` keys in every `.bib` file, with deterministic year-letter suffixes for collisions, and update all citation commands when keys change.
 - Require a nonempty, verified `url` field in every bibliography entry; a `doi` field alone is insufficient.
 - Preserve calibrated uncertainty language; do not reinstate a blanket ban on hedging or passive voice.
-- After changes, run the skill validator, `bash -n setup`, an isolated installer test, reference checks, and `git diff --check`.
+- After changes, run the skill validator, `bash -n setup.sh`, an isolated installer test, reference checks, and `git diff --check`.

@@ -176,7 +176,7 @@ Do not claim a gate passed without inspecting the relevant artifact or text.
 
 ## Figures
 
-Read `figure_synthesis_guide.md` for conceptual figures and `figure_templates/venue_styles.md` for style. Data figures require explicit units, coordinate conventions, aggregation, reference period, uncertainty encoding, and accessible color choices. Inspect rendered figures at final publication size; a checklist cannot establish legibility.
+Read `figure_synthesis_guide.md` for conceptual figures and `figure_templates/venue_styles.md` for style. Data figures require explicit units, coordinate conventions, aggregation, reference period, uncertainty encoding, and accessible color choices. Never leave a figure dangling at the end of a section or the paper: ensure that at least one substantive interpretive paragraph follows it before the next heading or document end. Inspect the rendered paper and adjust the figure callout, float location, or permitted placement controls until this ordering is visible in the output. Inspect rendered figures at final publication size; a checklist cannot establish legibility or placement.
 
 ## Common Requests
 

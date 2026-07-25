@@ -31,6 +31,12 @@ Data figures should be produced from versioned scripts, not generative imagery.
 
 Use `figure_templates/figure_spec_template.md`, `venue_styles.md`, and the relevant prompt or TikZ template. Generative tools may assist conceptual diagrams, but verify every label, arrow, physical relationship, and coordinate manually.
 
+## Placement in the paper
+
+Introduce and discuss every figure in the prose. Never allow a figure to be the final rendered element of a section or the paper. Place at least one substantive paragraph after the figure and before the next heading or document end; use that paragraph to interpret the result, state its implication, or bound the conclusion rather than merely announce the next section.
+
+Check the rendered output because LaTeX float behavior can separate a figure from its source position. If a figure dangles at an ending, move its callout or environment earlier, or use placement controls permitted by the target venue, then render again. Do not solve the problem by forcing a float into a location that creates large gaps, breaks reading order, or violates venue instructions.
+
 ## Critique
 
 1. Does the figure answer one stated question?
@@ -40,3 +46,4 @@ Use `figure_templates/figure_spec_template.md`, `venue_styles.md`, and the relev
 5. Are maps projected and weighted appropriately?
 6. Is the caption self-contained: panel encoding, products, variables, units, domain, period/lead time, reference, sampling, uncertainty, and principal comparison?
 7. Is all text legible at final publication size?
+8. In the rendered paper, does a substantive interpretive paragraph follow the figure before the next heading or document end?
