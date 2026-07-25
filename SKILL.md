@@ -180,6 +180,8 @@ Do not claim a gate passed without inspecting the relevant artifact or text.
 
 Read `figure_synthesis_guide.md` for conceptual figures and `figure_templates/venue_styles.md` for style. Data figures require explicit units, coordinate conventions, aggregation, reference period, uncertainty encoding, and accessible color choices. Make every figure as large as the verified venue template and page geometry permit while preserving aspect ratio, margins, caption placement, and reading order. Do not shrink figures merely to save space unless an explicit page requirement must be met, and then use only the reduction needed to comply without sacrificing legibility. Never leave a figure dangling at the end of a section or the paper: ensure that at least one substantive interpretive paragraph follows it before the next heading or document end. Inspect the rendered paper and adjust the figure callout, float location, or permitted placement controls until this ordering is visible in the output. Inspect rendered figures at final publication size because a checklist cannot establish legibility, scale, or placement.
 
+For an appendix experiment, state enough detail to reproduce its interpretation: predictor aggregation, split-aware preprocessing, regime or subgroup definition, metric and reference, contrast direction, resampling unit and count, multiple-testing correction, effect size, uncertainty, and evidential limitation. Place an appendix figure immediately after its section heading when requested, but retain substantive methodological and interpretive prose after the figure so it does not dangle. Reset and format appendix counters only when required by the venue or project template, and verify the rendered cross-reference, such as `Figure A.1`.
+
 ## Common Requests
 
 ### Draft or revise a section
@@ -197,6 +199,10 @@ Classify each comment as scientific validity, missing evidence, interpretation, 
 ### Prepare a submission
 
 Verify venue requirements, availability statements, ethical or AI-use disclosures, figure resolution, references, bibliography URLs, supplement links, and all numbers shared across abstract, text, tables, and figures.
+
+Distinguish the main-paper limit from references and appendices. Inspect the rendered PDF and verify the page on which the main conclusion ends, the references begin, and each appendix begins; do not infer compliance from the total PDF page count. When a secondary figure cannot remain legible within the main-paper limit, move it to an appendix or supplement instead of shrinking its typography, while retaining the headline interpretation in the main text.
+
+For Tackling Climate Change with Machine Learning workshop manuscripts, read `references/tccml-neurips.md` and verify it against the supplied template.
 
 ## Bibliography Requirements
 
