@@ -11,6 +11,8 @@ Always verify the target venue's current template. Record actual column width in
 
 ## Visual rules
 
+- Size each figure to the largest width and height permitted by the current venue template and page geometry while preserving its aspect ratio, margins, caption, and reading order.
+- Do not shrink figures merely to save pages. When an explicit page or layout requirement forces reduction, use the smallest necessary reduction and retain legible labels, uncertainty encoding, and panel comparisons.
 - Minimum final-size text: 8 pt; prefer 9 pt.
 - Use perceptually uniform, color-vision-accessible sequential or diverging maps. Center diverging scales on a scientifically meaningful reference.
 - Do not use rainbow color maps.
@@ -28,3 +30,4 @@ Always verify the target venue's current template. Record actual column width in
 3. Check grayscale and common color-vision simulations.
 4. Confirm no cropping, rasterized text, inconsistent panel labels, or unreadable legends.
 5. Compare every plotted number and caption statement with the versioned source artifact.
+6. Confirm that each figure occupies the largest compliant footprint unless a verified page or layout requirement documents why it was reduced.

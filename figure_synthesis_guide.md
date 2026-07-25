@@ -31,6 +31,12 @@ Data figures should be produced from versioned scripts, not generative imagery.
 
 Use `figure_templates/figure_spec_template.md`, `venue_styles.md`, and the relevant prompt or TikZ template. Generative tools may assist conceptual diagrams, but verify every label, arrow, physical relationship, and coordinate manually.
 
+## Figure scale
+
+Use the largest figure footprint allowed by the verified venue template and available page geometry. Prefer full text width for figures whose panels, maps, labels, or comparisons benefit from it, and use the maximum compliant column width for figures that remain in one column. Preserve the aspect ratio, page margins, caption, reading order, and space for the substantive paragraph that must follow the figure.
+
+Do not reduce a figure merely to make the manuscript shorter. Reduce it only when a verified page limit or explicit layout requirement must be met, and apply the smallest reduction that achieves compliance while keeping all scientific content legible. If reduction makes labels, uncertainty, or panel comparisons difficult to read, simplify the panel arrangement, move secondary material to the supplement when allowed, or revise the page layout before accepting a smaller figure.
+
 ## Placement in the paper
 
 Introduce and discuss every figure in the prose. Never allow a figure to be the final rendered element of a section or the paper. Place at least one substantive paragraph after the figure and before the next heading or document end; use that paragraph to interpret the result, state its implication, or bound the conclusion rather than merely announce the next section.
@@ -47,3 +53,4 @@ Check the rendered output because LaTeX float behavior can separate a figure fro
 6. Is the caption self-contained: panel encoding, products, variables, units, domain, period/lead time, reference, sampling, uncertainty, and principal comparison?
 7. Is all text legible at final publication size?
 8. In the rendered paper, does a substantive interpretive paragraph follow the figure before the next heading or document end?
+9. Does the figure use the largest compliant footprint, or is any reduction justified by a verified page or layout requirement?

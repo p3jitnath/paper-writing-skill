@@ -4,6 +4,8 @@
 - **Claim supported:**
 - **Archetype:**
 - **Target section and venue size:**
+- **Maximum compliant footprint:** [column width / text width / page height constraint]
+- **Reason for any reduction:** [verified page or layout requirement / none]
 - **Data products and versions:**
 - **Variables and units:**
 - **Domain, projection, grid, and levels:**
