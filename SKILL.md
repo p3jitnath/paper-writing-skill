@@ -194,9 +194,9 @@ Classify each comment as scientific validity, missing evidence, interpretation, 
 
 ### Prepare a submission
 
-Verify venue requirements, availability statements, ethical or AI-use disclosures, figure resolution, references, supplement links, and all numbers shared across abstract, text, tables, and figures.
+Verify venue requirements, availability statements, ethical or AI-use disclosures, figure resolution, references, bibliography URLs, supplement links, and all numbers shared across abstract, text, tables, and figures.
 
-## Bibliography Keys
+## Bibliography Requirements
 
 For every `.bib` file created or edited, use citation keys in the form `author_papershortname_year`, for example `nath_replacing_2026`.
 
@@ -205,3 +205,6 @@ For every `.bib` file created or edited, use citation keys in the form `author_p
 - Omit articles and generic stopwords from the title slug. Keep it short while remaining recognizable within the bibliography.
 - Resolve collisions deterministically with a lowercase letter after the year: `author_shortname_2026a`, `author_shortname_2026b`.
 - When renaming an existing key, update every corresponding `\cite`, `\citep`, `\citet`, `\autocite`, or other citation command across the paper. Never leave duplicate keys or broken references.
+- Require a nonempty `url` field in every bibliography entry, including entries that predate the current edit. A `doi` field does not replace this requirement; when a DOI exists, prefer its canonical `https://doi.org/...` URL.
+- For works without a DOI, use the authoritative publisher, repository, dataset, software-release, standards-body, or institutional record URL. Do not invent a URL.
+- Before delivering a created or edited bibliography, scan every entry for a `url` field and test that each URL resolves. Treat any missing or unverified URL as an unresolved bibliography error and report it explicitly; do not present the bibliography as complete.
