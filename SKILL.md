@@ -143,7 +143,7 @@ Run `references/scientific_rigor.md`, the relevant section checklist, and `red_t
 
 ### 5. Final introduction, abstract, and compression
 
-Rewrite the introduction from scratch after the evidence and interpretation stabilize. Promise only what the paper establishes. Then use `references/front_matter.md` to write the title, abstract, Key Points, Plain Language Summary, and availability statements required by the venue. Apply `author_profile/compression_patterns.md`; preserve caveats, definitions, units, and uncertainty while removing repetition.
+Rewrite the introduction from scratch after the evidence and interpretation stabilize. Promise only what the paper establishes. Then use `references/front_matter.md` to write the title, abstract, Key Points, Plain Language Summary, and availability statements required by the venue. End a standalone Conclusion, or the concluding Discussion when no Conclusion exists, with a concise and impactful sentence that states the strongest evidence-supported scientific or practical implication. Do not end on housekeeping, a generic future-work statement, a repeated limitation, or an unsupported flourish. Apply `author_profile/compression_patterns.md`; preserve caveats, definitions, units, and uncertainty while removing repetition.
 
 ## Scientific Language Rules
 
