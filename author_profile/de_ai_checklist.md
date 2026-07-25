@@ -7,7 +7,8 @@ Run on changed prose, then inspect every hit in context. A hit is a review promp
 - Throat-clearing: “It is important to note,” “In order to,” “This section presents.”
 - Hype: “groundbreaking,” “revolutionary,” “remarkable,” “unprecedented” without a defined comparison.
 - Empty intensifiers: “very,” “highly,” “significant” when no statistical meaning or magnitude follows.
-- Decorative antithesis, canned triads, editorializing closers, and repeated em-dashes.
+- Decorative antithesis, canned triads, editorializing closers, semicolons, and em dashes.
+- Choppy short sentences that should be connected to the preceding idea or developed into a substantive statement.
 - Vague mechanism verbs: “captures,” “leverages,” “encodes,” or “understands” without stating what relationship is represented or tested.
 - Unsupported certainty: “proves,” “causes,” “generalizes,” “physically consistent,” or “operational.”
 
@@ -22,6 +23,7 @@ Run on changed prose, then inspect every hit in context. A hit is a review promp
 
 ```bash
 rg -n -i "important to note|in order to|this section (presents|describes)|groundbreaking|revolutionary|remarkable|unprecedented|very|highly|proves?|generalizes?|physically consistent|operational" --glob '*.tex'
+rg -n ";|—|---" --glob '*.tex'
 ```
 
-For each match, keep it only when the surrounding text supplies the comparison, evidence, or operational definition.
+For each lexical match, keep it only when the surrounding text supplies the comparison, evidence, or operational definition. For each punctuation match, distinguish authored prose from required literal syntax, then rewrite every semicolon or em dash in authored prose. Inspect sentence length manually because a mechanical word-count threshold cannot determine whether a sentence is substantively connected.

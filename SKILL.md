@@ -147,6 +147,8 @@ Rewrite the introduction from scratch after the evidence and interpretation stab
 
 ## Scientific Language Rules
 
+- Use no semicolons or em dashes in drafted or revised manuscript prose. Recast the relationship with a conjunction, subordinate clause, separate sentence, colon, or parentheses as appropriate. Do not alter required punctuation inside code, equations, URLs, citation data, or quoted source text.
+- Do not leave short standalone sentences in manuscript prose. Connect a brief idea to the preceding sentence through an explicit logical relationship, or develop it with the evidence, qualification, or consequence needed to make it substantive. Preserve grammatical boundaries and avoid comma splices or overloaded run-on sentences.
 - Use calibrated uncertainty. Distinguish `shows`, `supports`, `suggests`, `is consistent with`, and `cannot distinguish` by evidential strength.
 - Reserve causal language for causal identification or a physically supported mechanism. Use association language otherwise.
 - Report effect size and uncertainty, not significance alone.

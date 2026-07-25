@@ -8,5 +8,7 @@
 6. Keep one term per concept across text, equations, figures, captions, and supplement.
 7. Ensure each paragraph advances the central claim rather than opening an unrelated method or phenomenon.
 8. Define all abbreviations in figures and captions independently of the main text when venue rules expect self-contained figures.
+9. Confirm that manuscript prose contains no semicolons or em dashes, except inside required literal syntax or quoted source text.
+10. Revise every short standalone sentence by connecting it explicitly to the preceding idea or developing it with necessary evidence, qualification, or consequence, while avoiding comma splices and run-on sentences.
 
 Severity: missing product roles, units, or claim connections are major; inconsistent data identities or contradictory coordinates are critical.

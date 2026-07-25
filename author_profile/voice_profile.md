@@ -20,7 +20,9 @@ Read `references/corpus_style.md`, then apply this file before the selected auth
 
 ## Prose
 
-- Prefer the shortest sentence that preserves the scientific dependency chain. Sentences above 40 words require a parse check but are not automatically split; equations, causal chains, and tightly coupled experimental qualifications may justify them.
+- Avoid short standalone sentences. When a brief statement depends on the preceding idea, integrate it with a conjunction or subordinate clause, or develop it with the evidence, qualification, or consequence that makes the connection explicit.
+- Use no semicolons or em dashes in manuscript prose. Express the relationship with grammatical coordination, subordination, a colon, parentheses, or a new sentence that remains substantively connected to the preceding idea.
+- Keep connected sentences readable. Do not replace prohibited punctuation or brief sentences with comma splices, overloaded run-ons, or obscured scientific dependencies.
 - Prefer active constructions when the actor matters. Passive voice is acceptable when the process or result is the subject and the actor is irrelevant.
 - Use first-person plural for author choices (`we train`, `we evaluate`) and direct subjects for findings (`the forecast improves`).
 - Avoid hype, ornamental metaphors, vague intensifiers, rhetorical questions, and claims of novelty unsupported by positioning.
