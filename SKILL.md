@@ -182,6 +182,28 @@ Read `figure_synthesis_guide.md` for conceptual figures and `figure_templates/ve
 
 For an appendix experiment, state enough detail to reproduce its interpretation: predictor aggregation, split-aware preprocessing, regime or subgroup definition, metric and reference, contrast direction, resampling unit and count, multiple-testing correction, effect size, uncertainty, and evidential limitation. Place an appendix figure immediately after its section heading when requested, but retain substantive methodological and interpretive prose after the figure so it does not dangle. Reset and format appendix counters only when required by the venue or project template, and verify the rendered cross-reference, such as `Figure A.1`.
 
+## Introduction
+
+When novelty is requested, identify the closest prior study and state the difference in analysis, system boundary, data, or evaluation protocol in one or two sentences. Avoid `first`, `novel`, or field-wide priority claims unless the literature search supports them.
+
+## Paper integration
+
+Audit the manuscript as a connected argument:
+
+- Introduce every model, dataset, abbreviation, symbol, and metric before use.
+- Cite every table and figure in the prose.
+- Place dataset citations immediately beside the dataset name.
+- Provide an experiment overview when several experiments form a model ladder.
+- Begin Results subsections with the experiment's purpose, not a result teaser.
+- Ensure each figure is followed by substantive interpretation before the next heading.
+- Verify requested page placement from the compiled PDF or LaTeX labels, not from source order.
+
+## Titles and conclusions
+
+Generate several claim-bounded title candidates and prefer the most natural, specific construction. A reviewer's requested opening such as `On the ...` does not justify awkward grammar or a broader claim.
+
+Match the final section title to the requested relationship between future directions and conclusion. End with the most consequential supported result, not a generic future-work statement.
+
 ## Common Requests
 
 ### Draft or revise a section
@@ -194,7 +216,16 @@ Review in this order: scientific claim → data/splits → verification → phys
 
 ### Respond to reviewers
 
-Classify each comment as scientific validity, missing evidence, interpretation, reproducibility, framing, or presentation. Draft a response that states the change, location, and evidence. Never promise an experiment that has not been authorized or completed.
+Before revising, build a response matrix with one row per comment and these columns:
+
+- Reviewer request.
+- Category: scientific validity, evidence, framing, organisation, terminology, citation, figure design, or placement.
+- Manuscript action.
+- Exact revised location.
+- Verification method.
+- Unresolved limitation.
+
+Resolve every comment explicitly. When a requested claim would exceed the evidence, revise the framing and explain the boundary rather than complying literally. Never promise an experiment that has not been authorized or completed.
 
 ### Prepare a submission
 
