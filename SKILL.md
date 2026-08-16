@@ -176,6 +176,15 @@ The audit must report:
 
 Do not claim a gate passed without inspecting the relevant artifact or text.
 
+Before delivery, treat the following as blocking gates:
+
+- Citation locality: place each citation immediately after the named model, dataset, method, or claim it supports. Do not collect citations for several models or claims at the end of a broad sentence.
+- Reader-facing terminology: scan the manuscript, captions, legends, and figure labels for internal run numbers, checkpoint names, and other experiment identifiers. Replace them with descriptive scientific names, retaining an identifier only when reproducibility requires it and defining it beside the reader-facing name.
+- Neutral headings: make every section and subsection title describe the analysis or subject rather than announce a conclusion.
+- Self-contained repository: copy every included figure into the paper's `figures/` directory and verify that no `\includegraphics` command or related LaTeX macro resolves outside it.
+- Rendered page contract: inspect the compiled PDF and record the last body page, first bibliography page, first appendix page, float order, and any orphaned appendix heading, figure, table, or prose. Do not infer these properties from source order.
+- Canonical bibliography: detect the same publication cited as both a preprint and a journal article, merge duplicate records, update citation keys, and prefer the requested published version.
+
 ## Figures
 
 Read `figure_synthesis_guide.md` for conceptual figures and `figure_templates/venue_styles.md` for style. Data figures require explicit units, coordinate conventions, aggregation, reference period, uncertainty encoding, and accessible color choices. Make every figure as large as the verified venue template and page geometry permit while preserving aspect ratio, margins, caption placement, and reading order. Do not shrink figures merely to save space unless an explicit page requirement must be met, and then use only the reduction needed to comply without sacrificing legibility. Never leave a figure dangling at the end of a section or the paper: ensure that at least one substantive interpretive paragraph follows it before the next heading or document end. Inspect the rendered paper and adjust the figure callout, float location, or permitted placement controls until this ordering is visible in the output. Inspect rendered figures at final publication size because a checklist cannot establish legibility, scale, or placement.
@@ -192,7 +201,9 @@ Audit the manuscript as a connected argument:
 
 - Introduce every model, dataset, abbreviation, symbol, and metric before use.
 - Cite every table and figure in the prose.
-- Place dataset citations immediately beside the dataset name.
+- Place citations immediately after the specific model, dataset, method, or claim they support. Do not group citations for several named entities at the end of a broad sentence.
+- Replace internal experiment identifiers in prose, captions, legends, and figure labels with descriptive scientific names.
+- Keep section and subsection headings neutral and descriptive rather than conclusion-led.
 - Provide an experiment overview when several experiments form a model ladder.
 - Begin Results subsections with the experiment's purpose, not a result teaser.
 - Ensure each figure is followed by substantive interpretation before the next heading.
@@ -244,6 +255,7 @@ For every `.bib` file created or edited, use citation keys in the form `author_p
 - Omit articles and generic stopwords from the title slug. Keep it short while remaining recognizable within the bibliography.
 - Resolve collisions deterministically with a lowercase letter after the year: `author_shortname_2026a`, `author_shortname_2026b`.
 - When renaming an existing key, update every corresponding `\cite`, `\citep`, `\citet`, `\autocite`, or other citation command across the paper. Never leave duplicate keys or broken references.
+- Detect duplicate publications represented by both preprint and journal records. Keep one canonical record, prefer the requested published version, and update every affected citation command.
 - Require a nonempty `url` field in every bibliography entry, including entries that predate the current edit. A `doi` field does not replace this requirement; when a DOI exists, prefer its canonical `https://doi.org/...` URL.
 - For works without a DOI, use the authoritative publisher, repository, dataset, software-release, standards-body, or institutional record URL. Do not invent a URL.
 - Before delivering a created or edited bibliography, scan every entry for a `url` field and test that each URL resolves. Treat any missing or unverified URL as an unresolved bibliography error and report it explicitly; do not present the bibliography as complete.
