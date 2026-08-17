@@ -14,7 +14,7 @@ Use these phases to create `project_context.md`. Ask questions interactively; ac
 ## Phase 2: Scientific coordinates
 
 7. What variables are predicted or analyzed, with units and sign conventions?
-8. What domain, grid, vertical coordinate, resolution, sampling frequency, initialization, and lead time apply?
+8. What domain, grid, vertical coordinate, resolution, sampling frequency, initialisation, and lead time apply?
 9. What weather regimes, seasons, climate states, forcing scenarios, and event thresholds define scope?
 10. Which quantities are inputs, targets, diagnostics, and evaluation references?
 11. What physical constraints, conservation laws, balances, symmetries, or known scaling relationships matter?
@@ -23,17 +23,17 @@ Use these phases to create `project_context.md`. Ask questions interactively; ac
 ## Phase 3: Data provenance and splits
 
 13. List every observation, reanalysis, operational analysis, simulation, forecast archive, and derived product by name and version.
-14. For each product, is it used for training, tuning, testing, initialization, forcing, or verification?
+14. For each product, is it used for training, tuning, testing, initialisation, forcing, or verification?
 15. What are the exact train, validation, and test years? Are neighboring samples correlated across the split boundary?
 16. Are regions, stations, storms, ensemble members, or climate models shared across splits?
-17. Could preprocessing, normalization, climatology, bias correction, interpolation, or target construction leak test information?
+17. Could preprocessing, normalisation, climatology, bias correction, interpolation, or target construction leak test information?
 18. Where does the evaluation product inherit information from the training product or assimilated observations?
 19. What sampling, observing-system, missingness, homogenization, or reanalysis biases affect interpretation?
 
 ## Phase 4: Baselines and verification
 
 20. Which references are mandatory: persistence, climatology, operational NWP, dynamical model, statistical method, or competitive ML model?
-21. What claim does each baseline test, and is the comparison matched in inputs, resolution, initialization, compute, and postprocessing?
+21. What claim does each baseline test, and is the comparison matched in inputs, resolution, initialisation, compute, and postprocessing?
 22. Which deterministic metrics measure amplitude and spatial structure? Which reference defines skill?
 23. For probabilistic outputs, how will calibration, reliability, resolution, sharpness, and spread be assessed?
 24. How will performance be disaggregated across lead time, region, level, season, regime, intensity, and event type?
@@ -48,7 +48,7 @@ Use these phases to create `project_context.md`. Ask questions interactively; ac
 ### Forecasting and nowcasting
 
 30. Does skill persist across useful lead times and against operationally meaningful references?
-31. Are initialization, latency, required observations, update cadence, and postprocessing compatible with the claimed use?
+31. Are initialisation, latency, required observations, update cadence, and postprocessing compatible with the claimed use?
 32. For ensembles, which uncertainty sources are represented, and how will marginal calibration, joint coherence, ensemble-mean skill, and ensemble-size sensitivity be tested?
 33. For limited-area forecasts, where do boundary conditions come from, how uncertain and timely are they, and which cells count toward forecast skill?
 
@@ -79,19 +79,21 @@ Use these phases to create `project_context.md`. Ask questions interactively; ac
 47. What are the current word/page, figure, supplement, Key Points, Plain Language Summary, availability, and disclosure requirements?
 48. Which three closest papers define the expected evidence and writing architecture?
 49. Which voice profile applies: Düben, Hartmann, or Emanuel? Record any explicit override.
-50. Build the claim–evidence table:
+50. Which manuscript language applies? Record the choice explicitly, defaulting to British English only when the user and venue are silent.
+51. Which caption typography, plot-title convention, category encodings, and preferred export format apply? Treat these as project or venue choices rather than universal defaults.
+52. Build the claim–evidence table:
 
 | Claim | Evidence | Reference | Disaggregation | Failure condition | Status |
 |---|---|---|---|---|---|
 | | | | | | |
 
-51. Build the section and figure plan using the selected genre rather than a universal template:
+53. Build the section and figure plan using the selected genre rather than a universal template:
 
 | Section | Key claim | Evidence | Figures/tables | Budget |
 |---|---|---|---|---|
 | | | | | |
 
-52. What decisions are locked, what results are pending, and what issues block drafting?
+54. What decisions are locked, what results are pending, and what issues block drafting?
 
 ## Output
 

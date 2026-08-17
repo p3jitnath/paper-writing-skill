@@ -1,6 +1,6 @@
 ---
 name: paper-writing
-description: Research-paper planning, drafting, scientific review, and revision for work at the intersection of artificial intelligence and weather or climate modeling. Use for papers on weather forecasting, nowcasting, Earth-system emulation, climate downscaling, projections, data assimilation, extremes and hazards, hybrid physics-ML models, or scientific understanding with AI. Trigger for paper outlines, .tex edits, abstracts, methods, results, discussions, rebuttals, camera-ready revisions, figures, verification design, data leakage checks, physical-consistency audits, reproducibility statements, and submissions to Earth-science journals or ML conferences.
+description: Research-paper planning, drafting, scientific review, and revision for work at the intersection of artificial intelligence and weather or climate modelling. Use for papers on weather forecasting, nowcasting, Earth-system emulation, climate downscaling, projections, data assimilation, extremes and hazards, hybrid physics-ML models, or scientific understanding with AI. Trigger for paper outlines, .tex edits, abstracts, methods, results, discussions, rebuttals, camera-ready revisions, figures, verification design, data leakage checks, physical-consistency audits, reproducibility statements, and submissions to Earth-science journals or ML conferences.
 ---
 
 # AI Weather and Climate Paper Writing
@@ -42,7 +42,7 @@ Read `references/paper_genres.md` and select one primary genre:
 |---|---|---|
 | Benchmark / resource | Comparable data, tasks, metrics, baselines, or infrastructure | Need → prior attempts → dataset/resource → evaluation protocol → baselines → open challenges |
 | Flagship result | A compact, broadly consequential scientific or predictive result | Stakes/gap → approach → result-led sections → integrated interpretation → methods later or supplement |
-| Model development | A model or coupling strategy with demonstrated behavior | Reference hierarchy → model/method → offline tests → online/prognostic tests → physical diagnostics → discussion |
+| Model development | A model or coupling strategy with demonstrated behaviour | Reference hierarchy → model/method → offline tests → online/prognostic tests → physical diagnostics → discussion |
 | Calibration / inverse problem | Parameters or inputs constrained by uncertain observations | Physical case → observations/operator → priors and discrepancy → inference method → posterior → process interpretation |
 | Intercomparison protocol | Questions made answerable through coordinated experiments and diagnostics | Scientific questions → experiment tiers → requested outputs → diagnostic mapping → participation/reuse guidance |
 | Review / mechanism synthesis | A unifying physical framework across evidence and scales | Phenomenon → observations → framework → applications across scales → exceptions → unresolved questions |
@@ -78,8 +78,10 @@ An explicit `voice_profile` in `project_context.md` overrides automatic routing.
 
 Before drafting, require the following in `project_context.md`:
 
+- Manuscript language and the source of the choice, defaulting to British English when neither the user nor venue specifies one.
+- Caption typography as a venue or project preference, including whether descriptive lead-ins use regular or bold weight.
 - Scientific question and falsifiable central claim.
-- Target variable, units, domain, resolution, timescale, initialization, and lead time where applicable.
+- Target variable, units, domain, resolution, timescale, initialisation, and lead time where applicable.
 - Provenance and role of every observation, reanalysis, simulation, forcing, and derived product.
 - Exact train, validation, and test periods/regions plus leakage controls.
 - For event data, complete event-level splits and counts before frame, patch, or window generation.
@@ -129,7 +131,7 @@ Check all of the following:
 - Statistical uncertainty respects temporal and spatial dependence.
 - Physical explanations are supported by diagnostics and alternatives are considered.
 - Computational speed claims include hardware, precision, batch size, I/O boundary, and comparison scope.
-- Operational comparisons distinguish the forecast core from observations, assimilation/initialization, ensembles, postprocessing, dissemination, and decision interfaces.
+- Operational comparisons distinguish the forecast core from observations, assimilation/initialisation, ensembles, postprocessing, dissemination, and decision interfaces.
 - End-to-end claims define distinct training, deployment, and evaluation boundaries; state-estimation error, observation-system robustness, unseen-location transfer, and task-specific tuning trade-offs are tested.
 - Limitations distinguish interpolation from extrapolation and weather predictability from climate credibility.
 - Offline or one-step skill is not treated as evidence of online/prognostic stability.
@@ -185,10 +187,13 @@ Before delivery, treat the following as blocking gates:
 - Self-contained repository: copy every included figure into the paper's `figures/` directory and verify that no `\includegraphics` command or related LaTeX macro resolves outside it.
 - Rendered page contract: inspect the compiled PDF and record the last body page, first bibliography page, first appendix page, float order, and any orphaned appendix heading, figure, table, or prose. Do not infer these properties from source order.
 - Canonical bibliography: detect the same publication cited as both a preprint and a journal article, merge duplicate records, update citation keys, and prefer the requested published version.
+- Caption typography: inspect every caption command and caption macro for manual formatting such as `\textbf{...}`. Enforce the caption style recorded in `project_context.md` and remove conflicting manual formatting before delivery.
 
 ## Figures
 
-Read `figure_synthesis_guide.md` for conceptual figures and `figure_templates/venue_styles.md` for style. Data figures require explicit units, coordinate conventions, aggregation, reference period, uncertainty encoding, and accessible color choices. Make every figure as large as the verified venue template and page geometry permit while preserving aspect ratio, margins, caption placement, and reading order. Do not shrink figures merely to save space unless an explicit page requirement must be met, and then use only the reduction needed to comply without sacrificing legibility. Never leave a figure dangling at the end of a section or the paper: ensure that at least one substantive interpretive paragraph follows it before the next heading or document end. Inspect the rendered paper and adjust the figure callout, float location, or permitted placement controls until this ordering is visible in the output. Inspect rendered figures at final publication size because a checklist cannot establish legibility, scale, or placement.
+Read `figure_synthesis_guide.md` for conceptual figures and `figure_templates/venue_styles.md` for style. Data figures require explicit units, coordinate conventions, aggregation, reference period, uncertainty encoding, and accessible colour choices. Make every figure as large as the verified venue template and page geometry permit while preserving aspect ratio, margins, caption placement, and reading order. Do not shrink figures merely to save space unless an explicit page requirement must be met, and then use only the reduction needed to comply without sacrificing legibility. Never leave a figure dangling at the end of a section or the paper: ensure that at least one substantive interpretive paragraph follows it before the next heading or document end. Inspect the rendered paper and adjust the figure callout, float location, or permitted placement controls until this ordering is visible in the output. Inspect rendered figures at final publication size because a checklist cannot establish legibility, scale, or placement.
+
+Treat caption typography as a venue or project preference, not a universal rule. Default to regular-weight captions without bold descriptive lead-ins only when no user, project, template, or venue requirement specifies otherwise.
 
 For an appendix experiment, state enough detail to reproduce its interpretation: predictor aggregation, split-aware preprocessing, regime or subgroup definition, metric and reference, contrast direction, resampling unit and count, multiple-testing correction, effect size, uncertainty, and evidential limitation. Place an appendix figure immediately after its section heading when requested, but retain substantive methodological and interpretive prose after the figure so it does not dangle. Reset and format appendix counters only when required by the venue or project template, and verify the rendered cross-reference, such as `Figure A.1`.
 

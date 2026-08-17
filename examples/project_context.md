@@ -16,7 +16,7 @@
 - **Spatial domain and grid:**
 - **Vertical coordinate:**
 - **Temporal resolution:**
-- **Initialization and lead times:**
+- **Initialisation and lead times:**
 - **Seasons, regimes, scenarios, or thresholds:**
 - **Physical constraints or expected balances:**
 - **Out of scope:**
@@ -29,6 +29,15 @@
 - **Deadline and length limit:**
 - **Required statements and supplements:**
 - **Voice profile:** [dueben / hartmann / emanuel]
+
+## Editorial and Figure Style
+
+- **Language:** British English.
+- **Figure captions:** Regular weight; no bold descriptive lead-ins.
+- **Plot titles:** Omitted when the caption supplies context.
+- **Training:** Connected red circles. [Replace with the project's actual category and encoding.]
+- **Inference:** Isolated blue triangle. [Replace with the project's actual category and encoding.]
+- **Preferred figure format:** PDF.
 
 ## Data Provenance
 
@@ -127,7 +136,7 @@
 - **Training and postprocessing scripts:**
 - **Figure-generation scripts:**
 - **Hardware, precision, runtime, and system boundary:**
-- **Operational stack included/excluded:** [observations / QC / assimilation-initialization / forecast core / ensembles / postprocessing / dissemination / decision interface]
+- **Operational stack included/excluded:** [observations / QC / assimilation-initialisation / forecast core / ensembles / postprocessing / dissemination / decision interface]
 - **Training / deployment / evaluation boundaries:**
 - **End-to-end tuning target and non-target trade-offs:**
 
