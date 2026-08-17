@@ -188,6 +188,7 @@ Before delivery, treat the following as blocking gates:
 - Rendered page contract: inspect the compiled PDF and record the last body page, first bibliography page, first appendix page, float order, and any orphaned appendix heading, figure, table, or prose. Do not infer these properties from source order.
 - Canonical bibliography: detect the same publication cited as both a preprint and a journal article, merge duplicate records, update citation keys, and prefer the requested published version.
 - Caption typography: inspect every caption command and caption macro for manual formatting such as `\textbf{...}`. Enforce the caption style recorded in `project_context.md` and remove conflicting manual formatting before delivery.
+- Rendered cross-references: determine whether `\ref`, `\autoref`, or a customised counter already renders the object's semantic name. Never combine a literal prefix with a reference that renders the same prefix. Compile the manuscript and scan the rendered PDF text for repeated prefixes, including `Appendix Appendix`, `Figure Figure`, `Table Table`, `Section Section`, and `Equation Equation`. Treat every genuine repetition as a blocking error.
 
 ## Figures
 
