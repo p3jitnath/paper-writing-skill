@@ -80,6 +80,7 @@ Before drafting, require the following in `project_context.md`:
 
 - Manuscript language and the source of the choice, defaulting to British English when neither the user nor venue specifies one.
 - Caption typography as a venue or project preference, including whether descriptive lead-ins use regular or bold weight.
+- Canonical result provenance: run, inference checkpoint or episode, forecast length, baseline, source data, aggregation method, and status of each reported result.
 - Scientific question and falsifiable central claim.
 - Target variable, units, domain, resolution, timescale, initialisation, and lead time where applicable.
 - Provenance and role of every observation, reanalysis, simulation, forcing, and derived product.
@@ -131,6 +132,7 @@ Check all of the following:
 - Statistical uncertainty respects temporal and spatial dependence.
 - Physical explanations are supported by diagnostics and alternatives are considered.
 - Computational speed claims include hardware, precision, batch size, I/O boundary, and comparison scope.
+- Profiling claims distinguish complete task wall time, cumulative timer time, mean time per invocation, rank means, all-rank summaries, and selected-rank measurements. State timer overlap and whether residual categories are measured directly or computed by subtraction.
 - Operational comparisons distinguish the forecast core from observations, assimilation/initialisation, ensembles, postprocessing, dissemination, and decision interfaces.
 - End-to-end claims define distinct training, deployment, and evaluation boundaries; state-estimation error, observation-system robustness, unseen-location transfer, and task-specific tuning trade-offs are tested.
 - Limitations distinguish interpolation from extrapolation and weather predictability from climate credibility.
@@ -177,7 +179,7 @@ The audit must report:
 | Reproducibility | Code/data/weights/environment/archive status checked |
 | Prose | Voice, accessibility, terminology, and mechanical checks run |
 
-Do not claim a gate passed without inspecting the relevant artifact or text.
+Do not claim a gate passed without inspecting the relevant artefact or text.
 
 Before delivery, treat the following as blocking gates:
 
@@ -189,6 +191,8 @@ Before delivery, treat the following as blocking gates:
 - Canonical bibliography: detect the same publication cited as both a preprint and a journal article, merge duplicate records, update citation keys, and prefer the requested published version.
 - Caption typography: inspect every caption command and caption macro for manual formatting such as `\textbf{...}`. Enforce the caption style recorded in `project_context.md` and remove conflicting manual formatting before delivery.
 - Rendered cross-references: determine whether `\ref`, `\autoref`, or a customised counter already renders the object's semantic name. Never combine a literal prefix with a reference that renders the same prefix. Compile the manuscript and scan the rendered PDF text for repeated prefixes, including `Appendix Appendix`, `Figure Figure`, `Table Table`, `Section Section`, and `Equation Equation`. Treat every genuine repetition as a blocking error.
+- Result replacement: identify the canonical run, checkpoint, forecast length, baseline, aggregation, and source data before editing. Update the abstract, Methods, Results, tables, captions, appendices, and supplementary discussion as one unit, then search the complete source for superseded identifiers, durations, percentages, variable names, settings, and conclusions.
+- Figure–caption–text agreement: verify every visible number and category together with its caption and nearby discussion, including duration, rank, invocation count, aggregation, percentage, difference direction, and residual definition.
 
 ## Figures
 
@@ -215,6 +219,9 @@ Audit the manuscript as a connected argument:
 - Begin Results subsections with the experiment's purpose, not a result teaser.
 - Ensure each figure is followed by substantive interpretation before the next heading.
 - Verify requested page placement from the compiled PDF or LaTeX labels, not from source order.
+- Use one stable reader-facing term for every method, variable, phase, and system. Define the relationship before using a formal and informal name for the same object.
+- Keep the main text centred on the central claim. Move secondary fields, spatial diagnostics, and implementation detail to an appendix only when the main text retains the evidence and limitations needed to understand the experiment.
+- Separate measurement, interpretation, and scope: state what was observed, what it supports, and what remains untested. Do not generalise from a single case or imply operational readiness without held-out operational evidence.
 
 ## Titles and conclusions
 
@@ -253,13 +260,15 @@ Distinguish the main-paper limit from references and appendices. Inspect the ren
 
 For Tackling Climate Change with Machine Learning workshop manuscripts, read `references/tccml-neurips.md` and verify it against the supplied template.
 
+Finish every result-changing task with this consistency pass: identify the canonical experiment and source data; regenerate requested artefacts from reproducible scripts; compile the manuscript; inspect relevant pages at final size; search the complete source for stale values and terminology; and report unresolved warnings separately from passed checks.
+
 ## Bibliography Requirements
 
 For every `.bib` file created or edited, use citation keys in the form `author_papershortname_year`, for example `nath_replacing_2026`.
 
 - Use the first author's family name, lowercase ASCII, followed by a short distinctive title slug and the four-digit year.
 - Join components with underscores; remove spaces, punctuation, diacritics, braces, and LaTeX commands.
-- Omit articles and generic stopwords from the title slug. Keep it short while remaining recognizable within the bibliography.
+- Omit articles and generic stopwords from the title slug. Keep it short while remaining recognisable within the bibliography.
 - Resolve collisions deterministically with a lowercase letter after the year: `author_shortname_2026a`, `author_shortname_2026b`.
 - When renaming an existing key, update every corresponding `\cite`, `\citep`, `\citet`, `\autocite`, or other citation command across the paper. Never leave duplicate keys or broken references.
 - Detect duplicate publications represented by both preprint and journal records. Keep one canonical record, prefer the requested published version, and update every affected citation command.

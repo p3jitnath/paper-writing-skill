@@ -43,7 +43,13 @@
 
 | Product and version | Product type | Role | Period/domain | Resolution | Known limitations |
 |---|---|---|---|---|---|
-| | observation/reanalysis/simulation/forecast/derived | train/tune/test/initialize/force/verify | | | |
+| | observation/reanalysis/simulation/forecast/derived | train/tune/test/initialise/force/verify | | | |
+
+## Canonical Reported Results
+
+| Result or figure | Run and checkpoint/episode | Forecast length | Baseline | Source data | Aggregation | Status |
+|---|---|---|---|---|---|---|
+| | | | | | | current/superseded |
 
 ## Split and Leakage Controls
 
