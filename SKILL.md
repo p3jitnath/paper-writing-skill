@@ -152,6 +152,7 @@ Rewrite the introduction from scratch after the evidence and interpretation stab
 ## Scientific Language Rules
 
 - Use British English spelling, punctuation, and usage throughout manuscript prose, captions, headings, tables, and author-facing notes unless the user or target venue explicitly requires another variety. Preserve spelling inside quotations, proper names, code, commands, identifiers, bibliography metadata, and official titles.
+- Spell out the whole numbers zero through nine in running prose. Retain numerals when they are attached to units, belong to equations or statistical notation, identify figures, tables, sections, experiments, versions, or list items, appear in tables or figure labels, or when the venue or established house style requires numerals.
 - Use no semicolons or em dashes in drafted or revised manuscript prose. Recast the relationship with a conjunction, subordinate clause, separate sentence, colon, or parentheses as appropriate. Do not alter required punctuation inside code, equations, URLs, citation data, or quoted source text.
 - Do not leave short standalone sentences in manuscript prose. Connect a brief idea to the preceding sentence through an explicit logical relationship, or develop it with the evidence, qualification, or consequence needed to make it substantive. Preserve grammatical boundaries and avoid comma splices or overloaded run-on sentences.
 - Use calibrated uncertainty. Distinguish `shows`, `supports`, `suggests`, `is consistent with`, and `cannot distinguish` by evidential strength.
