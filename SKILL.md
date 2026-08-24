@@ -216,6 +216,7 @@ Audit the manuscript as a connected argument:
 - Replace internal experiment identifiers in prose, captions, legends, and figure labels with descriptive scientific names.
 - Keep section and subsection headings neutral and descriptive rather than conclusion-led.
 - Provide an experiment overview when several experiments form a model ladder.
+- In that overview, give every experiment a reader-facing name, purpose, changed inputs or architecture, held-fixed controls, target, and comparison. The overview must let a reader reconstruct the order and controlled contrasts without internal identifiers.
 - Begin Results subsections with the experiment's purpose, not a result teaser.
 - Ensure each figure is followed by substantive interpretation before the next heading.
 - Verify requested page placement from the compiled PDF or LaTeX labels, not from source order.
@@ -249,8 +250,9 @@ Before revising, build a response matrix with one row per comment and these colu
 - Exact revised location.
 - Verification method.
 - Unresolved limitation.
+- Disposition: accepted, accepted in principle, partly accepted, or not adopted.
 
-Resolve every comment explicitly. When a requested claim would exceed the evidence, revise the framing and explain the boundary rather than complying literally. Never promise an experiment that has not been authorized or completed.
+Resolve every comment explicitly. For accepted-in-principle, partly accepted, and not-adopted requests, state the missing evidence, scope expansion, invalid assumption, or conflict with the frozen protocol. Never invent an experiment, dataset, independence claim, or operational capability to satisfy a reviewer. Identify the most consequential comment first. If it changes the central interpretation, revise the title, abstract, Methods, Results, Discussion, Conclusion, tables, captions, and response ledger as one connected unit. Every response item must identify the manuscript location and verification method, and every defence must rest on evidence rather than author preference.
 
 ### Prepare a submission
 
@@ -261,6 +263,8 @@ Distinguish the main-paper limit from references and appendices. Inspect the ren
 For Tackling Climate Change with Machine Learning workshop manuscripts, read `references/tccml-neurips.md` and verify it against the supplied template.
 
 Finish every result-changing task with this consistency pass: identify the canonical experiment and source data; regenerate requested artefacts from reproducible scripts; compile the manuscript; inspect relevant pages at final size; search the complete source for stale values and terminology; and report unresolved warnings separately from passed checks.
+
+Preserve the manuscript's source-format convention. If the project uses one physical source line per prose paragraph and caption, join only prose and caption lines while preserving blank paragraph boundaries, equations, tables, comments, and environment structure. For whitespace-only reflow, verify that compiled page count and extracted word positions are unchanged. Do not alter a template preamble, style options, commented master file, or venue class unless the user explicitly asks for that target.
 
 ## Bibliography Requirements
 
@@ -273,5 +277,6 @@ For every `.bib` file created or edited, use citation keys in the form `author_p
 - When renaming an existing key, update every corresponding `\cite`, `\citep`, `\citet`, `\autocite`, or other citation command across the paper. Never leave duplicate keys or broken references.
 - Detect duplicate publications represented by both preprint and journal records. Keep one canonical record, prefer the requested published version, and update every affected citation command.
 - Require a nonempty `url` field in every bibliography entry, including entries that predate the current edit. A `doi` field does not replace this requirement; when a DOI exists, prefer its canonical `https://doi.org/...` URL.
+- Put either a provider landing page or canonical `https://doi.org/...` URL in each required URL field. Do not put a full DOI URL in a `doi` field when the bibliography style adds the resolver prefix. Encode legacy DOI characters safely for BibTeX, LaTeX, and the embedded URI.
 - For works without a DOI, use the authoritative publisher, repository, dataset, software-release, standards-body, or institutional record URL. Do not invent a URL.
-- Before delivering a created or edited bibliography, scan every entry for a `url` field and test that each URL resolves. Treat any missing or unverified URL as an unresolved bibliography error and report it explicitly; do not present the bibliography as complete.
+- Before delivering a created or edited bibliography, scan every entry for a `url` field and test that each URL resolves. After compilation, inspect embedded PDF URI targets rather than printed bibliography text alone. Confirm that DOI links contain exactly one resolver prefix, contain no LaTeX escapes or literal angle brackets, and redirect through doi.org. Distinguish a publisher's automated-access denial after a valid DOI redirect from a broken DOI. Treat any missing or unverified URL as an unresolved bibliography error and report it explicitly; do not present the bibliography as complete.

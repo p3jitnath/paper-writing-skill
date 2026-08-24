@@ -6,11 +6,15 @@ For every dataset, record the product name, version, provider, access date, vari
 
 For observation-to-forecast systems, name sensor processing level, calibration, geolocation, retrievals, homogenization, gridding, quality control, temporal window, latency, metadata, and missingness handling. Reserve `raw observations` for unprocessed sensor measurements; level-1 products and gridded composites remain processed observations. Distinguish independence from NWP products at deployment from dependence on analyses, reanalyses, simulators, or NWP-derived static fields during pretraining and supervision.
 
+Distinguish an assumed delay scenario, an archive's latest visible timestamp, and a measured historical delivery-latency distribution. Label latency values as measured, assumed, conservative, or reconstructed. One product instance or archive audit does not establish a universal latency floor, and reprocessed production timestamps do not reconstruct historical operational availability unless the provider documents that they preserve original delivery times. Describe unequal near-real-time and gauge-adjusted comparisons as availability-versus-processing trade-offs unless latency, calibration, domain, resolution, and target dates are matched. Do not rank products from an unequal-latency comparison.
+
 ## 2. Leakage audit
 
 Check temporal adjacency, overlapping forecast windows, repeated storms, stations, regions, ensemble members, parent climate models, and shared regridding or bias-correction statistics. Fit normalization, climatology, imputation, feature selection, and calibration only on permitted data. Document whether targets or verification products inherit information from training inputs.
 
 For event datasets, split by complete storm or event before constructing frames, patches, or forecast windows; report event counts by basin and split. Check whether storm-centered crops, empirically chosen bounding boxes, augmentation, or repeated adjacent frames leak event identity. For cascaded systems, fit and select every stage without access to downstream test targets.
+
+For every observation-derived predictor, audit whether it was gauge-adjusted, bias-corrected, assimilated, trained, or evaluated using the same observation family as the verification target. This dependence is not automatically future-target leakage, but it weakens independent-verification claims. State the relationship prominently and name the genuinely independent control that would be required. Transforming a dependent product does not make it independent. If no unadjusted or independently verified control exists, retain that limitation and do not describe the evaluation as independent.
 
 ## 3. Fair baselines
 
@@ -19,6 +23,8 @@ Use the references required by the claim, commonly persistence, climatology, an 
 Build a reference hierarchy. State whether each target is an observation, operational analysis, reanalysis, high-resolution simulation, nature run, or another model. A fine-grid simulation can be the intended reference without being observational truth. When methods are verified against different analysis products, quantify or discuss how the target mismatch affects the comparison.
 
 When an observation-initialized system is trained or verified against a reanalysis, evaluate the estimated initial state at lead time zero and separate initialization error from subsequent forecast growth. Where possible, verify state estimation against withheld independent observations as well as the supervising reanalysis. Note when the chosen verification product is closer to one system's training target or older than a competing operational analysis.
+
+Label every baseline by its scientific role: probabilistic reference, deterministic stress test, persistence control, operational comparator, ablation, or upper or lower bound. A deterministic persistence forecast is not a matched probabilistic baseline. For each comparison, check issue time, information age, target dates, calibration opportunity, resolution, postprocessing, product maturity, and date-subset symmetry. State asymmetries beside the result rather than only in Limitations. When one input replaces another, describe a separate pathway rather than an additional predictor, and avoid algorithm-ranking claims across unequal routes.
 
 ## 4. Forecast verification
 
@@ -33,6 +39,8 @@ State which uncertainty sources the ensemble represents: initial-condition, mode
 Marginal CRPS and spread–skill ratios do not establish a coherent joint forecast distribution. Pair marginal scores with diagnostics of spatial and temporal dependence, spectra or structure, multivariate and extreme-event behavior, and artifacts. When a proper-score fine-tuning term trades calibration against spatial coherence, report the trade-off rather than selecting only the best marginal score.
 
 Treat diffusion samples as probabilistic forecasts only when sampling design, ensemble size, calibration, spread, and outcome-conditioned verification are reported. A single selected sample or image-quality score does not demonstrate uncertainty quality.
+
+For forecasts assembled from products delivered at different times, make an input timing table containing each observation or analysis validity window, nominal forecast lead, delivery delay, issue time, target interval, and effective information age. Distinguish forecast lead time, observation age, and atmospheric forecast age rather than collapsing them into `days`. Verify that every predictor is available at issue time and that a forecast target starts strictly after issue time. If multiple input ages change together, attribution to either source is confounded. Prefer a factorial experiment that varies them independently; otherwise restrict the conclusion to the jointly aged system and label the limiting input unresolved.
 
 Separate offline or one-step component error from coupled online/prognostic performance. Evaluate drift, feedbacks, numerical stability, time-mean biases, and trade-offs across variables and timescales. An offline improvement does not establish a useful coupled correction.
 
@@ -50,11 +58,15 @@ For climate emulators, report the checkpoint and seed selection target as well a
 
 Define event thresholds and independence. Report sample size and dependence-aware uncertainty. Use metrics appropriate to rarity, location, timing, intensity, probability, and decision context. Do not infer changes in rare-event tails from bulk-error improvements alone.
 
+For rare spatial events, report positive cell outcomes, positive event days, total days, and the dependence-aware resampling unit. Prefer paired resampling of complete independent units such as monsoons or storms when cell-days share weather systems. Do not add pointwise binomial intervals that assume independent cell-days when the design contradicts that assumption. Define `resolved` before use. An interval containing zero indicates limited experimental precision, not equivalence. Report small paired score differences in raw score units with their interval, then add relevant diagnostics such as reliability, resolution, discrimination, or decision value.
+
 For impact or risk claims, write the full chain explicitly: climate forcing or predictor → hazard frequency and intensity distribution → location and exposure → vulnerability or loss function → expected or tail consequence. Separate changes in hazard from changes in exposure and vulnerability. Because nonlinear losses may be dominated by rare intense events, show which portion of the distribution controls the result and propagate uncertainty through the chain. A robust basin-wide mean response does not establish a robust landfall or damage response.
 
 ## 7. Physical interpretation
 
 Feature importance, attention, saliency, and latent correlations are diagnostic associations. A mechanism claim needs physical expectations plus budgets, perturbations, controlled experiments, process diagnostics, or convergent evidence. Consider alternative explanations and shared biases.
+
+Distinguish fitted-model reliance, retrained ablation value, subgroup association, and causal physical importance. Permutation and Shapley analyses describe the fitted predictor; removal followed by retraining tests whether correlated inputs can substitute; regime screens test conditional association. Name which question each result answers. Consolidate the full non-causal caveat in a synthesis paragraph instead of repeating it after every diagnostic, while retaining a short local qualifier where misunderstanding is immediate. Apply false-discovery control to exploratory screens across many variable groups, call them screens rather than mechanism experiments, and highlight only effects that satisfy the declared uncertainty or multiplicity criterion.
 
 For a theory or mechanism claim, state the prevailing explanation, the inconsistency it leaves unresolved, the proposed constraint and assumptions, and at least one discriminating test. Distinguish an organizing approximation from a universal law and state the regimes in which its balance or equilibrium assumption may fail.
 
@@ -63,6 +75,8 @@ For calibration and inverse problems, separate parameter uncertainty, observatio
 ## 8. Statistical uncertainty
 
 Respect temporal, spatial, storm, ensemble, and model dependence in confidence intervals and significance tests. Report effect sizes. Correct or qualify multiple comparisons. Distinguish variability across samples, seeds, initial conditions, models, and scenarios.
+
+Match the uncertainty unit to the effective independent unit of the claim. Do not translate `not resolved` into `the same`, `no effect`, or evidence of equivalence unless an equivalence design and margin support that conclusion.
 
 ## 9. Computational and operational claims
 
@@ -89,6 +103,8 @@ When using idealized models or testbeds, state what each level establishes and w
 For benchmarks, version datasets, splits, evaluation code, and baselines; separate validation from a protected test period and warn against repeated test tuning. For intercomparison protocols, map every scientific question to experiment tiers, control/perturbation design, requested variables and frequencies, and planned diagnostics.
 
 For foundation models, evaluate capabilities separately across dense, sparse, missing-variable, unseen-product, unseen-model, downstream-task, probabilistic, extreme-event, physical-consistency, and long-rollout settings. Case studies complement but do not replace systematic capability evaluation.
+
+Before interpreting a frozen foundation model's value for downstream extremes, record whether the actual checkpoint includes the target variable as an input or forecast head, its native grid relative to the target scale, retained vertical levels, forecast-valid times, ensemble construction, and relevant omitted diagnostics. Check whether evaluated reanalysis states may overlap the pretraining corpus. Separate whether the atmospheric forecast has value, whether it adds value beyond matched observations, whether the adapter can extract that value, and whether the backbone represents the processes needed for the extreme. A null adapter comparison does not answer all four questions. Treat explanations based on resolution, displacement, missing vertical structure, or absent variables as bounded hypotheses unless controlled experiments isolate them. Do not generalise a single-backbone result to all AI weather or foundation models; use a multi-backbone comparison for claims at that scope.
 
 Audit every pretraining product by type, fidelity, resolution, variables, period, parent model, initialization, and relationship to downstream targets and baselines. Detect duplicate or dependent states across analyses, reanalyses, forecasts, ensemble means, and climate simulations. Explain mixture sampling and loss weighting so a large nominal hour count is not mistaken for independent information.
 
