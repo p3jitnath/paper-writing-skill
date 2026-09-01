@@ -15,7 +15,7 @@ Help researchers turn an AI weather or climate result into a scientifically defe
 2. Read `references/scientific_rigor.md`, `references/corpus_style.md`, and the selected voice profile.
 3. Identify the task family, paper genre, and venue track from the routing tables below.
 4. Load only the section guide and checklist required for the current task.
-5. For any changed prose, run the style and scientific audits before presenting it.
+5. For any changed prose, run the style and scientific audits before presenting it. For LaTeX edits, also read `references/latex_manuscript_editing.md`.
 
 ## Route the Project
 
@@ -147,14 +147,15 @@ Run `references/scientific_rigor.md`, the relevant section checklist, and `red_t
 
 ### 5. Final introduction, abstract, and compression
 
-Rewrite the introduction from scratch after the evidence and interpretation stabilize. Promise only what the paper establishes. Then use `references/front_matter.md` to write the title, abstract, Key Points, Plain Language Summary, and availability statements required by the venue. End a standalone Conclusion, or the concluding Discussion when no Conclusion exists, with a concise and impactful sentence that states the strongest evidence-supported scientific or practical implication. Do not end on housekeeping, a generic future-work statement, a repeated limitation, or an unsupported flourish. Apply `author_profile/compression_patterns.md`; preserve caveats, definitions, units, and uncertainty while removing repetition.
+Rewrite the introduction from scratch after the evidence and interpretation stabilize. Promise only what the paper establishes. Then use `references/front_matter.md` to write the title, abstract, Key Points, Plain Language Summary, and availability statements required by the venue. End both the abstract and a standalone Conclusion, or the concluding Discussion when no Conclusion exists, with a concise, positive, evidence-supported implication. Make the two final sentences closely aligned in scientific message without copying them mechanically. Do not end on housekeeping, a generic future-work statement, a repeated limitation, or an unsupported flourish. Apply `author_profile/compression_patterns.md`; preserve caveats, definitions, units, and uncertainty while removing repetition.
 
 ## Scientific Language Rules
 
 - Use British English spelling, punctuation, and usage throughout manuscript prose, captions, headings, tables, and author-facing notes unless the user or target venue explicitly requires another variety. Preserve spelling inside quotations, proper names, code, commands, identifiers, bibliography metadata, and official titles.
 - Spell out the whole numbers zero through nine in running prose. Retain numerals when they are attached to units, belong to equations or statistical notation, identify figures, tables, sections, experiments, versions, or list items, appear in tables or figure labels, or when the venue or established house style requires numerals.
 - Use no semicolons or em dashes in drafted or revised manuscript prose. Recast the relationship with a conjunction, subordinate clause, separate sentence, colon, or parentheses as appropriate. Do not alter required punctuation inside code, equations, URLs, citation data, or quoted source text.
-- Do not leave short standalone sentences in manuscript prose. Connect a brief idea to the preceding sentence through an explicit logical relationship, or develop it with the evidence, qualification, or consequence needed to make it substantive. Preserve grammatical boundaries and avoid comma splices or overloaded run-on sentences.
+- Do not leave standalone sentences of four to eight words in manuscript prose. Connect each one grammatically and logically to the preceding or following sentence, or develop it with the evidence, qualification, or consequence needed to make it substantive. Preserve grammatical boundaries and avoid comma splices or overloaded run-on sentences.
+- Never begin a manuscript sentence with `Its`, `It's`, `Because`, or `But`. Recast the sentence so the subject and logical relationship are explicit. Preserve quoted text and official titles verbatim.
 - Use calibrated uncertainty. Distinguish `shows`, `supports`, `suggests`, `is consistent with`, and `cannot distinguish` by evidential strength.
 - Reserve causal language for causal identification or a physically supported mechanism. Use association language otherwise.
 - Report effect size and uncertainty, not significance alone.
@@ -194,6 +195,8 @@ Before delivery, treat the following as blocking gates:
 - Rendered cross-references: determine whether `\ref`, `\autoref`, or a customised counter already renders the object's semantic name. Never combine a literal prefix with a reference that renders the same prefix. Compile the manuscript and scan the rendered PDF text for repeated prefixes, including `Appendix Appendix`, `Figure Figure`, `Table Table`, `Section Section`, and `Equation Equation`. Treat every genuine repetition as a blocking error.
 - Result replacement: identify the canonical run, checkpoint, forecast length, baseline, aggregation, and source data before editing. Update the abstract, Methods, Results, tables, captions, appendices, and supplementary discussion as one unit, then search the complete source for superseded identifiers, durations, percentages, variable names, settings, and conclusions.
 - Figure–caption–text agreement: verify every visible number and category together with its caption and nearby discussion, including duration, rank, invocation count, aggregation, percentage, difference direction, and residual definition.
+- Quantitative support: every number or statistic used as paper evidence must be represented in an accompanying figure or table, and every figure and table must be cited in the main text. Cite each appendix from the main text; within an appendix, cite the section when item-by-item figure or table citations would be redundant.
+- Section depth: every section, subsection, and subsubsection must contain at least two substantive paragraphs. Each section must contain at least two subsections. Restructure or merge underdeveloped headings rather than leaving single-paragraph fragments.
 
 ## Figures
 
@@ -201,7 +204,7 @@ Read `figure_synthesis_guide.md` for conceptual figures and `figure_templates/ve
 
 Treat caption typography as a venue or project preference, not a universal rule. Default to regular-weight captions without bold descriptive lead-ins only when no user, project, template, or venue requirement specifies otherwise.
 
-For an appendix experiment, state enough detail to reproduce its interpretation: predictor aggregation, split-aware preprocessing, regime or subgroup definition, metric and reference, contrast direction, resampling unit and count, multiple-testing correction, effect size, uncertainty, and evidential limitation. Place an appendix figure immediately after its section heading when requested, but retain substantive methodological and interpretive prose after the figure so it does not dangle. Reset and format appendix counters only when required by the venue or project template, and verify the rendered cross-reference, such as `Figure A.1`.
+For an appendix experiment, state enough detail to reproduce its interpretation: predictor aggregation, split-aware preprocessing, regime or subgroup definition, metric and reference, contrast direction, resampling unit and count, multiple-testing correction, effect size, uncertainty, and evidential limitation. Make appendices concrete and scannable: replace walls of prose with tables, bullet points, or figures whenever those forms communicate the material faithfully. Place an appendix figure immediately after its section heading when requested, but retain substantive methodological and interpretive prose after the figure so it does not dangle. Reset and format appendix counters only when required by the venue or project template, and verify the rendered cross-reference, such as `Figure A.1`.
 
 ## Introduction
 
@@ -257,7 +260,7 @@ Resolve every comment explicitly. For accepted-in-principle, partly accepted, an
 
 ### Prepare a submission
 
-Verify venue requirements, availability statements, ethical or AI-use disclosures, figure resolution, references, bibliography URLs, supplement links, and all numbers shared across abstract, text, tables, and figures.
+Read `references/latex_manuscript_editing.md`. Verify venue requirements, availability statements, ethical or AI-use disclosures, figure resolution, references, bibliography URLs, supplement links, and all numbers shared across abstract, text, tables, and figures.
 
 Distinguish the main-paper limit from references and appendices. Inspect the rendered PDF and verify the page on which the main conclusion ends, the references begin, and each appendix begins; do not infer compliance from the total PDF page count. When a secondary figure cannot remain legible within the main-paper limit, move it to an appendix or supplement instead of shrinking its typography, while retaining the headline interpretation in the main text.
 
