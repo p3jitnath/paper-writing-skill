@@ -8,6 +8,8 @@ Use either a descriptive scientific claim/capability or `Named method: functiona
 
 ## Abstract
 
+The abstract must never exceed 250 words. Count the rendered prose rather than LaTeX commands or the `\begin{abstract}` and `\end{abstract}` delimiters, but include words displayed through command arguments. For a non-LaTeX abstract, count the complete abstract text. A lower venue limit takes precedence. Run a mechanical word count after every edit and before delivery; do not estimate by eye.
+
 Use this sequence, adapting it to genre:
 
 1. Scientific problem or community bottleneck.
