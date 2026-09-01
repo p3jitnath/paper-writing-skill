@@ -1,6 +1,6 @@
 # Scientific Rigor for AI Weather and Climate Papers
 
-## 1. Product identity and provenance
+## 1. Product identity and source lineage
 
 For every dataset, record the product name, version, provider, access date, variable definition, units, grid, vertical coordinate, time coverage, and processing. State whether it is an observation, analysis, reanalysis, simulation, forecast, or derived product. A reanalysis is not direct observation and can share model or assimilated-data dependencies with training inputs.
 

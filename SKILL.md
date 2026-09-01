@@ -12,7 +12,7 @@ Help researchers turn an AI weather or climate result into a scientifically defe
 ## Start Every Task
 
 1. Locate and read `project_context.md` in the paper directory. If it is absent or incomplete, read `brainstorming_guide.md` and build it before drafting claims.
-2. Read `references/scientific_rigor.md`, `references/corpus_style.md`, and the selected voice profile.
+2. Read `references/scientific_rigor.md`, `references/corpus_style.md`, `references/banned_words_phrases.txt`, and the selected voice profile.
 3. Identify the task family, paper genre, and venue track from the routing tables below.
 4. Load only the section guide and checklist required for the current task.
 5. For any changed prose, run the style and scientific audits before presenting it. For LaTeX edits, also read `references/latex_manuscript_editing.md`.
@@ -56,7 +56,7 @@ Do not force a resource, protocol, or review into a falsifiable-results template
 
 | Track | Default paper architecture | Emphasis |
 |---|---|---|
-| Earth-science journal | Use the selected genre; include required front matter and availability statements | Scientific question, provenance, mechanisms, uncertainty, reproducibility |
+| Earth-science journal | Use the selected genre; include required front matter and availability statements | Scientific question, source lineage, mechanisms, uncertainty, reproducibility |
 | ML conference | Usually method- or capability-led; adapt the selected genre to the template | Method novelty, controlled comparisons, ablations, reproducibility |
 | Interdisciplinary / workshop | Select the closer track and document deviations | Accessibility across both communities |
 
@@ -80,10 +80,10 @@ Before drafting, require the following in `project_context.md`:
 
 - Manuscript language and the source of the choice, defaulting to British English when neither the user nor venue specifies one.
 - Caption typography as a venue or project preference, including whether descriptive lead-ins use regular or bold weight.
-- Canonical result provenance: run, inference checkpoint or episode, forecast length, baseline, source data, aggregation method, and status of each reported result.
+- Canonical result lineage: run, inference checkpoint or episode, forecast length, baseline, source data, aggregation method, and status of each reported result.
 - Scientific question and falsifiable central claim.
 - Target variable, units, domain, resolution, timescale, initialisation, and lead time where applicable.
-- Provenance and role of every observation, reanalysis, simulation, forcing, and derived product.
+- Source and role of every observation, reanalysis, simulation, forcing, and derived product.
 - Exact train, validation, and test periods/regions plus leakage controls.
 - For event data, complete event-level splits and counts before frame, patch, or window generation.
 - Baselines and the claim each baseline tests.
@@ -165,6 +165,7 @@ Rewrite the introduction from scratch after the evidence and interpretation stab
 - Avoid “physically consistent” without a tested budget, constraint, scaling, or mechanism.
 - Avoid “operational” unless latency, reliability, inputs, update cycle, and deployment constraints are evaluated.
 - Keep units attached to quantities and use consistent sign conventions.
+- Do not use any entry in `references/banned_words_phrases.txt` in drafted or revised manuscript prose. Match entries case-insensitively as complete words or phrases, and run a final scan across all edited prose, captions, headings, tables, and author-facing notes. Preserve unavoidable occurrences inside quotations, official names, code, identifiers, and bibliography metadata, and report each retained exception.
 
 ## Style and Review Gates
 
