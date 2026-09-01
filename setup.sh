@@ -2,27 +2,69 @@
 #
 # paper-writing-skill setup
 #
-# Usage:
-#   git clone <repo-url>
-#   cd paper-writing-skill
-#   ./setup.sh
-#
-# What this does:
-#   Copies the skill into ${CODEX_HOME:-~/.codex}/skills/paper-writing/ so Codex
-#   can discover and invoke it when you mention $paper-writing.
-#
-# The skill works immediately with AI weather and climate writing rules as defaults.
-# To customize, edit the files in author_profile/ — see the README.
+# Usage: ./setup.sh [--harness codex|claude]
+# Default harness: codex
 #
 
-set -e
+set -euo pipefail
 
 SKILL_NAME="paper-writing"
-CODEX_ROOT="${CODEX_HOME:-$HOME/.codex}"
-SKILL_DIR="$CODEX_ROOT/skills/$SKILL_NAME"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+HARNESS="codex"
 
-echo "=== Paper Writing Skill Setup ==="
+usage() {
+    echo "Usage: $0 [--harness codex|claude]"
+    echo
+    echo "Install the $SKILL_NAME skill for Codex (default) or Claude Code."
+    echo "  codex   ${CODEX_HOME:-$HOME/.codex}/skills/$SKILL_NAME"
+    echo "  claude  ${CLAUDE_HOME:-$HOME/.claude}/skills/$SKILL_NAME"
+}
+
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        --harness)
+            [ "$#" -ge 2 ] || { echo "Missing value for --harness" >&2; usage >&2; exit 2; }
+            HARNESS="$2"
+            shift 2
+            ;;
+        --harness=*)
+            HARNESS="${1#*=}"
+            shift
+            ;;
+        -h|--help)
+            usage
+            exit 0
+            ;;
+        *)
+            echo "Unknown argument: $1" >&2
+            usage >&2
+            exit 2
+            ;;
+    esac
+done
+
+case "$HARNESS" in
+    codex)
+        HARNESS_NAME="Codex"
+        HARNESS_ROOT="${CODEX_HOME:-$HOME/.codex}"
+        INVOCATION="\$$SKILL_NAME"
+        ;;
+    claude)
+        HARNESS_NAME="Claude Code"
+        HARNESS_ROOT="${CLAUDE_HOME:-$HOME/.claude}"
+        INVOCATION="/$SKILL_NAME"
+        ;;
+    *)
+        echo "Unsupported harness: $HARNESS (expected codex or claude)" >&2
+        exit 2
+        ;;
+esac
+
+SKILL_DIR="$HARNESS_ROOT/skills/$SKILL_NAME"
+
+echo "=== Paper Writing Skill Installer ==="
+echo "Harness: $HARNESS_NAME"
+echo "Destination: $SKILL_DIR"
 echo ""
 
 # Check if skill already exists
@@ -41,30 +83,34 @@ fi
 mkdir -p "$SKILL_DIR"
 
 # Copy all skill files (everything except setup.sh, README, .git, examples)
-echo "Installing skill files..."
-for item in SKILL.md agents brainstorming_guide.md figure_synthesis_guide.md red_team_protocol.md loop_mode.md references author_profile writing_checklists section_rhetorical_moves figure_templates; do
+echo "Installing $SKILL_NAME for $HARNESS_NAME..."
+for item in SKILL.md brainstorming_guide.md figure_synthesis_guide.md red_team_protocol.md loop_mode.md references author_profile writing_checklists section_rhetorical_moves figure_templates; do
     if [ -e "$SCRIPT_DIR/$item" ]; then
         cp -r "$SCRIPT_DIR/$item" "$SKILL_DIR/$item"
     fi
 done
+
+if [ "$HARNESS" = "codex" ] && [ -e "$SCRIPT_DIR/agents" ]; then
+    cp -r "$SCRIPT_DIR/agents" "$SKILL_DIR/agents"
+fi
 
 # Copy examples separately (students need the templates)
 mkdir -p "$SKILL_DIR/examples"
 cp -r "$SCRIPT_DIR/examples/"* "$SKILL_DIR/examples/"
 
 echo ""
-echo "Installed to $SKILL_DIR"
-echo ""
-echo "The skill is ready for AI weather and climate paper writing."
-echo ""
-echo 'To use: open Codex in any project directory and mention $paper-writing'
+echo "Installation complete."
+echo "Skill: $SKILL_NAME"
+echo "Harness: $HARNESS_NAME"
+echo "Location: $SKILL_DIR"
+echo "Invoke: $INVOCATION"
 echo ""
 echo "To start a new paper:"
 echo "  1. cd into your paper's directory"
-echo "  2. Open Codex"
-echo '  3. Ask Codex to use $paper-writing'
-echo "  4. Codex will walk you through creating a project_context.md"
+echo "  2. Open $HARNESS_NAME"
+echo "  3. Invoke $INVOCATION"
+echo "  4. The skill will guide you through creating a project_context.md"
 echo ""
 echo "To customize the voice rules for your own style:"
 echo "  Edit files in $SKILL_DIR/author_profile/"
-echo "  See the README for what to change in each file."
+echo "  See README.md in the cloned repository for guidance."

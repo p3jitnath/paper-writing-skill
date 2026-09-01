@@ -1,6 +1,6 @@
 # AI Weather and Climate Paper-Writing Skill
 
-A Codex skill for planning, drafting, reviewing, and revising research papers at the intersection of artificial intelligence and weather or climate modeling.
+An Agent Skill for Codex and Claude Code that plans, drafts, reviews, and revises research papers at the intersection of artificial intelligence and weather or climate modeling.
 
 The skill covers weather forecasting and nowcasting, Earth-system emulation, climate downscaling and projections, data assimilation, extremes and hazards, hybrid physics–ML methods, and AI-assisted scientific understanding. It preserves rigorous scientific distinctions that generic writing assistants often blur: observations versus reanalyses, prediction versus mechanism, deterministic accuracy versus calibration, interpolation versus extrapolation, and computational speed versus operational readiness.
 
@@ -12,7 +12,15 @@ cd paper-writing-skill
 ./setup.sh
 ```
 
-The installer copies the skill to `${CODEX_HOME:-~/.codex}/skills/paper-writing/`. Start a new Codex session in a paper directory and ask Codex to use `$paper-writing`.
+Codex is the default harness. The installer copies the skill to `${CODEX_HOME:-$HOME/.codex}/skills/paper-writing/`, where it can be invoked as `$paper-writing`.
+
+To install for Claude Code instead:
+
+```bash
+./setup.sh --harness claude
+```
+
+The Claude installation uses `${CLAUDE_HOME:-$HOME/.claude}/skills/paper-writing/` and is invoked as `/paper-writing`.
 
 ## What It Does
 
