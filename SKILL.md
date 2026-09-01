@@ -268,7 +268,7 @@ For Tackling Climate Change with Machine Learning workshop manuscripts, read `re
 
 Finish every result-changing task with this consistency pass: identify the canonical experiment and source data; regenerate requested artefacts from reproducible scripts; compile the manuscript; inspect relevant pages at final size; search the complete source for stale values and terminology; and report unresolved warnings separately from passed checks.
 
-Preserve the manuscript's source-format convention. If the project uses one physical source line per prose paragraph and caption, join only prose and caption lines while preserving blank paragraph boundaries, equations, tables, comments, and environment structure. For whitespace-only reflow, verify that compiled page count and extracted word positions are unchanged. Do not alter a template preamble, style options, commented master file, or venue class unless the user explicitly asks for that target.
+Keep every LaTeX prose paragraph on one physical source line and every complete `\caption{...}` command on one physical source line. Join only prose and caption source lines while preserving blank paragraph boundaries, equations, tables, comments, commands, and environment structure. For whitespace-only reflow, verify that the compiled page count, rendered text, and word positions are unchanged. Do not alter a template preamble, style options, commented master file, or venue class unless the user explicitly asks for that target.
 
 ## Bibliography Requirements
 

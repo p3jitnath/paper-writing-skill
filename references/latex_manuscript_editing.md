@@ -4,6 +4,8 @@
 
 Identify whether the project uses a supplied venue template before editing. Treat the template distribution as immutable. In the manuscript source, edit only between `\begin{document}` and `\end{document}` unless a required package or definition must be added to the preamble. Make the smallest necessary preamble addition and record why it is required. Do not clean up, reorder, or modernise unrelated preamble code. Do not edit class, style, bibliography-style, or template files unless the user explicitly requests that exact file and the change is necessary.
 
+Keep each prose paragraph on exactly one physical source line and each complete `\caption{...}` command on exactly one physical source line. Preserve blank lines between paragraphs. Do not join equations, tables, comments, unrelated commands, or environment boundaries into prose lines. After a whitespace-only reflow, compile and verify that the page count, rendered text, word positions, floats, and references are unchanged.
+
 Apply `\small` to tables and the reference list unless the user or template explicitly requires another size. Prefer a local table scope and the template-supported bibliography hook so the change cannot leak into surrounding prose.
 
 ## Check section architecture and evidence links
