@@ -151,6 +151,7 @@ Rewrite the introduction from scratch after the evidence and interpretation stab
 
 ## Scientific Language Rules
 
+- Prefer first-person plural when describing the authors' work, choices, and findings, provided the venue and manuscript voice permit it. Use constructions such as `we evaluate`, `we find`, and `we show` instead of impersonal phrases that obscure agency. Use `In this study, we ...` or `In this study, ...` where it clearly introduces the paper's scope, approach, or contribution, but do not repeat either phrase mechanically.
 - Use British English spelling, punctuation, and usage throughout manuscript prose, captions, headings, tables, and author-facing notes unless the user or target venue explicitly requires another variety. Preserve spelling inside quotations, proper names, code, commands, identifiers, bibliography metadata, and official titles.
 - Spell out the whole numbers zero through nine in running prose. Retain numerals when they are attached to units, belong to equations or statistical notation, identify figures, tables, sections, experiments, versions, or list items, appear in tables or figure labels, or when the venue or established house style requires numerals.
 - Use no semicolons or em dashes in drafted or revised manuscript prose. Recast the relationship with a conjunction, subordinate clause, separate sentence, colon, or parentheses as appropriate. Do not alter required punctuation inside code, equations, URLs, citation data, or quoted source text.
