@@ -1,5 +1,7 @@
 # LaTeX manuscript editing
 
+Read only the sections needed for the requested LaTeX change. House layout preferences yield to explicit user, project, and venue requirements.
+
 ## Protect templates and source boundaries
 
 Identify whether the project uses a supplied venue template before editing. Treat the template distribution as immutable. In the manuscript source, edit only between `\begin{document}` and `\end{document}` unless a required package or definition must be added to the preamble. Make the smallest necessary preamble addition and record why it is required. Do not clean up, reorder, or modernise unrelated preamble code. Do not edit class, style, bibliography-style, or template files unless the user explicitly requests that exact file and the change is necessary.
@@ -10,7 +12,7 @@ Apply `\small` to tables and the reference list unless the user or template expl
 
 ## Check section architecture and evidence links
 
-Require at least two substantive paragraphs in every section, subsection, and subsubsection. Require at least two subsections within each section. Merge or restructure underdeveloped headings rather than padding them with empty prose.
+For manuscript-wide structural work, prefer at least two substantive paragraphs per headed unit and two subsections per section when the genre supports them. Preserve user- or venue-defined structures. Merge thin headings rather than adding empty prose, and do not restructure unrelated sections for a local edit.
 
 Every evidential number or statistic in the paper must appear in an accompanying figure or table. Cite every figure and table in the main text. Cite every appendix from the main text; within appendices, use section-level citations when citing every figure or table would add noise. Audit both directions: claim to evidence object and evidence object to prose callout.
 

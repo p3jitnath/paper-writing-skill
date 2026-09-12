@@ -1,6 +1,6 @@
 # Titles, Abstracts, Key Points, and Availability Statements
 
-Verify current venue requirements before drafting.
+Use supplied venue requirements when available. Verify current requirements for submission preparation or when the requested text depends on a venue rule; a standalone abstract edit can use the house limit below.
 
 ## Title
 
@@ -8,7 +8,7 @@ Use either a descriptive scientific claim/capability or `Named method: functiona
 
 ## Abstract
 
-The abstract must never exceed 250 words. Count the rendered prose rather than LaTeX commands or the `\begin{abstract}` and `\end{abstract}` delimiters, but include words displayed through command arguments. For a non-LaTeX abstract, count the complete abstract text. A lower venue limit takes precedence. Run a mechanical word count after every edit and before delivery; do not estimate by eye.
+Use a 250-word house limit unless the user or venue specifies another limit. Count the rendered prose rather than LaTeX commands or the `\begin{abstract}` and `\end{abstract}` delimiters, but include words displayed through command arguments. For a non-LaTeX abstract, count the complete abstract text. A lower venue limit takes precedence. Count the final edited abstract mechanically before delivery, and recount after any further change to it.
 
 Use this sequence, adapting it to genre:
 

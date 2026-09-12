@@ -29,7 +29,7 @@ Data figures should be produced from versioned scripts, not generative imagery.
 - Mechanism schematic that distinguishes established relationships from hypotheses.
 - Data provenance and split diagram showing train, validation, test, and verification products.
 
-Use `figure_templates/figure_spec_template.md`, `venue_styles.md`, and the relevant prompt or TikZ template. Generative tools may assist conceptual diagrams, but verify every label, arrow, physical relationship, and coordinate manually.
+Use `figure_templates/figure_spec_template.md`, `figure_templates/venue_styles.md`, and the relevant prompt or TikZ template. Generative tools may assist conceptual diagrams, but verify every label, arrow, physical relationship, and coordinate manually.
 
 ## Figure scale
 

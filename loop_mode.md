@@ -1,6 +1,6 @@
 # Resumable Paper Audit
 
-For long papers, maintain `notes/AUDIT_LEDGER.md` with one row per section.
+For a requested long or resumable audit, maintain `notes/AUDIT_LEDGER.md` with one row per section.
 
 | Section | Claim/evidence | Data/leakage | Verification | Physics/uncertainty | Reproducibility | Prose | Status |
 |---|---|---|---|---|---|---|---|
@@ -14,4 +14,4 @@ Process one section per iteration:
 5. Re-run affected checks and update the ledger with evidence.
 6. Rebuild and visually inspect figures or PDF pages changed by the revision.
 
-Stop when all in-scope rows are `CLEAN`, or when the same blocker survives two iterations and requires new evidence or user direction.
+Finish when all in-scope rows are resolved. Mark a row that needs unavailable evidence as blocked, record the exact dependency, and continue other rows. Pause the audit only when no independent in-scope work remains; do not retry an unchanged evidence gap on a fixed iteration schedule.

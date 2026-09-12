@@ -24,7 +24,7 @@ The Claude installation uses `${CLAUDE_HOME:-$HOME/.claude}/skills/paper-writing
 
 ## What It Does
 
-- Builds a `project_context.md` evidence contract before drafting.
+- Builds or extends a `project_context.md` evidence contract for manuscript planning; handles local edits directly.
 - Routes the paper by scientific task and publication culture.
 - Routes benchmark, flagship-result, model-development, calibration, intercomparison, review, theory/mechanism, foundation-model, and standard research papers separately.
 - Audits temporal and spatial leakage, product provenance, baseline fairness, physical consistency, uncertainty, and reproducibility.
@@ -48,6 +48,8 @@ The Claude installation uses `${CLAUDE_HOME:-$HOME/.claude}/skills/paper-writing
 
 ## Workflow
 
+Use the stages needed for the request. Short edits do not require the full workflow. Instruction routing follows OpenAI’s [Astra skills guidance](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) and [model guidance](https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra).
+
 1. **Scientific framing:** Define the claim, falsifier, task family, domain, scales, and evidence boundary.
 2. **Architecture:** Choose the paper genre and venue track, then build genre-appropriate evidence, figure, and section plans.
 3. **Data and methods:** Document product identity, splits, leakage controls, model, baselines, metrics, and reproducibility.
@@ -61,7 +63,12 @@ The skill expects named and versioned products, exact temporal/spatial splits, r
 ## Repository Layout
 
 ```text
-SKILL.md                       Core routing and workflow
+SKILL.md                       Task router and essential constraints
+references/project_planning.md Project families, evidence, and development
+references/prose_style.md      Scientific language and house conventions
+references/manuscript_review.md Integration and submission checks
+references/bibliography.md     Citation keys, URLs, and record validation
+references/reviewer_responses.md Reviewer response matrix
 brainstorming_guide.md         Project-context interview
 references/scientific_rigor.md Scientific validity gates
 references/paper_genres.md     Genre-specific architectures

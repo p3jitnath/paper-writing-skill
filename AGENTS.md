@@ -14,11 +14,11 @@ This repository contains a Codex skill for AI weather and climate paper writing.
 
 ## Editing rules
 
-- Keep `SKILL.md` under 500 lines and move detailed domain guidance into references.
+- Keep `SKILL.md` a concise task router; put substantial conditional workflows in linked references. Preserve scientific and house-style requirements while keeping their scope explicit.
 - Do not state current venue limits or policies from memory; direct the runtime agent to verify them.
 - Do not use completed numerical claims in illustrative examples unless they are sourced and labeled.
 - Keep observations, analyses, reanalyses, simulations, and forecasts distinct.
 - Use `author_papershortname_year` keys in every `.bib` file, with deterministic year-letter suffixes for collisions, and update all citation commands when keys change.
 - Require a nonempty, verified `url` field in every bibliography entry; a `doi` field alone is insufficient.
 - Preserve calibrated uncertainty language; do not reinstate a blanket ban on hedging or passive voice.
-- After changes, run the skill validator, `bash -n setup.sh`, an isolated installer test, reference checks, and `git diff --check`.
+- Validate changed skill frontmatter and reference paths, and run `git diff --check`. For installer or resource-layout changes, also run `bash -n setup.sh` and an isolated installer test. These local checks use temporary fixtures and can run without repeated approval. Rerun affected checks after fixes; broader testing needs a concrete reason.

@@ -1,6 +1,6 @@
 # Independent Scientific Red-Team Protocol
 
-Run after drafting or materially revising a section.
+Use for a requested scientific review or a material change to claims, evidence, or interpretation. Review the affected scientific dependencies; a wording-only correction does not need this protocol.
 
 ## Review order
 
@@ -23,4 +23,4 @@ Use `CRITICAL` for leakage, contradictory product identity, invalid comparisons,
 
 Review with a fresh-reader lens. If a separate reviewer is available and authorized, give it only the paper context, changed text, and checklists—not the author's self-assessment. Otherwise perform a clearly separated second pass and disclose that it was not independent.
 
-Repeat after substantive fixes until no critical or major finding remains. Never report a clean audit without the findings table and the checks actually performed.
+Recheck affected findings after substantive fixes. Continue until the in-scope issues are resolved or require unavailable evidence; record those issues and complete independent work. A clean audit requires evidence for the checks actually performed. Report findings with locations, and do not expand a finished review without a new concern.

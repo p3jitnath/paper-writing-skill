@@ -1,6 +1,6 @@
 # Structured Brainstorming for AI Weather and Climate Papers
 
-Use these phases to create `project_context.md`. Ask questions interactively; accept “unknown” and record it as an open item. Do not invent results, dataset properties, or venue requirements.
+Use the relevant questions to create or extend `project_context.md` for requested planning. Fill known answers from supplied material, skip inapplicable questions, and ask a small batch only when missing answers affect the next scientific decision. Record “unknown” as an open item and keep working on independent parts. Do not invent results, dataset properties, or venue requirements.
 
 ## Phase 1: Scientific problem
 
