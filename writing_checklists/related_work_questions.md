@@ -1,5 +1,7 @@
 # Related Work Checklist
 
+Select questions relevant to the requested change and research genre. Weather/climate items apply only to those claims; this is not a required full audit for a local edit.
+
 - Are works grouped by scientific or methodological question?
 - Are comparisons matched by task, data, scale, inputs, and verification setup?
 - Does the text distinguish physical, statistical, ML, and hybrid approaches without caricature?

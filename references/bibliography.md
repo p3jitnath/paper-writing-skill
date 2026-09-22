@@ -1,16 +1,28 @@
 # Bibliography requirements
 
-For every `.bib` file created or edited, use citation keys in the form `author_papershortname_year`, for example `nath_replacing_2026`.
+Match the audit to the request. A prose correction does not require a bibliography audit; a selected-record repair does not imply that all records have been verified. Preserve explicitly protected citation keys and document structure. State the scope actually checked.
 
-- Use the first author's family name, lowercase ASCII, followed by a short distinctive title slug and the four-digit year.
-- Join components with underscores; remove spaces, punctuation, diacritics, braces, and LaTeX commands.
-- Omit articles and generic stopwords from the title slug. Keep it short while remaining recognisable within the bibliography.
-- Resolve collisions deterministically with a lowercase letter after the year: `author_shortname_2026a`, `author_shortname_2026b`.
-- When renaming an existing key, update every corresponding `\cite`, `\citep`, `\citet`, `\autocite`, or other citation command across the paper. Never leave duplicate keys or broken references.
-- Detect duplicate publications represented by both preprint and journal records. Keep one canonical record, prefer the requested published version, and update every affected citation command.
-- Require a nonempty `url` field in every bibliography entry, including entries that predate the current edit. A `doi` field does not replace this requirement; when a DOI exists, prefer its canonical `https://doi.org/...` URL.
-- Put either a provider landing page or canonical `https://doi.org/...` URL in each required URL field. Do not put a full DOI URL in a `doi` field when the bibliography style adds the resolver prefix. Encode legacy DOI characters safely for BibTeX, LaTeX, and the embedded URI.
-- For works without a DOI, use the authoritative publisher, repository, dataset, software-release, standards-body, or institutional record URL. Do not invent a URL.
-- Before delivering a created or edited bibliography, scan every entry for a `url` field and test that each URL resolves. After compilation, inspect embedded PDF URI targets rather than printed bibliography text alone. Confirm that DOI links contain exactly one resolver prefix, contain no LaTeX escapes or literal angle brackets, and redirect through doi.org. Distinguish a publisher's automated-access denial after a valid DOI redirect from a broken DOI. Treat any missing or unverified URL as an unresolved bibliography error and report it explicitly; do not present the bibliography as complete.
+## Record identity and metadata
 
-Apply this audit when creating, editing, or reviewing a bibliography. A prose-only change does not require rewriting untouched bibliography records. If external verification is unavailable, retain known records, flag the unverified links, and complete independent edits.
+For a full integrity audit, enumerate active citations, missing keys, unused records, duplicate works, and malformed entries. Inspect complete author lists and their order and spellings, including records abbreviated with “et al.”, plus title, version, venue, year, and identifiers against authoritative publisher, repository, dataset, software-release, or institutional records. Syntax parsing alone does not verify metadata.
+
+When authoritative records disagree, inspect the underlying primary records and distinguish versions. Record an unresolved disagreement rather than guessing a merged name or date. Prefer the requested publication version; merge preprint and journal duplicates only when they represent the same cited work and the citation's meaning is preserved. Never invent missing fields.
+
+## Citation keys
+
+For created or edited `.bib` files, the house key form is `author_papershortname_year`, for example `nath_replacing_2026`, unless the user or project protects another scheme.
+
+- Use the first author's family name, lowercase ASCII, a short distinctive title slug, and the four-digit year, joined with underscores.
+- Remove spaces, punctuation, diacritics, braces, and LaTeX commands; omit generic title stopwords.
+- Resolve collisions deterministically with a lowercase year suffix, such as `author_shortname_2026a`.
+- For authorised key changes, update every affected citation command and check for duplicates and missing references. Do not broaden a prose-only task into key renaming.
+
+## URLs and rendered references
+
+Require a nonempty, verified `url` field in bibliography records being delivered as complete; a `doi` field alone is insufficient. For a full bibliography edit or audit, scan every entry. Use a canonical `https://doi.org/...` URL when appropriate, otherwise an authoritative landing page. Keep only the DOI identifier in a `doi` field when the renderer supplies its resolver prefix. Preserve characters correctly through BibTeX, LaTeX, and URI encoding.
+
+Test that links identify the intended work and version. Distinguish a valid DOI redirect followed by a publisher's automated-access denial from a broken DOI. Report unverified access or metadata precisely without inventing a URL or claiming a complete audit.
+
+When a document build is available and bibliography rendering is in scope, inspect generated reference text and actual embedded hyperlink targets. A macro, style, or rendering rule can override correct source metadata. Check for truncated author lists when full authors were requested, duplicated DOI resolver prefixes, literal LaTeX escapes or angle brackets in URLs, and links to the wrong version.
+
+Keep source-to-claim attribution clear when moving or grouping citations. If rendering or external verification is unavailable, retain supported records, state the specific unverified part, and finish independent repairs.

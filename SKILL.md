@@ -1,48 +1,49 @@
 ---
 name: paper-writing
-description: Plan, draft, revise, and scientifically review AI weather and climate research papers, including their evidence, verification, and submission materials.
+description: Plan, draft, revise, and scientifically review research papers, including arguments, evidence, mathematical methods, references, and submission materials, with conditional AI weather and climate guidance.
 ---
 
-# AI Weather and Climate Paper Writing
+# Scientific Paper Writing
 
-Develop scientifically defensible papers while keeping predictive skill, physical fidelity, scientific understanding, computational utility, and operational value distinct.
+Develop a clear scientific argument whose claims match its evidence. Adapt the narrative to theoretical, methodological, experimental, observational, or applied work; use the weather and climate extensions when relevant.
 
 ## Scope and initiative
 
-The user's instructions and established project or venue requirements take precedence over this skill's house defaults, subject to the host's safety and permission rules. Use the supplied manuscript, evidence, and conversation to infer routine choices and finish the requested deliverable. Ask only for missing information that changes a scientific claim or other consequential decision; continue independent work while it is unresolved.
+The user's instructions and current project or venue requirements take precedence over house defaults. Distinguish inspection, proofreading, rewriting, structural work, layout work, and scientific review. Findings-only requests leave files unchanged; protected wording stays protected. Complete authorised dependent repairs without expanding a local edit into a new research programme.
 
-A local edit needs the passage and enough surrounding context to preserve meaning. Do not require a project-context file, full audit, new experiments, or other skills for a wording correction. For manuscript development, use an existing `project_context.md`; create or extend it when the requested planning needs one. Record unknown evidence without inventing results or blocking unrelated writing.
+For files, identify the active source, working revision and existing changes, relevant bibliography and assets, output, and build route. For a pasted passage, its supplied context can be sufficient. Infer routine choices from current evidence; ask only when a missing fact changes a scientific claim or another consequential decision, continuing independent work.
+
+Reuse current audience, language variety, notation, review markup, figure profile, page constraints, and delivery settings. Retain the user's vocabulary exclusions and abstract limit of 2,000 characters including spaces. An existing context record helps substantial planning, but a local edit does not require one, a full audit, new experiments, or other skills. Later specific instructions supersede conflicting earlier preferences. Keep planned, executed, verified, incorporated, and conclusive work distinct.
 
 ## Read for the requested task
 
-Read only the relevant references or sections. Paths in backticks are relative to this skill directory; Markdown links resolve from the containing file.
+Read only relevant sections. Paths in backticks are relative to this skill directory; Markdown links resolve from the containing file.
 
 | Task | Guidance |
 |---|---|
-| Draft or polish prose | [Prose conventions](references/prose_style.md); preserve the manuscript's established voice. |
-| Plan or substantially reframe a paper | [Project planning](references/project_planning.md), with task families, genres, voice selection, and evidence requirements. |
-| Draft or revise a section's argument | The matching guide in `section_rhetorical_moves/` and checklist in `writing_checklists/`; use [scientific rigor](references/scientific_rigor.md) for claims needing review. |
-| Review evidence, verification, leakage, or physical claims | Relevant sections of [scientific rigor](references/scientific_rigor.md); [red-team protocol](red_team_protocol.md) for a critical review. |
+| Draft or polish prose | [Prose conventions](references/prose_style.md); preserve the manuscript's voice. |
+| Plan or substantially reframe a paper | [Project planning](references/project_planning.md) and [paper genres](references/paper_genres.md). |
+| Revise a section's argument | Relevant guide in `section_rhetorical_moves/` and matching checklist in `writing_checklists/`; apply domain-specific items only when relevant. |
+| Review claims, controls, aggregation, uncertainty, or proxies | [Scientific evidence](references/scientific_rigor.md); its weather/climate sections are conditional. Use [red-team protocol](red_team_protocol.md) for a requested critical review. |
+| Explain or revise mathematics, algorithms, or computational claims | [Mathematical methods](references/mathematical-methods.md). |
 | Write a title, abstract, or required front matter | [Front matter](references/front_matter.md). |
-| Edit LaTeX, document structure, or page fit | Relevant sections of [LaTeX editing](references/latex_manuscript_editing.md). |
-| Create or integrate figures | [Figure synthesis](figure_synthesis_guide.md); [integration checks](references/manuscript_review.md#figures) when placing figures in a manuscript. |
-| Edit or audit a bibliography | [Bibliography requirements](references/bibliography.md). |
+| Edit LaTeX or fit a page limit | [LaTeX editing](references/latex_manuscript_editing.md). |
+| Create or integrate figures | [Figure synthesis](figure_synthesis_guide.md); [integration checks](references/manuscript_review.md#figures) when placing them in a manuscript. |
+| Edit or audit a bibliography | [Bibliography requirements](references/bibliography.md), to the requested depth. |
 | Respond to reviewers | [Reviewer responses](references/reviewer_responses.md). |
-| Review a full manuscript, replace results, or prepare submission | [Manuscript review](references/manuscript_review.md); [TCCML guidance](references/tccml-neurips.md) only for that workshop. |
-| Resume a long audit | [Audit ledger](loop_mode.md), when tracking sections across sessions is useful. |
+| Review a manuscript, accept revisions, replace results, or prepare submission | [Manuscript review](references/manuscript_review.md); [TCCML guidance](references/tccml-neurips.md) only for that workshop. |
+| Resume a long audit | [Audit ledger](loop_mode.md), when tracking work across sessions is useful. |
 
 ## Scientific invariants
 
-- Preserve values, units, notation, citations, source lineage, and uncertainty. Flag factual conflicts with their locations instead of silently choosing an unsupported value.
-- Distinguish observations, analyses, reanalyses, simulations, and forecasts. Name the product and its role.
-- Tie claims to the available evidence and name the reference behind skill scores. Account for dependence, leakage, baseline fairness, and aggregation when those affect the claim.
-- Keep offline accuracy separate from prognostic or coupled stability, and association separate from mechanism. State the tested boundary for transfer, climate, speed, and operational claims.
-- When replacing a result, update its dependent text, tables, figures, captions, and conclusions together. Use reproducible source artefacts and inspect the affected rendered output.
+- Preserve values, units, definitions, notation, citations, source lineage, and uncertainty. Locate conflicts and resolve them from evidence or flag the unresolved choice.
+- Keep the target quantity, comparator, population, conditions, and aggregation recoverable for result-bearing statements. Distinguish system comparisons from component tests and structural guarantees from measured outcomes.
+- Make each section answer a question and prepare what follows. Emphasise the strongest supported finding through ordering and precise explanation, retaining important adverse results and trade-offs.
+- Keep scientific claims within tested or proved conditions. In weather/climate work, distinguish observations, analyses, reanalyses, simulations, and forecasts, and offline accuracy from coupled or operational performance.
+- When replacing a result, update its dependent text, tables, figures, captions, and conclusions together. When shortening, preserve the evidence and qualifications needed by the surviving claims.
 
 ## Verify and deliver
 
-Match verification to the change: check a prose edit against its source; count an edited abstract mechanically; compile and inspect affected pages for layout or reference changes; audit scientific evidence for result changes. Complete applicable project checks, then repeat or broaden them only for failures, further edits, or a concrete unresolved concern. If tooling or evidence is missing, report exactly what remains unverified and finish the rest.
+Match verification to the change: compare a prose edit with its source and read it continuously with its neighbours; check an edited formula's equivalence; mechanically verify that an edited abstract has at most 2,000 characters including spaces; compile and inspect affected pages for rendering changes; inspect evidence for changed scientific claims. Read the intended accepted version of tracked edits separately from their markup. A successful build does not establish scientific correctness or coherent prose.
 
-Return the requested text or files. For a small edit with no unresolved issue, the revision alone is enough. For substantial work, briefly report material changes, evidence gaps, and checks actually performed. Use a findings table for an audit or a response matrix for reviewer comments. Do not claim submission readiness or a clean scientific audit from a source-only check.
-
-If a skill instruction causes a pause or conflicts with the requested task, identify the file and instruction and explain the conflict. Reuse authorization already given for installation, commits, or publication; this skill adds no separate approval step.
+After applicable checks pass, repeat or broaden them only after another edit, a failure, or a concrete concern. Missing tooling or evidence limits only the checks that require it. Return the requested text, findings, or files, with a brief account of material changes and checks actually performed for substantial work. Distinguish source inspection, compilation, visual review, numerical verification, experiment execution, local saving, and publication; an earlier success does not verify current inputs.

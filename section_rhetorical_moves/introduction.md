@@ -1,5 +1,7 @@
 # Writing the Introduction
 
+Use only the moves relevant to the requested argument and genre; the weather/climate details below are conditional. These are diagnostics, not mandatory headings or sentence templates.
+
 Write Introduction 0 before finalizing experiments, then rewrite the final introduction after Results and Discussion stabilize.
 
 ## Move 1: Scientific stakes

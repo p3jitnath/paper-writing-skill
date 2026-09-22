@@ -1,4 +1,38 @@
-# Scientific Rigor for AI Weather and Climate Papers
+# Scientific evidence and comparisons
+
+Use only the sections relevant to the claim being written or reviewed. The first sections apply across disciplines; the numbered weather/climate sections apply only to those research questions. These checks identify evidential limits, not permission to run unrequested experiments.
+
+## Claims, controls, and output objects
+
+For result-bearing statements, keep the estimand, comparator, population, conditions, aggregation, uncertainty, and source recoverable. A small edit needs only enough context to preserve those meanings. Distinguish a whole-system comparison from a component test: shared inputs alone do not hold objectives, capacity, training budget, or inference fixed. Describe what changed and what the design can isolate.
+
+Connect the output object to the scientific objective. A point estimate, interval, distribution, ranking, representation, or decision rule is useful according to the information the task needs. A richer output is not inherently better; under suitable objectives a point estimate is sufficient. Means and medians answer different questions.
+
+Explain design choices at their actual support level: requirement, engineering decision, precedent, resource constraint, or sensitivity evidence. Keep planned, executed, numerically verified, incorporated, and conclusive experiments distinct. A completed study can leave a concern unresolved.
+
+For guarantees, algebraic changes, and computational benefits, read [mathematical methods](mathematical-methods.md). Keep theoretical properties separate from empirical performance.
+
+## Aggregation, sampling, and uncertainty
+
+State aggregation order when it changes the estimand: an average of ratios differs from a ratio of averages, and equal group weighting differs from pooling observations. Identify the experimental unit and dependence structure. Separate file or run identifiers do not prove independence. Distinguish resampling observations, groups, and independently fitted models.
+
+Differentiate outcome variability, a predictive distribution, parameter/model uncertainty, repeated-fit variation, and uncertainty in a performance difference. Name interval type, level, and construction when relevant. Aggregate coverage does not establish conditional calibration, and spread alone does not establish accurate uncertainty. Proper scores and coverage assess different properties.
+
+Lead with the supported effect and pattern, then state uncertainty proportionately. Favourable point estimates do not imply every difference is resolved. An interval containing zero leaves direction unresolved under that analysis; equivalence and non-inferiority require suitable designs, margins, and assumptions. Preserve material adverse results rather than making a universal advantage through omission.
+
+Before treating threshold statements as contradictory, distinguish a pooled crossing, subgroup crossings, and the setting at which all subgroup estimates have a given sign. Tested settings do not identify an untested crossing or imply that intervals exclude the null.
+
+## Proxies and displayed examples
+
+Define a difficulty, similarity, uncertainty, or mechanism proxy operationally. Examine leakage, confounding, normalisation, and the population used to build it. For neighbour-based diagnostics, identify eligible references and the similarity representation; examine sensitivity when it matters to the claim. Association with a proxy does not establish direct measurement of the underlying property or calibration of uncertainty.
+
+For grouped diagnostics, state binning, weights, units, and summary statistic. Inspect influential observations when a sharp change in a group mean drives the conclusion. Use consistent conventions before comparing absolute quantities and retain relevant comparator patterns.
+
+Distinguish an illustrated subset from the population behind its accompanying score. A specimen, time window, region, or selected sample can explain behaviour but cannot establish aggregate performance. Preserve prescribed examples and scales during presentation changes.
+
+## Domain extensions: AI weather and climate
+
+Apply the following checks only when their products, processes, or claims are present. Preserve the distinctions between predictive skill, physical fidelity, scientific understanding, computational utility, and operational value.
 
 ## 1. Product identity and source lineage
 

@@ -1,8 +1,8 @@
-# AI Weather and Climate Paper-Writing Skill
+# Scientific Paper-Writing Skill
 
-An Agent Skill for Codex and Claude Code that plans, drafts, reviews, and revises research papers at the intersection of artificial intelligence and weather or climate modeling.
+An Agent Skill for Codex and Claude Code that plans, drafts, reviews, and revises scientific papers, with conditional specialist resources for artificial intelligence and weather or climate modelling.
 
-The skill covers weather forecasting and nowcasting, Earth-system emulation, climate downscaling and projections, data assimilation, extremes and hazards, hybrid physics–ML methods, and AI-assisted scientific understanding. It preserves rigorous scientific distinctions that generic writing assistants often blur: observations versus reanalyses, prediction versus mechanism, deterministic accuracy versus calibration, interpolation versus extrapolation, and computational speed versus operational readiness.
+The general guidance covers connected arguments, comparison scope, mathematical definitions, uncertainty, references, and manuscript integration. Its specialist resources cover weather forecasting and nowcasting, Earth-system emulation, climate downscaling and projections, data assimilation, extremes and hazards, hybrid physics–ML methods, and AI-assisted scientific understanding. It preserves rigorous scientific distinctions that generic writing assistants often blur: observations versus reanalyses, prediction versus mechanism, deterministic accuracy versus calibration, interpolation versus extrapolation, and computational speed versus operational readiness.
 
 ## Install
 
@@ -26,11 +26,12 @@ The Claude installation uses `${CLAUDE_HOME:-$HOME/.claude}/skills/paper-writing
 
 - Builds or extends a `project_context.md` evidence contract for manuscript planning; handles local edits directly.
 - Routes the paper by scientific task and publication culture.
+- Retains the user's words-to-avoid list and limits abstracts to 2,000 characters including spaces, verified mechanically.
 - Routes benchmark, flagship-result, model-development, calibration, intercomparison, review, theory/mechanism, foundation-model, and standard research papers separately.
 - Audits temporal and spatial leakage, product provenance, baseline fairness, physical consistency, uncertainty, and reproducibility.
 - Standardizes BibTeX keys as `author_papershortname_year` (for example, `nath_replacing_2026`).
 - Supports Earth-science-journal and ML-conference structures.
-- Uses one of three scientific prose profiles:
+- Offers three optional prose profiles for relevant weather/climate work:
   - Peter Düben for Earth-system modeling and operational AI forecasting.
   - Dennis Hartmann for climate dynamics, feedbacks, and physical interpretation.
   - Kerry Emanuel for tropical convection and tropical cyclones.
@@ -70,7 +71,8 @@ references/manuscript_review.md Integration and submission checks
 references/bibliography.md     Citation keys, URLs, and record validation
 references/reviewer_responses.md Reviewer response matrix
 brainstorming_guide.md         Project-context interview
-references/scientific_rigor.md Scientific validity gates
+references/scientific_rigor.md General evidence checks and conditional weather/climate detail
+references/mathematical-methods.md Definitions, equivalence, and computational claims
 references/paper_genres.md     Genre-specific architectures
 references/corpus_style.md     Twenty-paper calibrated house style
 references/front_matter.md     Abstract, Key Points, PLS, availability

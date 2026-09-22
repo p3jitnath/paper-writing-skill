@@ -1,5 +1,7 @@
 # Introduction Checklist
 
+Select questions relevant to the requested change and research genre. Weather/climate items apply only to those claims; this is not a required full audit for a local edit.
+
 - Does the opening identify a specific Earth-system problem, scale, and consequence?
 - Is the gap scientific, methodological, computational, or operational rather than generic “low accuracy”?
 - Does the core insight precede the model name?

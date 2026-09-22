@@ -1,5 +1,7 @@
 # Discussion Checklist
 
+Select questions relevant to the requested change and research genre. Weather/climate items apply only to those claims; this is not a required full audit for a local edit.
+
 - Does the section synthesize rather than repeat results?
 - Does it build on local interpretations already given with the results rather than deferring all explanation?
 - Is each proposed mechanism supported and are alternatives considered?

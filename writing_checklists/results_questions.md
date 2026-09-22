@@ -1,6 +1,8 @@
 # Results and Verification Checklist
 
-- Does each subsection open with a question rather than a metric or figure number?
+Select questions relevant to the requested change and research genre. Weather/climate items apply only to those claims; this is not a required full audit for a local edit.
+
+- Is each subsection's scientific question or purpose clear early, with evidence and interpretation connected?
 - Is the primary comparison against a scientifically meaningful reference?
 - Are effect size and uncertainty reported together?
 - Is skill shown across relevant lead times, regions, levels, seasons, regimes, intensities, and events?
@@ -28,4 +30,4 @@
 - Does targeted end-to-end fine-tuning report degradation outside the optimized region, variable, location set, and lead time?
 - For risk results, are hazard, exposure, vulnerability/loss, event dependence, and tail sampling separated?
 - For mechanism results, does the evidence discriminate the proposed constraint from plausible alternatives and identify its failure regime?
-- In the rendered paper, does every figure have at least one substantive interpretive paragraph after it before the next heading or document end?
+- In the rendered paper, are figures, captions, callouts, and interpretations associated clearly in the intended reading order?

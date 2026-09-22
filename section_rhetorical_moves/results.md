@@ -1,8 +1,10 @@
 # Writing Results and Verification
 
+Use only the moves relevant to the requested argument and genre; the weather/climate details below are conditional. These are diagnostics, not mandatory headings or sentence templates.
+
 ## Move 1: Anchor the question
 
-Open each subsection with the scientific question and the evidence that answers it.
+Make the scientific question and the evidence that answers it recoverable early. Choose an opening that serves the current narrative rather than requiring a fixed first-sentence pattern.
 
 ## Move 2: Establish the reference comparison
 
@@ -38,4 +40,4 @@ State exactly what the evidence establishes and what it does not. Do not use agg
 
 Interpret the result locally: explain the physical or methodological reason supported by this diagnostic and name important exceptions. Leave only cross-result synthesis and competing explanations for Discussion.
 
-Position each figure so that its local interpretation follows it in the rendered paper. Never end a subsection, section, or paper with a dangling figure; move the float source or use venue-permitted placement controls until at least one substantive interpretive paragraph appears after it.
+Place each figure near its callout and interpretation, then inspect the rendered reading order and caption association. Use placement suited to the venue and document rather than requiring a fixed paragraph-after-float pattern.

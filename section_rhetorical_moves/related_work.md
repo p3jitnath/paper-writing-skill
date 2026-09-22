@@ -1,5 +1,7 @@
 # Writing Related Work
 
+Use only the moves relevant to the requested argument and genre; the weather/climate details below are conditional. These are diagnostics, not mandatory headings or sentence templates.
+
 Organize by scientific or methodological question, not a chronology of model names.
 
 If the paper makes a historical progress claim, use a consistent skill or capability measure and identify changes in observations, assimilation, models, ensembles, computing, verification, and operations that complicate attribution. Do not credit cumulative system progress to the latest forecast architecture alone.

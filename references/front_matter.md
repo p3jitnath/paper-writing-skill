@@ -1,6 +1,6 @@
 # Titles, Abstracts, Key Points, and Availability Statements
 
-Use supplied venue requirements when available. Verify current requirements for submission preparation or when the requested text depends on a venue rule; a standalone abstract edit can use the house limit below.
+Use supplied venue requirements when available. Verify current requirements for submission preparation or when the requested text depends on a venue rule. Preserve established language, structure, and word constraints rather than inheriting settings from another paper.
 
 ## Title
 
@@ -8,7 +8,9 @@ Use either a descriptive scientific claim/capability or `Named method: functiona
 
 ## Abstract
 
-Use a 250-word house limit unless the user or venue specifies another limit. Count the rendered prose rather than LaTeX commands or the `\begin{abstract}` and `\end{abstract}` delimiters, but include words displayed through command arguments. For a non-LaTeX abstract, count the complete abstract text. A lower venue limit takes precedence. Count the final edited abstract mechanically before delivery, and recount after any further change to it.
+Keep abstracts at or below **2,000 characters, including spaces**, as the user's established preference. Also satisfy any stricter current venue constraint; a later explicit user instruction can change this preference. Do not substitute a word count for the character check or assume that this alone establishes venue compliance.
+
+Count the final reader-facing abstract mechanically, including punctuation and displayed mathematical text. Exclude the abstract heading, LaTeX command syntax, and environment delimiters, but include text displayed through command arguments. For a plain-text paragraph, normalise source line wraps and repeated whitespace to single spaces, then use `len(" ".join(abstract.split()))`. Check the intended accepted reading when markup is present and recount after every further abstract edit. Use the venue's counting convention too when it differs.
 
 Use this sequence, adapting it to genre:
 
@@ -19,7 +21,7 @@ Use this sequence, adapting it to genre:
 5. Principal quantitative or mechanistic results.
 6. Important limitation and bounded implication when material.
 
-Do not turn the abstract into an architecture inventory. Give enough experimental coordinates to interpret headline numbers.
+Do not turn the abstract into an architecture inventory. Give enough experimental coordinates to interpret headline numbers, or state the assumptions and scope of a theoretical result. Keep the conclusion aligned with the paper. A negative or unresolved finding can be the main contribution; do not force a positive ending.
 
 ## AGU/JAMES Key Points
 
@@ -27,7 +29,7 @@ Write three standalone, result-bearing bullets. Each should communicate one cont
 
 ## Plain Language Summary
 
-Explain the physical problem, why current models struggle, what was done, what was learned, and why it matters. Avoid equations, unexplained model names, specialist acronyms, and inflated societal claims. Preserve uncertainty and limitations.
+Explain the scientific question, the gap in current understanding or methods, what was done, what was learned, and why it matters. Avoid equations, unexplained model names, specialist acronyms, and inflated societal claims. Preserve uncertainty and limitations.
 
 ## Availability
 

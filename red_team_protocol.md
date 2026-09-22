@@ -1,16 +1,16 @@
 # Independent Scientific Red-Team Protocol
 
-Use for a requested scientific review or a material change to claims, evidence, or interpretation. Review the affected scientific dependencies; a wording-only correction does not need this protocol.
+Use for a requested scientific review or a material change to claims, evidence, or interpretation. Review affected dependencies; a wording-only correction does not need this protocol. Select only applicable dimensions below, using the general checks in [scientific evidence](references/scientific_rigor.md) and [mathematical methods](references/mathematical-methods.md) before any relevant weather/climate extensions.
 
 ## Review order
 
 1. **Claim validity:** Identify the strongest sentence and the exact evidence required to support it.
 2. **Data integrity:** Verify product identities, versions, roles, units, periods, grids, and split boundaries.
 3. **Leakage and fairness:** Inspect preprocessing, dependent samples, shared products, and baseline matching.
-4. **Verification:** Check reference forecasts, metrics, aggregation, uncertainty, disaggregation, extremes, and end-to-end cascade behavior.
-5. **Physical reasoning:** Separate association from mechanism and test alternative explanations.
+4. **Verification:** Check definitions, comparison populations, metrics, aggregation, and uncertainty. Forecast, extreme-event, and cascade checks apply when those claims are present.
+5. **Reasoning:** Separate structural guarantees from measured outcomes and association from mechanism. Inspect assumptions, numerical forms, computational-count conventions, and relevant alternative explanations.
 6. **Scope:** Check transfer, extrapolation, operational, and societal claims against evaluated conditions.
-   Verify that all conditioning inputs exist at issuance time and that image-quality metrics are not standing in for meteorological or probabilistic skill.
+   For forecast claims, verify that conditioning inputs exist at issuance time and image-quality metrics are not standing in for meteorological or probabilistic skill.
 7. **Reproducibility:** Check code, data, weights, environment, compute, postprocessing, and plotting artifacts.
 8. **Communication:** Apply the selected voice, accessibility, terminology, and mechanical prose checks.
 

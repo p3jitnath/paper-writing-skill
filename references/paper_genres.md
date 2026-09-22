@@ -1,6 +1,8 @@
-# Paper Genres in AI Weather and Climate Research
+# Research paper genres
 
-Genre controls the argument and section sequence; venue controls formatting and compression.
+Genre controls the argument; the current venue controls formatting. These progressions are diagnostic options, not mandatory headings. Theory can move from question and assumptions to construction, theorem, and implication; empirical work can move from hypothesis and design to observations and interpretation; methods work can connect problem, representation, algorithm, and controlled evaluation. Applied work may need its operational or physical setting first.
+
+The specialised weather/climate examples below apply when those objects and claims are present. Use a one-line section purpose during substantial structural work to identify missing links or duplicated jobs, not for a local grammar correction.
 
 ## Theory or mechanism paper
 

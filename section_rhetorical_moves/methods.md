@@ -1,5 +1,7 @@
 # Writing Data and Methods
 
+Use only the moves relevant to the requested argument and genre; the weather/climate details below are conditional. These are diagnostics, not mandatory headings or sentence templates.
+
 ## Move 1: Scientific task and coordinates
 
 Define variables, units, domain, grid, vertical coordinate, period, initialization, lead time, and intended inference.
@@ -16,7 +18,7 @@ Give exact temporal, spatial, event, ensemble, and model partitions. State where
 
 ## Move 4: Model or analytical method
 
-Explain each component by the scientific or computational constraint it addresses. Provide equations, architecture, losses, physical constraints, and training procedure at reproducible detail.
+Explain each component by the scientific or computational constraint it addresses. Distinguish mathematical requirements, engineering choices, precedents, and sensitivity evidence. Connect each object to its operation and consequence, preserving assumptions, stabilisers, and the distinction between a population objective, estimator, and numerical approximation. Use `references/mathematical-methods.md` for formula and computational-claim checks. Provide equations, architecture, losses, physical constraints, and training procedure at reproducible detail.
 
 ## Move 5: Baselines and verification
 

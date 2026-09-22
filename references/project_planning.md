@@ -1,10 +1,10 @@
 # Project planning and evidence
 
-Use for new manuscript planning, a new section that lacks scientific context, or a substantial reframing. Select the stages needed for the request. Paths in backticks are relative to the skill directory.
+Use for new manuscript planning, a new section that lacks scientific context, or substantial reframing. Select only the stages needed. Start from the current discipline, genre, question, evidence, and audience. The weather/climate task families, voice overlays, and verification examples below apply only when relevant; other disciplines need their own objects and evidence. Paths in backticks are relative to the skill directory.
 
 ## Route the Project
 
-### Task family
+### Task family for weather and climate work
 
 | Family | Primary question | Required evidence emphasis |
 |---|---|---|
@@ -17,7 +17,7 @@ Use for new manuscript planning, a new section that lacks scientific context, or
 | Scientific understanding | What physical relationship does AI reveal? | Mechanistic diagnostics, robustness, alternative explanations |
 | Impacts / risk | How does a physical change alter consequential outcomes? | Event tails, exposure, vulnerability/loss model, dependence, uncertainty propagation |
 
-If a paper spans families, select one primary family and list secondary families in `project_context.md`. The primary family controls the narrative and minimum evidence; secondary families add relevant checks but do not create extra headline contributions automatically.
+If a paper spans relevant families, identify the primary one and retain useful secondary distinctions in an existing context record when needed. The primary family controls the narrative and minimum evidence; secondary families add relevant checks but do not create extra headline contributions automatically.
 
 ### Paper genre
 
@@ -49,7 +49,7 @@ Use the target venue's current author instructions for length, required statemen
 
 ## Select a Voice
 
-Preserve the existing manuscript voice for local revisions. When a new draft needs a voice, choose one primary profile unless the user requests a blend:
+Preserve the existing manuscript voice. For a new weather/climate draft, the following optional profiles can guide exposition when appropriate or requested. A paper in another field does not need a named author overlay:
 
 | Profile | Default use | File |
 |---|---|---|
@@ -61,12 +61,13 @@ An explicit `voice_profile` in `project_context.md` overrides automatic routing.
 
 ## Build the Evidence Contract
 
-For a new manuscript or a requested evidence plan, record the relevant items below in `project_context.md`, using supplied evidence first. Mark unknowns explicitly and continue work that does not depend on them. An existing passage does not need a new context file to be edited:
+For substantial planning, retain useful context in an existing project record, creating one only when its benefit fits the task. Select relevant items below, using supplied evidence first; none requires inventing a new record for a local edit. Record unknowns and continue work that does not depend on them:
 
 - Manuscript language and the source of the choice, defaulting to British English when neither the user nor venue specifies one.
 - Caption typography as a venue or project preference, including whether descriptive lead-ins use regular or bold weight.
 - Canonical result lineage: run, inference checkpoint or episode, forecast length, baseline, source data, aggregation method, and status of each reported result.
-- Scientific question and falsifiable central claim.
+- Scientific question, contribution, and success criterion suited to the genre, including a falsifier when appropriate.
+- Active document, build route, audience, notation, protected text, review markup, page/word constraints, and delivery destination when needed.
 - Target variable, units, domain, resolution, timescale, initialisation, and lead time where applicable.
 - Source and role of every observation, reanalysis, simulation, forcing, and derived product.
 - Exact train, validation, and test periods/regions plus leakage controls.
@@ -87,11 +88,11 @@ Treat a missing evidence item as an open question, not prose to fill with confid
 
 ### 1. Scientific framing
 
-Read `brainstorming_guide.md`. Produce `project_context.md` from `examples/project_context.md`. State what the paper shows, which scientific or operational problem it resolves, and what evidence could falsify the claim.
+Use `brainstorming_guide.md` and `examples/project_context.md` when a domain-specific planning interview or context record helps. State the scientific question, what the paper establishes, and how its claim is supported or could be challenged.
 
 ### 2. Paper architecture
 
-Create a section plan with one claim per section, a claim-to-evidence map, figure plan, and word/page budget. Draft a disposable Introduction 0 to expose framing gaps. For every result figure, record the question, reference, metric, aggregation, uncertainty, and intended takeaway.
+For a substantial outline, give each section a question or job and show how it prepares the next. Map claims to evidence and figures where helpful, using the current word/page budget. A provisional introduction can expose framing gaps. Keep definitions, transitions, and qualifications that make the argument understandable; do not add administrative artefacts to a narrow task.
 
 ### 3. Data, methods, and results
 
@@ -132,4 +133,4 @@ Use `references/scientific_rigor.md` and the relevant section checklist for clai
 
 ### 5. Final introduction, abstract, and compression
 
-Reconcile the introduction with the final evidence and interpretation; rewrite it when its framing no longer fits. Promise only what the paper establishes. Then use `references/front_matter.md` to write the title, abstract, Key Points, Plain Language Summary, and availability statements required by the venue. Use the 250-word house limit unless the user or venue specifies another limit; apply a lower venue limit when present. End both the abstract and a standalone Conclusion, or the concluding Discussion when no Conclusion exists, with a concise, positive, evidence-supported implication. Make the two final sentences closely aligned in scientific message without copying them mechanically. Do not end on housekeeping, a generic future-work statement, a repeated limitation, or an unsupported flourish. Apply `author_profile/compression_patterns.md`; preserve caveats, definitions, units, and uncertainty while removing repetition.
+Reconcile the introduction with the final evidence and interpretation; rewrite it when its framing no longer fits. Promise only what the paper establishes. Then use `references/front_matter.md` to write the title, abstract, Key Points, Plain Language Summary, and availability statements required by the venue. Apply the 2,000-character abstract limit, including spaces, and any stricter venue constraint as described in `references/front_matter.md`. Finish with the strongest supported implication or boundary, including a negative or unresolved finding when that is the result. Make the two final sentences closely aligned in scientific message without copying them mechanically. Do not end on housekeeping, a generic future-work statement, a repeated limitation, or an unsupported flourish. Apply `author_profile/compression_patterns.md`; preserve caveats, definitions, units, and uncertainty while removing repetition.

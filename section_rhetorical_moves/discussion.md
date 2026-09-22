@@ -1,5 +1,7 @@
 # Writing the Discussion
 
+Use only the moves relevant to the requested argument and genre; the weather/climate details below are conditional. These are diagnostics, not mandatory headings or sentence templates.
+
 ## Move 1: Synthesize the answer
 
 Restate the scientific answer without repeating the Results section numerically.

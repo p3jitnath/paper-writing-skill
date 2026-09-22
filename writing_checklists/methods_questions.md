@@ -1,5 +1,7 @@
 # Data and Methods Checklist
 
+Select questions relevant to the requested change and research genre. Weather/climate items apply only to those claims; this is not a required full audit for a local edit.
+
 - Are variables, units, grids, levels, periods, initialization, and lead times explicit?
 - Is every product named, versioned, classified, and assigned a role?
 - For observations, are processing level, calibration/geolocation, retrieval or gridding, time window, latency, metadata, quality control, and missingness explicit?
@@ -9,6 +11,9 @@
 - For cascades, are stage-wise inputs, target availability, training/selection boundaries, and end-to-end inference reproducible?
 - Are preprocessing, climatology, bias correction, and calibration fit on permitted data only?
 - Does each model component answer a stated scientific or computational need?
+- Does each comparison identify changed factors and held-fixed controls, distinguishing a component test from a system comparison?
+- Are relevant assumptions, index sets, stabilisers, theoretical objectives, estimators, and numerical approximations distinguished?
+- Do computational claims identify operation-count conventions, overhead, and the quantity actually measured?
 - Are baselines matched in inputs, resolution, initialization, postprocessing, and verification grid?
 - Is the reference hierarchy explicit, including mismatched analysis products or simulation references?
 - Are metrics, references, thresholds, aggregation, and dependence-aware uncertainty defined?

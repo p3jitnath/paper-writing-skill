@@ -1,6 +1,6 @@
 # Venue and Figure Styling
 
-Always verify the target venue's current template. Record actual column width in the figure spec rather than relying on a remembered value.
+For venue-specific delivery, verify the current template and actual column width. Retain these in existing figure context when useful; a local edit does not need a new specification file.
 
 ## Venue families
 
@@ -11,9 +11,9 @@ Always verify the target venue's current template. Record actual column width in
 
 ## Visual rules
 
-- Size each figure to the largest width and height permitted by the current venue template and page geometry while preserving its aspect ratio, margins, caption, and reading order.
+- Size the figure for its scientific content and target reading dimensions, preserving aspect ratio, margins, caption spacing, and reading order.
 - Do not shrink figures merely to save pages. When an explicit page or layout requirement forces reduction, use the smallest necessary reduction and retain legible labels, uncertainty encoding, and panel comparisons.
-- Minimum final-size text: 8 pt; prefer 9 pt.
+- Follow the established typography profile and current venue requirements. For this project's Nature-style profile, ordinary text is 8 pt with a 7-pt effective minimum; review mathematical glyphs and subscripts at final size too.
 - Use perceptually uniform, color-vision-accessible sequential or diverging maps. Center diverging scales on a scientifically meaningful reference.
 - Do not use rainbow color maps.
 - Use identical scales for panels intended for direct comparison; state when scales differ.
@@ -30,4 +30,4 @@ Always verify the target venue's current template. Record actual column width in
 3. Check grayscale and common color-vision simulations.
 4. Confirm no cropping, rasterized text, inconsistent panel labels, or unreadable legends.
 5. Compare every plotted number and caption statement with the versioned source artifact.
-6. Confirm that each figure occupies the largest compliant footprint unless a verified page or layout requirement documents why it was reduced.
+6. Confirm that the chosen physical size communicates the comparison clearly without wasting space or shrinking essential information.

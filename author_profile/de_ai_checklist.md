@@ -1,29 +1,16 @@
-# Mechanical and De-AI Prose Check
+# Readability and mechanical prose review
 
-Run on changed prose, then inspect every hit in context. A hit is a review prompt, not an automatic error.
+Use on changed prose when substantial editing or a readability review warrants it. “Remove AI slop” means improving explanation, not detecting authorship. Apply the user's explicit vocabulary exclusions through [prose conventions](../references/prose_style.md); separately judge readability in context rather than inferring quality or authorship from a word, sentence length, or punctuation mark.
 
-## Remove
+## Inspect in context
 
-- Throat-clearing: “It is important to note,” “In order to,” “This section presents.”
-- Hype: “groundbreaking,” “revolutionary,” “remarkable,” “unprecedented” without a defined comparison.
-- Empty intensifiers: “very,” “highly,” “significant” when no statistical meaning or magnitude follows.
-- Decorative antithesis, canned triads, editorializing closers, semicolons, and em dashes.
-- Choppy short sentences that should be connected to the preceding idea or developed into a substantive statement.
-- Vague mechanism verbs: “captures,” “leverages,” “encodes,” or “understands” without stating what relationship is represented or tested.
-- Unsupported certainty: “proves,” “causes,” “generalizes,” “physically consistent,” or “operational.”
+- Repeated motivation, duplicated conclusions, and paragraph endings that add no implication.
+- Vague subjects, remote pronouns, unexplained changes of comparator or population, and missing logical links.
+- Promotional claims or intensifiers without a supported magnitude, comparison, or consequence.
+- Abstract operation words whose intended technical meaning is not defined.
+- Choppy fragments or overloaded qualification chains that raise reading effort.
+- Duplicated words, possessives, agreement, spelling, and punctuation.
 
-## Preserve
+Retain necessary uncertainty, precise domain terminology, legitimate short definitions, and passive voice when it keeps the scientific object in focus. Replace an empty claim with a specific supported consequence or remove repetition; do not insert a stock disclaimer.
 
-- Necessary uncertainty and modal language.
-- Qualified claims tied to sampling, internal variability, observational uncertainty, or model spread.
-- Standard domain terminology and mathematical definitions.
-- Passive voice when it keeps the scientific object in focus and does not hide responsibility.
-
-## Suggested scan
-
-```bash
-rg -n -i "important to note|in order to|this section (presents|describes)|groundbreaking|revolutionary|remarkable|unprecedented|very|highly|proves?|generalizes?|physically consistent|operational" --glob '*.tex'
-rg -n ";|—|---" --glob '*.tex'
-```
-
-For each lexical match, keep it only when the surrounding text supplies the comparison, evidence, or operational definition. For each punctuation match, distinguish authored prose from required literal syntax, then rewrite every semicolon or em dash in authored prose. Inspect sentence length manually because a mechanical word-count threshold cannot determine whether a sentence is substantively connected.
+Targeted searches can locate candidate issues, but inspect each occurrence before changing it. Preserve literal syntax, official names, quotations, symbols, and citation keys. Finish with a continuous read of the changed passage and its neighbours. A keyword scan alone does not establish coherence.

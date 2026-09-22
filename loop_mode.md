@@ -1,13 +1,13 @@
 # Resumable Paper Audit
 
-For a requested long or resumable audit, maintain `notes/AUDIT_LEDGER.md` with one row per section.
+For a requested long or resumable audit, use an existing tracking record when available, or `notes/AUDIT_LEDGER.md` when a new record is useful. Use one row per section or other meaningful unit; a local revision does not require a ledger.
 
 | Section | Claim/evidence | Data/leakage | Verification | Physics/uncertainty | Reproducibility | Prose | Status |
 |---|---|---|---|---|---|---|---|
 
 Process one section per iteration:
 
-1. Read `project_context.md` and the ledger.
+1. Read current project context from the request, document, or an existing context file, together with the ledger.
 2. Select the next section with `PENDING` or `FINDINGS` status.
 3. Apply `references/scientific_rigor.md`, the section checklist, and `red_team_protocol.md`.
 4. Fix authorized prose or report experiments/data needed for findings that cannot be fixed editorially.
