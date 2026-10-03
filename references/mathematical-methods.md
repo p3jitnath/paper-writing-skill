@@ -6,9 +6,15 @@ Use when the requested work includes mathematics, a derivation, a theoretical re
 
 Name the mathematical object and why it is needed before adding notation. Connect each expression to its assumptions and the consequence used in the argument. Preserve index sets, ranges, units, normalisation, sign and branch conventions, domain restrictions, stabilisers, and boundary cases. Extra equations are useful only when they expose an actual operation or relationship.
 
+Explain the method through input → learned quantities → transformations → output → objective. For a method without learning, identify prescribed or computed quantities instead. Identify what is fitted, what is computed from each input, the order and role of the transformations, the resulting object, and how the objective evaluates or trains it. Distinguish the training objective from inference-time operations; do not leave the reader to reconstruct the connection between symbols, prose, and the implemented pipeline.
+
 Keep a population objective, its finite-sample estimator, and its numerical approximation distinct. If all are shown, explain their relationship. A proof of validity, conservation, identifiability, or invariance establishes its stated property under its assumptions; it does not establish empirical accuracy, calibration, robustness, or deployment usefulness. An observed gain also does not prove a universal theorem.
 
 When implementation affects meaning, compare the expression with the code path or protocol used for the reported result, including parameterisation, weighting, interpolation, and numerical approximation. Do not substitute a cleaner textbook algorithm for the implemented method. If evidence is absent, identify the unresolved correspondence.
+
+## Proof steps and justification
+
+Expand steps that readers would otherwise have to reconstruct to establish the claimed result. State the premise or cited result used by an inequality, its direction, and the conditions under which it holds. Explain limits, convergence, and exchanges of limits, sums, integrals, or derivatives when the argument depends on them, naming the assumptions that justify the exchange. Keep routine algebra compact when the connection is evident. An unsupported step remains a gap to resolve or flag; clearer wording cannot supply a missing proof.
 
 ## Algebraic edits
 

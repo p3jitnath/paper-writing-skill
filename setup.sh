@@ -84,7 +84,7 @@ mkdir -p "$SKILL_DIR"
 
 # Copy all skill files (everything except setup.sh, README, .git, examples)
 echo "Installing $SKILL_NAME for $HARNESS_NAME..."
-for item in SKILL.md brainstorming_guide.md figure_synthesis_guide.md red_team_protocol.md loop_mode.md references author_profile writing_checklists section_rhetorical_moves figure_templates; do
+for item in SKILL.md brainstorming_guide.md figure_synthesis_guide.md red_team_protocol.md loop_mode.md references author_profile writing_checklists section_rhetorical_moves figure_templates scripts; do
     if [ -e "$SCRIPT_DIR/$item" ]; then
         cp -r "$SCRIPT_DIR/$item" "$SKILL_DIR/$item"
     fi

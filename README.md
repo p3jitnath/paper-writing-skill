@@ -100,8 +100,15 @@ The profiles encode recurring reasoning and exposition patterns, not phrases to 
 ```bash
 python3 /path/to/skill-creator/scripts/quick_validate.py .
 bash -n setup.sh
+python3 -B -m unittest discover -s tests
 ```
 
 ## License
 
 MIT
+
+## GitHub refresh on every invocation
+
+The skill requires a fresh download of this repository's latest `main` bundle before every invocation, including repeated uses in one session. `scripts/refresh_skill.py` prints the downloaded `SKILL.md` path; follow that version and its resources. A failed or stalled download falls back to the current bundle after a total of five seconds. Downloads use a separate runtime cache and preserve the installed copy and unpublished source edits.
+
+The helper uses Python 3.6 or later and its standard library. The installer includes it for both supported harnesses.

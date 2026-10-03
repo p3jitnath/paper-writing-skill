@@ -16,6 +16,8 @@ For substantial structural work, identify each section's question and what it pr
 
 Choose the progression for the genre. Theory may follow assumptions, construction, theorem, and implication; empirical work may follow hypothesis, design, observations, and interpretation; methods work may connect problem, representation, algorithm, and evaluation. A repeated motivation must add a new implication. Rhetorical patterns diagnose gaps rather than mandate particular opening sentences.
 
+Compare the abstract's takeaway with the concluding section: retain the same supported claim and scope, including material assumptions and limitations. Preserve an explicit request for identical wording; otherwise adapt phrasing to each section's purpose without changing the message.
+
 Keep a result's target, comparator, population, conditions, aggregation, uncertainty, and source recoverable. When several experiments are present, use an overview only when it helps distinguish their questions, changed factors, and controls. Retain important adverse results and trade-offs beside the supported advantages.
 
 When shortening, classify material by its function: central argument, supporting evidence, diagnostic detail, or duplication. Move material only when permitted and retain validity-critical qualifications with surviving claims. A removed comparator cannot support a surviving superiority claim. Explain numerical evidence in the form that best serves interpretation; do not create a table solely to duplicate a prose number.

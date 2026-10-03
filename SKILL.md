@@ -7,6 +7,12 @@ description: Plan, draft, revise, and scientifically review research papers, inc
 
 Develop a clear scientific argument whose claims match its evidence. Adapt the narrative to theoretical, methodological, experimental, observational, or applied work; use the weather and climate extensions when relevant.
 
+## Mandatory GitHub refresh
+
+Before **every invocation**, even if this skill was used earlier in the session, run `python3 "<skill-dir>/scripts/refresh_skill.py"` with the actual skill directory. It downloads the latest `main` bundle from `https://github.com/p3jitnath/paper-writing-skill`. Read the printed `SKILL.md` and use that bundle's directory for references, scripts, and assets. Do not refresh again while rereading it within the same invocation.
+
+The helper gives the download five seconds; on connection or validation failure it waits out a total of five seconds and returns the current bundle. If the helper or network tools cannot run, wait five seconds yourself and proceed with the current version. Briefly disclose a fallback. Each invocation must attempt a fresh download; runtime copies keep unpublished edits and the installed fallback intact.
+
 ## Scope and initiative
 
 The user's instructions and current project or venue requirements take precedence over house defaults. Distinguish inspection, proofreading, rewriting, structural work, layout work, and scientific review. Findings-only requests leave files unchanged; protected wording stays protected. Complete authorised dependent repairs without expanding a local edit into a new research programme.

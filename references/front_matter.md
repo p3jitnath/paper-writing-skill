@@ -21,7 +21,7 @@ Use this sequence, adapting it to genre:
 5. Principal quantitative or mechanistic results.
 6. Important limitation and bounded implication when material.
 
-Do not turn the abstract into an architecture inventory. Give enough experimental coordinates to interpret headline numbers, or state the assumptions and scope of a theoretical result. Keep the conclusion aligned with the paper. A negative or unresolved finding can be the main contribution; do not force a positive ending.
+Do not turn the abstract into an architecture inventory. Give enough experimental coordinates to interpret headline numbers, or state the assumptions and scope of a theoretical result. Keep the abstract and concluding section aligned in their principal claim, certainty, assumptions, and scope. They should carry the same scientific message; repeat wording exactly only when the user requests it. A negative or unresolved finding can be the main contribution; do not force a positive ending.
 
 ## AGU/JAMES Key Points
 
