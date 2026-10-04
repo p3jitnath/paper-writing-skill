@@ -4,7 +4,7 @@ Apply these principles to the edited passage and its necessary context. Preserve
 
 ## Connected explanation
 
-Each sentence must be understandable from prior context. Introduce technical terms, acronyms, symbols, model components, and unusual metrics before or at first use; avoid defining ordinary terms. If advance explanation is impossible, explain the idea in the same sentence or, at most, the next, never paragraphs later. For a symbol or concept last explained several sections or subsections earlier, add a brief reminder and a verified section cross-reference when helpful.
+Each sentence must be understandable from prior context. Introduce technical terms, acronyms, symbols, model components, and unusual metrics before or at first use; avoid defining ordinary terms. Redefine every abbreviation used in the abstract at its first use in both the introduction and conclusion, even if it was defined earlier. If advance explanation is impossible, explain the idea in the same sentence or, at most, the next, never paragraphs later. For a symbol or concept last explained several sections or subsections earlier, add a brief reminder and a verified section cross-reference when helpful.
 
 Read a changed sentence with its neighbours. Identify the known object, what is added, and why the next sentence follows. Name the relationship before adding a connector: definition, elaboration, consequence, contrast, evidence, or qualification. Repeating a stable technical noun often works better than a stock transition. A changed comparator or population needs to be made explicit. Flag topic jumps, implicit links, and paragraphs that read as disconnected facts; make each idea's relevance, connection to the next, and consequence explicit.
 

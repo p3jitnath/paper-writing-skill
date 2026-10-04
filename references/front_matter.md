@@ -8,6 +8,8 @@ Use either a descriptive scientific claim/capability or `Named method: functiona
 
 ## Abstract
 
+For abbreviation definitions across the abstract, introduction, and conclusion, follow [prose conventions](prose_style.md#connected-explanation).
+
 Keep abstracts at or below **2,000 characters, including spaces**, as the user's established preference. Also satisfy any stricter current venue constraint; a later explicit user instruction can change this preference. Do not substitute a word count for the character check or assume that this alone establishes venue compliance.
 
 Count the final reader-facing abstract mechanically, including punctuation and displayed mathematical text. Exclude the abstract heading, LaTeX command syntax, and environment delimiters, but include text displayed through command arguments. For a plain-text paragraph, normalise source line wraps and repeated whitespace to single spaces, then use `len(" ".join(abstract.split()))`. Check the intended accepted reading when markup is present and recount after every further abstract edit. Use the venue's counting convention too when it differs.
