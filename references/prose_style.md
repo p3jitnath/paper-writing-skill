@@ -4,7 +4,9 @@ Apply these principles to the edited passage and its necessary context. Preserve
 
 ## Connected explanation
 
-Read a changed sentence with its neighbours. Identify the known object, what is added, and why the next sentence follows. Name the relationship before adding a connector: definition, elaboration, consequence, contrast, evidence, or qualification. Repeating a stable technical noun often works better than a stock transition. A changed comparator or population needs to be made explicit.
+Each sentence must be understandable from prior context. Introduce technical terms, acronyms, symbols, model components, and unusual metrics before or at first use; avoid defining ordinary terms. If advance explanation is impossible, explain the idea in the same sentence or, at most, the next, never paragraphs later. For a symbol or concept last explained several sections or subsections earlier, add a brief reminder and a verified section cross-reference when helpful.
+
+Read a changed sentence with its neighbours. Identify the known object, what is added, and why the next sentence follows. Name the relationship before adding a connector: definition, elaboration, consequence, contrast, evidence, or qualification. Repeating a stable technical noun often works better than a stock transition. A changed comparator or population needs to be made explicit. Flag topic jumps, implicit links, and paragraphs that read as disconnected facts; make each idea's relevance, connection to the next, and consequence explicit.
 
 For substantial drafting, give each paragraph and section a distinct job. Question → result → interpretation and object → operation → consequence are useful diagnostics, not fixed sentence templates. Retain the definitions and premises that make compressed prose understandable. Short definitions and longer linked explanations are both appropriate; sentence length, opening words, and punctuation are not quality tests by themselves.
 

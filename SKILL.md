@@ -27,7 +27,7 @@ Read only relevant sections. Paths in backticks are relative to this skill direc
 
 | Task | Guidance |
 |---|---|
-| Draft or polish prose | [Prose conventions](references/prose_style.md); preserve the manuscript's voice. |
+| Draft, edit, or review prose | [Prose conventions](references/prose_style.md); preserve the manuscript's voice. |
 | Plan or substantially reframe a paper | [Project planning](references/project_planning.md) and [paper genres](references/paper_genres.md). |
 | Revise a section's argument | Relevant guide in `section_rhetorical_moves/` and matching checklist in `writing_checklists/`; apply domain-specific items only when relevant. |
 | Review claims, controls, aggregation, uncertainty, or proxies | [Scientific evidence](references/scientific_rigor.md); its weather/climate sections are conditional. Use [red-team protocol](red_team_protocol.md) for a requested critical review. |
