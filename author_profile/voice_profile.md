@@ -21,7 +21,7 @@ Read `references/corpus_style.md`, then apply this file before the selected auth
 ## Prose
 
 - Choose sentence length to support the explanation. Keep a short definition when it does its job; connect a dependent fragment through the actual relationship and split overloaded chains.
-- Follow current punctuation preferences. Judge how clauses connect rather than treating a punctuation mark as an error in itself.
+- Apply the [prose punctuation rule](../SKILL.md#prose-punctuation), including its title and literal-syntax exceptions. Recast authored semicolons and colons while keeping the relationship between clauses clear.
 - Keep connected sentences readable. Do not replace prohibited punctuation or brief sentences with comma splices, overloaded run-ons, or obscured scientific dependencies.
 - Prefer active constructions when the actor matters. Passive voice is acceptable when the process or result is the subject and the actor is irrelevant.
 - Use first-person plural for author choices (`we train`, `we evaluate`) and direct subjects for findings (`the forecast improves`).

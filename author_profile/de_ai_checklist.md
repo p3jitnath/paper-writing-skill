@@ -1,6 +1,6 @@
 # Readability and mechanical prose review
 
-Use on changed prose when substantial editing or a readability review warrants it. “Remove AI slop” means improving explanation, not detecting authorship. Apply the user's explicit vocabulary exclusions through [prose conventions](../references/prose_style.md); separately judge readability in context rather than inferring quality or authorship from a word, sentence length, or punctuation mark.
+Use on changed prose when substantial editing or a readability review warrants it. “Remove AI slop” means improving explanation, not detecting authorship. Apply the user's explicit vocabulary and punctuation preferences through [prose conventions](../references/prose_style.md). Separately judge readability in context rather than inferring quality or authorship from a word, sentence length, or punctuation mark.
 
 ## Inspect in context
 

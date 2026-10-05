@@ -2,6 +2,10 @@
 
 Apply these principles to the edited passage and its necessary context. Preserve the author's voice and current project settings; use British English only as a fallback when no variety is established. Preserve literal code, symbols, citation keys, official titles, names, and quotations.
 
+## Punctuation
+
+Apply the [prose punctuation rule](../SKILL.md#prose-punctuation) to authored manuscript text, headings, captions, and notes. Remove semicolons and colons by recasting the sentence, preserving the rule's title, literal-syntax, and protected-text exceptions. A punctuation scan complements the contextual read and does not replace it.
+
 ## Connected explanation
 
 Each sentence must be understandable from prior context. Introduce technical terms, acronyms, symbols, model components, and unusual metrics before or at first use; avoid defining ordinary terms. Redefine every abbreviation used in the abstract at its first use in both the introduction and conclusion, even if it was defined earlier. If advance explanation is impossible, explain the idea in the same sentence or, at most, the next, never paragraphs later. For a symbol or concept last explained several sections or subsections earlier, add a brief reminder and a verified section cross-reference when helpful.
