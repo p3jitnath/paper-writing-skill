@@ -6,6 +6,14 @@ Apply these principles to the edited passage and its necessary context. Preserve
 
 Apply the [prose punctuation rule](../SKILL.md#prose-punctuation) to authored manuscript text, headings, captions, and notes. Remove semicolons and colons by recasting the sentence, preserving the rule's title, literal-syntax, and protected-text exceptions. A punctuation scan complements the contextual read and does not replace it.
 
+## Audience and writing convention
+
+Apply the requested audience and writing convention to every authored surface, including short labels and supporting documentation. For a first-year undergraduate audience, introduce the physical idea in familiar language, define unfamiliar terms and abbreviations before relying on them, state units and explain what each equation does. Preserve the necessary science and use connected clauses rather than a sequence of unexplained short statements. A project adaptation of a writing standard does not establish formal compliance with the official standard.
+
+Begin with the wider scientific motivation selected by the project before introducing the tool or implementation. For an Earth system model development project, explain the need to represent interacting physical processes and the relevant development problem before narrowing to code generation. Retain the [introduction opening and citation requirements](../section_rhetorical_moves/introduction.md#opening-and-citation-requirements) when writing a full paper introduction. A short poster Motivation panel follows its own agreed format.
+
+A Summary should state what was done or found and the conditions under which it holds. When a reusable skill or instruction set is part of the contribution, explain its development and role in Methods, then state the supported outcome in Summary. Do not substitute an empty claim of usefulness, promise or importance for that explanation.
+
 ## Connected explanation
 
 Each sentence must be understandable from prior context. Introduce technical terms, acronyms, symbols, model components, and unusual metrics before or at first use; avoid defining ordinary terms. Redefine every abbreviation used in the abstract at its first use in both the introduction and conclusion, even if it was defined earlier. If advance explanation is impossible, explain the idea in the same sentence or, at most, the next, never paragraphs later. For a symbol or concept last explained several sections or subsections earlier, add a brief reminder and a verified section cross-reference when helpful.

@@ -12,6 +12,12 @@ Keep a population objective, its finite-sample estimator, and its numerical appr
 
 When implementation affects meaning, compare the expression with the code path or protocol used for the reported result, including parameterisation, weighting, interpolation, and numerical approximation. Do not substitute a cleaner textbook algorithm for the implemented method. If evidence is absent, identify the unresolved correspondence.
 
+## Physical notes and numerical contracts
+
+When a project distinguishes a basic physics formulation from its numerical contract, preserve that boundary. Keep the physical idea, governing equations, defined symbols, units, parameters, initial state and boundary conditions in the formulation. Put discretisation, ordered arithmetic, storage, interfaces and acceptance limits in the separate numerical or implementation contract. Link the two so that a readable physics note still points to the method actually used. Do not silently replace either with the other or change a verified contract during a prose edit.
+
+For GitHub Markdown, use GitHub-compatible mathematics rather than raw LaTeX document commands. Follow the project's delimiter convention, including dollar-and-backtick inline expressions and fenced `math` display blocks when requested. Preserve equation meaning and use `\lvert` and `\rvert` where literal table separators would split a mathematical cell. Check the rendered equations and surrounding explanations, not just the Markdown source. Keep unfamiliar symbols and their units beside their first use.
+
 ## Proof steps and justification
 
 Expand steps that readers would otherwise have to reconstruct to establish the claimed result. State the premise or cited result used by an inequality, its direction, and the conditions under which it holds. Explain limits, convergence, and exchanges of limits, sums, integrals, or derivatives when the argument depends on them, naming the assumptions that justify the exchange. Keep routine algebra compact when the connection is evident. An unsupported step remains a gap to resolve or flag; clearer wording cannot supply a missing proof.
@@ -42,7 +48,7 @@ Distinguish operation counts, asymptotic complexity, storage, measured peak memo
 
 For `n` objects, a direct ordered-pair sum including the diagonal has `n^2` terms; a symmetric off-diagonal sum has `n(n-1)/2` unique pairs. Reducing to `m` objects changes these to `m^2` or `m(m-1)/2`, respectively. State the convention and relevant overhead, such as constructing representatives, sorting, indexing, or approximation. A smaller term count alone does not measure a runtime speedup or memory reduction.
 
-Measured comparisons need the relevant implementation, hardware, precision, batch sizes, data movement, setup, and system boundary. Fewer iterations can coexist with slower runtime or greater memory per iteration. Preserve supported trade-offs and distinguish theoretical scaling from a measured operating regime.
+Measured comparisons need the relevant implementation, hardware, precision, batch sizes, data movement, setup, and system boundary. State the measured processor or accelerator, node count and active cores or threads precisely. One thread on one node does not measure full-node throughput or a distributed run. Name the tested equations and workloads, controls, repetitions and timing variation. Distinguish complete time-step timing from a partial kernel and state whether compilation, model inference, warm-up, initialisation and I/O were included. Use the benchmark record as evidence and do not generalise its outcome to other hardware or full Earth system models. Fewer iterations can coexist with slower runtime or greater memory per iteration. Preserve supported trade-offs and distinguish theoretical scaling from a measured operating regime.
 
 ## Proportionate verification
 

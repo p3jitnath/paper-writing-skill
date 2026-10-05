@@ -2,6 +2,10 @@
 
 Use for new manuscript planning, a new section that lacks scientific context, or substantial reframing. Select only the stages needed. Start from the current discipline, genre, question, evidence, and audience. The weather/climate task families, voice overlays, and verification examples below apply only when relevant; other disciplines need their own objects and evidence. Paths in backticks are relative to the skill directory.
 
+## Project profile
+
+Reuse a compact project profile when one exists, or create one when requested to preserve decisions across outputs. Keep audience, writing standard, language, mathematics format, title and subtitle casing, branding assets, colours and explicit punctuation exceptions together with their source paths. Separate durable preferences from dated benchmark evidence. Link to current measurements rather than copying results into a style profile. A profile for one institution or project must be selected deliberately and must not change other projects' defaults.
+
 ## Route the Project
 
 ### Task family for weather and climate work
