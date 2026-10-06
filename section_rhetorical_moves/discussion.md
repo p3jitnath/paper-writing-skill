@@ -20,7 +20,7 @@ Discuss sampling, observations, initial conditions, internal variability, model 
 
 ## Move 5: State limitations by consequence
 
-Identify which conclusions, domains, regimes, resolutions, lead times, or uses are limited. Distinguish missing evidence from known failure.
+Concentrate general limitations and scope qualifications here or in a dedicated Scope section, using neutral language. Identify which conclusions, domains, regimes, resolutions, lead times or uses are limited and distinguish missing evidence from known failure. Retain validity-critical conditions beside the results they constrain, while consolidating repeated caveats rather than weakening each supported finding.
 
 ## Move 6: Define the next decisive test
 

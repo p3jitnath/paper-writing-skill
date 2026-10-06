@@ -24,6 +24,9 @@ Select questions relevant to the requested change and research genre. Weather/cl
 - Is emulator error compared with internal-variability or sampling noise where that limits agreement?
 - Are negative, neutral, and failure results visible?
 - Does each result include the local interpretation required to understand it?
+- Are supported findings stated positively, precisely and confidently, with every number and scientific distinction preserved?
+- Does the result or trade-off motivate the next step through an explicit logical bridge, where the evidence supports that connection?
+- Are generic repeated caveats removed while essential conditions, uncertainty and important adverse results remain clear?
 - Does every takeaway stay within the evaluated domain and period?
 - Is lead-zero state-estimation error separated from later forecast-error growth and checked against independent observations where possible?
 - Are observation outages, coverage/latency changes, sensor drift or replacement, and unseen-location transfer tested for deployment claims?

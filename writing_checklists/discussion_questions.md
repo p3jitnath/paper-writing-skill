@@ -8,6 +8,7 @@ Select questions relevant to the requested change and research genre. Weather/cl
 - Are forced response, internal variability, model, observational, and scenario uncertainty separated where relevant?
 - Are interpolation, temporal transfer, spatial transfer, and forcing extrapolation distinguished?
 - Are limitations tied to the conclusions or uses they restrict?
+- Are general limitations and scope qualifications neutral and concentrated in Discussion or Scope, with validity-critical conditions retained beside their results?
 - Is societal or operational value supported by decision-relevant evidence?
 - Does the final paragraph name the next decisive test rather than a generic future-work list?
 - Does the final sentence of the Conclusion, or the concluding Discussion, end on the strongest evidence-supported implication in concise and impactful language without introducing a new claim or exceeding the paper's scope?

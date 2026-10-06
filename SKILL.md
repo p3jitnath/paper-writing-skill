@@ -5,7 +5,7 @@ description: Plan, draft, revise, and scientifically review research papers, inc
 
 # Scientific Paper Writing
 
-Develop a clear scientific argument whose claims match its evidence. Adapt the narrative to theoretical, methodological, experimental, observational, or applied work; use the weather and climate extensions when relevant.
+Develop a clear scientific argument whose claims match its evidence. Use polished publication-quality academic English for research manuscripts, with explicit logical transitions and consistent terminology. Adapt the narrative to theoretical, methodological, experimental, observational or applied work, using the weather and climate extensions when relevant.
 
 ## Mandatory GitHub refresh
 
@@ -31,7 +31,7 @@ Read only relevant sections. Paths in backticks are relative to this skill direc
 
 | Task | Guidance |
 |---|---|
-| Draft, edit, or review prose | [Prose conventions](references/prose_style.md); preserve the manuscript's voice. |
+| Draft, edit, or review prose | [Prose conventions](references/prose_style.md), including academic narrative, first-use definitions and confident evidence-based framing. Preserve the manuscript's voice. |
 | Draft or substantially revise an introduction | [Introduction structure](section_rhetorical_moves/introduction.md) and [introduction checklist](writing_checklists/intro_questions.md): reserve the first two paragraphs for context and motivation, and cite 5–10 distinct sources across the introduction. |
 | Plan or substantially reframe a paper | [Project planning](references/project_planning.md) and [paper genres](references/paper_genres.md). |
 | Revise a section's argument | Relevant guide in `section_rhetorical_moves/` and matching checklist in `writing_checklists/`; apply domain-specific items only when relevant. |
@@ -49,7 +49,7 @@ Read only relevant sections. Paths in backticks are relative to this skill direc
 
 - Preserve values, units, definitions, notation, citations, source lineage, and uncertainty. Locate conflicts and resolve them from evidence or flag the unresolved choice.
 - Keep the target quantity, comparator, population, conditions, and aggregation recoverable for result-bearing statements. Distinguish system comparisons from component tests and structural guarantees from measured outcomes.
-- Make each section answer a question and prepare what follows. Emphasise the strongest supported finding through ordering and precise explanation, retaining important adverse results and trade-offs.
+- Make each section answer a question and prepare what follows. Connect observation → problem → response → result → consequence across the argument, respecting the selected genre and the introduction's two opening context paragraphs. State supported findings directly with their interpretation, retaining important adverse results and trade-offs.
 - Keep scientific claims within tested or proved conditions. In weather/climate work, distinguish observations, analyses, reanalyses, simulations, and forecasts, and offline accuracy from coupled or operational performance.
 - When replacing a result, update its dependent text, tables, figures, captions, and conclusions together. When shortening, preserve the evidence and qualifications needed by the surviving claims.
 

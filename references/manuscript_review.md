@@ -12,7 +12,7 @@ For tracked edits, read both the displayed review state and the intended accepte
 
 ## Argument and evidence
 
-For substantial structural work, identify each section's question and what it prepares the reader to understand next. Check whether the opening, headings, and figures make the question, contribution, primary evidence, and finding easy to locate. This is a qualitative orientation check unless reader testing is performed.
+For substantial structural work, trace observation → problem → response → result → consequence across the argument, using the [prose conventions](prose_style.md#scientific-argument). Check that each sentence advances the reasoning and that each section's question prepares the reader to understand the next. Check whether the opening, headings, and figures make the question, contribution, primary evidence, and finding easy to locate. This is a qualitative orientation check unless reader testing is performed.
 
 Choose the progression for the genre. Theory may follow assumptions, construction, theorem, and implication; empirical work may follow hypothesis, design, observations, and interpretation; methods work may connect problem, representation, algorithm, and evaluation. A repeated motivation must add a new implication. Rhetorical patterns diagnose gaps rather than mandate particular opening sentences.
 
