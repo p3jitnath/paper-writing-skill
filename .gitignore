@@ -10,3 +10,6 @@ project_context.md
 *~
 .vscode/
 .idea/
+
+# Diagnostic workspace
+/.scratch/

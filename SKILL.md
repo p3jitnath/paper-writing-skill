@@ -29,6 +29,8 @@ Reuse current audience, language variety, notation, review markup, figure profil
 
 Whenever creating a paper folder, create `main.tex`, supporting `.tex` files, a `.bib` bibliography and the `.cls` and `.sty` files used by the paper at the root. Put final figure inputs in one flat `figures/` directory, preferably PDF or PNG, with no subdirectories. Gitignore everything else that is not required to build the paper. Read [paper workspace](references/paper_workspace.md) and use its bundled starter when no supplied template governs the files.
 
+Direct the user to pull or import the paper sources into Overleaf and compile there. Generate a paper PDF in the paper folder only when the user explicitly asks. Diagnostic PDFs are the permitted exception and must stay in gitignored `.scratch/`, together with all other diagnostic material, including previews, screenshots, logs, build files and temporary test artifacts. Follow [Overleaf and diagnostics](references/paper_workspace.md#overleaf-and-diagnostics) for every diagnostic workflow.
+
 Strongly discourage any other paper folder structure. If the user creates or proposes `v2`, `v3` or similar draft copies, firmly ask them to use Git commits, branches or tags and retain one active `main.tex`. Preserve existing work while resolving the canonical version. This is a firm project requirement rather than an optional housekeeping suggestion.
 
 ## Read for the requested task
@@ -62,6 +64,6 @@ Read only relevant sections. Paths in backticks are relative to this skill direc
 
 ## Verify and deliver
 
-Match verification to the change: compare a prose edit with its source and read it continuously with its neighbours; check an edited formula's equivalence; mechanically verify that an edited abstract has at most 2,000 characters including spaces; compile and inspect affected pages for rendering changes; inspect evidence for changed scientific claims. Read the intended accepted version of tracked edits separately from their markup. A successful build does not establish scientific correctness or coherent prose.
+Match verification to the change. Compare a prose edit with its source and read it continuously with its neighbours, check an edited formula's equivalence, mechanically verify the abstract's 2,000-character limit including spaces, and inspect evidence for changed scientific claims. For rendering changes, inspect a current supplied PDF or perform a diagnostic build confined to `.scratch/` under the compilation rules above. Read the intended accepted version of tracked edits separately from their markup. A successful build does not establish scientific correctness or coherent prose.
 
 After applicable checks pass, repeat or broaden them only after another edit, a failure, or a concrete concern. Missing tooling or evidence limits only the checks that require it. Return the requested text, findings, or files, with a brief account of material changes and checks actually performed for substantial work. Distinguish source inspection, compilation, visual review, numerical verification, experiment execution, local saving, and publication; an earlier success does not verify current inputs.

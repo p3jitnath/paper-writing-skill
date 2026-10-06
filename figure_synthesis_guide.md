@@ -10,6 +10,8 @@ Identify the visual's job: explain a construction, compare estimates, show a dis
 
 Preserve data, topology, labels, equations, scales, category order, and meanings during styling work. If the original explanation is preferred, refine its presentation. Supply requested alternatives as separately named previews, including the current version for comparison, rather than replacing the accepted asset automatically.
 
+Put all diagnostic artifacts in gitignored `.scratch/`, including comparison previews, temporary exports, screenshots, close-ups and manuscript review renders. Follow [Overleaf and diagnostics](references/paper_workspace.md#overleaf-and-diagnostics) for any manuscript build. Place accepted final figure inputs directly in the paper's flat `figures/` directory.
+
 Use a table when exact values are the main message; use a plot when shape, ordering, density, trend, or uncertainty geometry aids interpretation. An authorised conversion requires consistent values, captions, object references, and discussion. Distinguish an illustrated subset from the population used to compute an accompanying metric.
 
 For mathematical diagrams, trace the same objects through stages with stable notation, addresses, and encodings. Label arrows by their actual relation when ambiguous. Check relevant invariants such as normalisation, conservation, dimensions, or connectivity. Synthetic examples need to satisfy the illustrated property and be identified as schematic. Equations should explain visible operations.

@@ -12,3 +12,5 @@
 !/paper.sty
 !/figures/
 # Add exact entries for figure files and dependencies used by main.tex.
+# Keep all diagnostic material ignored.
+/.scratch/

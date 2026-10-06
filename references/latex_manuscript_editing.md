@@ -10,6 +10,8 @@ For a new paper folder, follow [paper workspace](paper_workspace.md). Keep `main
 
 Identify the root document, included sources, bibliography, relevant assets, engine, bibliography processor, and intended output. Inspect current content and existing version-control changes. A prior PDF, filename, source comment, or successful build does not establish the state of the current inputs.
 
+Follow [Overleaf and diagnostics](paper_workspace.md#overleaf-and-diagnostics). Direct normal manuscript compilation to Overleaf and generate a paper PDF in the paper folder only on an explicit user request. Confine diagnostic builds and all other diagnostic material to gitignored `.scratch/`, including logs, auxiliary files, package caches, preview images and temporary scripts. A rendering check permits a diagnostic build under this rule.
+
 Preserve the supplied template distribution and unrelated preamble code. Make a necessary package or definition addition narrowly and record its purpose. Change class, style, or bibliography-style files only when explicitly in scope. Follow established source-line conventions; a prose edit does not require whole-document reflow. For requested whitespace-only reflow, preserve paragraph and environment boundaries and verify that rendered text and layout are unchanged.
 
 ## Structure and evidence dependencies
@@ -22,7 +24,7 @@ Before removing a paragraph, row, figure, or comparator, identify the claims tha
 
 ## Fit a page constraint
 
-Determine whether the limit covers the body, references, appendices, or a combination. Use the required build route and inspect the rendered output before selecting a repair.
+Determine whether the limit covers the body, references, appendices, or a combination. Inspect a current supplied PDF or a diagnostic build confined to `.scratch/` before selecting a repair. Use the project engine without generating an unrequested manuscript PDF elsewhere in the paper folder.
 
 Locate the source of excess space: unused figure canvas, inclusion size, table geometry, float placement, surrounding spacing, or repeated content. Tight cropping cannot repair reading order, and negative document spacing cannot remove whitespace inside an image. Preserve aspect ratios, effective font sizes, explicit caption gaps, and template requirements.
 
@@ -32,6 +34,6 @@ Use local layout controls only where the template permits them and inspect their
 
 ## Verify affected output
 
-Compile after changes that affect rendering. Inspect relevant pages and neighbours for reading order, float movement, glyph collisions, caption association, overflow, and effective figure/table typography. Verify page-count claims against the applicable part of the current PDF, and check generated reference text and links when bibliography rendering is in scope.
+For changes that affect rendering, inspect a current supplied PDF or perform a diagnostic build confined to `.scratch/`. Keep every inspection artifact there, including page images, close-ups and diagnostic logs. Inspect relevant pages and neighbours for reading order, float movement, glyph collisions, caption association, overflow, and effective figure/table typography. Verify page-count claims against the applicable part of the current PDF, and check generated reference text and links when bibliography rendering is in scope.
 
-Report the current page count, retained layout changes, and any unverified part. A successful compile does not establish that numerical values, scientific claims, or ordinary prose are correct.
+Report the page count only for a PDF actually inspected, along with retained layout changes and any unverified part. A successful compile does not establish that numerical values, scientific claims, or ordinary prose are correct.
