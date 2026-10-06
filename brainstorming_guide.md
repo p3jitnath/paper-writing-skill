@@ -97,4 +97,4 @@ Use the relevant questions to create or extend `project_context.md` for requeste
 
 ## Output
 
-Create `project_context.md` from `examples/project_context.md`. Add it to `.gitignore` unless the user explicitly wants strategic notes committed. Then draft Introduction 0 as a disposable framing test; leave unsupported numerical claims as placeholders.
+Reuse an existing project context or adapt the relevant domain example in `examples/` when a context record is useful. Keep strategic notes gitignored. When creating a paper folder, follow [paper workspace](references/paper_workspace.md) and create the actual LaTeX inputs in the prescribed layout. Draft the initial introduction in its canonical `.tex` file and use Git for revisions. Leave unsupported numerical claims as placeholders.

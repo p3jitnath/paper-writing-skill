@@ -2,6 +2,10 @@
 
 Use only for the requested source, structure, or layout change. Follow current user, project, and venue requirements; page budgets, source formatting, and caption gaps are project settings.
 
+## Paper workspace
+
+For a new paper folder, follow [paper workspace](paper_workspace.md). Keep `main.tex`, supporting `.tex`, `.bib`, `.cls` and `.sty` inputs at the root and all final figure inputs directly in `figures/`, with no child directories. Strongly discourage other folder layouts and use Git for revision history. A local edit to an existing manuscript must preserve the current source until a requested consolidation or conversion is authorised.
+
 ## Establish the active build
 
 Identify the root document, included sources, bibliography, relevant assets, engine, bibliography processor, and intended output. Inspect current content and existing version-control changes. A prior PDF, filename, source comment, or successful build does not establish the state of the current inputs.

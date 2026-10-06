@@ -2,6 +2,10 @@
 
 Use for new manuscript planning, a new section that lacks scientific context, or substantial reframing. Select only the stages needed. Start from the current discipline, genre, question, evidence, and audience. The weather/climate task families, voice overlays, and verification examples below apply only when relevant; other disciplines need their own objects and evidence. Paths in backticks are relative to the skill directory.
 
+## Create the paper workspace
+
+Apply the [paper folder contract](paper_workspace.md) whenever creating a paper folder. Create the actual `main.tex`, supporting `.tex`, bibliography, class and style files at the root, with one flat `figures/` directory and a `.gitignore` that excludes every nonessential file. Strongly discourage alternative layouts and firmly ask users with numbered draft copies to use Git. A plan or context record does not satisfy the requirement to create the LaTeX files.
+
 ## Project profile
 
 Reuse a compact project profile when one exists, or create one when requested to preserve decisions across outputs. Keep audience, writing standard, language, mathematics format, title and subtitle casing, branding assets, colours and explicit punctuation exceptions together with their source paths. Separate durable preferences from dated benchmark evidence. Link to current measurements rather than copying results into a style profile. A profile for one institution or project must be selected deliberately and must not change other projects' defaults.
@@ -92,7 +96,7 @@ Treat a missing evidence item as an open question, not prose to fill with confid
 
 ### 1. Scientific framing
 
-Use `brainstorming_guide.md` and `examples/project_context.md` when a domain-specific planning interview or context record helps. State the scientific question, what the paper establishes, and how its claim is supported or could be challenged.
+Use `brainstorming_guide.md` and the relevant domain example in `examples/` when a domain-specific planning interview or context record helps. State the scientific question, what the paper establishes, and how its claim is supported or could be challenged.
 
 ### 2. Paper architecture
 

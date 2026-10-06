@@ -25,6 +25,12 @@ For files, identify the active source, working revision and existing changes, re
 
 Reuse current audience, language variety, notation, review markup, figure profile, page constraints, and delivery settings. Read an existing project profile when supplied or recorded in the project instructions. Carry its audience and writing convention through all requested outputs, including formulations, README files, captions, comments, docstrings, reports and conversation. Keep institution colours, artwork, casing and explicit punctuation exceptions in that compact profile rather than making them universal skill rules. Retain the user's vocabulary exclusions and abstract limit of 2,000 characters including spaces. An existing context record helps substantial planning, but a local edit does not require one, a full audit, new experiments, or other skills. Later specific instructions supersede conflicting earlier preferences. Keep planned, executed, verified, incorporated, and conclusive work distinct.
 
+## Paper folder contract
+
+Whenever creating a paper folder, create `main.tex`, supporting `.tex` files, a `.bib` bibliography and the `.cls` and `.sty` files used by the paper at the root. Put final figure inputs in one flat `figures/` directory, preferably PDF or PNG, with no subdirectories. Gitignore everything else that is not required to build the paper. Read [paper workspace](references/paper_workspace.md) and use its bundled starter when no supplied template governs the files.
+
+Strongly discourage any other paper folder structure. If the user creates or proposes `v2`, `v3` or similar draft copies, firmly ask them to use Git commits, branches or tags and retain one active `main.tex`. Preserve existing work while resolving the canonical version. This is a firm project requirement rather than an optional housekeeping suggestion.
+
 ## Read for the requested task
 
 Read only relevant sections. Paths in backticks are relative to this skill directory; Markdown links resolve from the containing file.
@@ -33,6 +39,7 @@ Read only relevant sections. Paths in backticks are relative to this skill direc
 |---|---|
 | Draft, edit, or review prose | [Prose conventions](references/prose_style.md), including academic narrative, first-use definitions and confident evidence-based framing. Preserve the manuscript's voice. |
 | Draft or substantially revise an introduction | [Introduction structure](section_rhetorical_moves/introduction.md) and [introduction checklist](writing_checklists/intro_questions.md): reserve the first two paragraphs for context and motivation, and cite 5–10 distinct sources across the introduction. |
+| Create a paper folder or resolve draft clutter | [Paper workspace](references/paper_workspace.md), including the required flat layout and Git revision policy. |
 | Plan or substantially reframe a paper | [Project planning](references/project_planning.md) and [paper genres](references/paper_genres.md). |
 | Revise a section's argument | Relevant guide in `section_rhetorical_moves/` and matching checklist in `writing_checklists/`; apply domain-specific items only when relevant. |
 | Review claims, controls, aggregation, uncertainty, or proxies | [Scientific evidence](references/scientific_rigor.md); its weather/climate sections are conditional. Use [red-team protocol](red_team_protocol.md) for a requested critical review. |

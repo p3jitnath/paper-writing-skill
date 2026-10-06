@@ -1,0 +1,14 @@
+# Ignore everything except the declared paper inputs.
+*
+!/.gitignore
+!/main.tex
+!/abstract.tex
+!/introduction.tex
+!/methods.tex
+!/results.tex
+!/discussion.tex
+!/references.bib
+!/paper.cls
+!/paper.sty
+!/figures/
+# Add exact entries for figure files and dependencies used by main.tex.
