@@ -14,6 +14,12 @@ Follow [Overleaf and diagnostics](paper_workspace.md#overleaf-and-diagnostics). 
 
 Preserve the supplied template distribution and unrelated preamble code. Make a necessary package or definition addition narrowly and record its purpose. Change class, style, or bibliography-style files only when explicitly in scope. Follow established source-line conventions; a prose edit does not require whole-document reflow. For requested whitespace-only reflow, preserve paragraph and environment boundaries and verify that rendered text and layout are unchanged.
 
+## Figure placement
+
+Write every figure environment as `\begin{figure}[!h]` or `\begin{figure*}[!h]`. When creating or revising paper sources, replace `[htbp]`, any other figure placement option or a missing placement argument with `[!h]`. Apply this to reused manuscript and template figures, appendices and supplements. Preserve the included asset, dimensions, caption and label while correcting placement.
+
+Check every included `.tex` source to confirm that each `figure` and `figure*` declaration has exactly `[!h]`. Inspect the rendered reading order and caption association when rendering verification is in scope, following the diagnostic build rules above.
+
 ## Structure and evidence dependencies
 
 Adapt headings and section lengths to their jobs and the research genre. Merge genuinely duplicated material during authorised structural work, but do not add paragraphs or subsections to meet a universal count.

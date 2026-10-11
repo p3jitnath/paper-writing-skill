@@ -40,4 +40,4 @@ State the supported finding positively, precisely and confidently, then explain 
 
 Connect the measured result to its supported physical or methodological interpretation and the trade-off or distinction that motivates the next step. Keep general limitations and scope exclusions neutral and concentrated in Discussion or Scope, alongside cross-result synthesis and competing explanations. Avoid repeatedly qualifying an already bounded result with generic caveats.
 
-Place each figure near its callout and interpretation, then inspect the rendered reading order and caption association. Use placement suited to the venue and document rather than requiring a fixed paragraph-after-float pattern.
+Use `[!h]` for every LaTeX `figure` and `figure*` environment, following [figure placement](../references/latex_manuscript_editing.md#figure-placement). Place each figure near its callout and interpretation, then inspect the rendered reading order and caption association. Do not require a fixed paragraph-after-float pattern.

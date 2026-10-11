@@ -32,6 +32,8 @@ Choose a table when exact values dominate, and a plot when shape, ordering, dens
 
 Use [figure synthesis](../figure_synthesis_guide.md) when selecting or creating a figure and [LaTeX editing](latex_manuscript_editing.md) for inclusion. Check labels, units, scales, category meanings, comparison direction, and caption agreement. Distinguish the displayed example's domain or subset from the population used to compute an accompanying metric.
 
+Check that every LaTeX `figure` and `figure*` environment uses exactly `[!h]`, including figures in appendices and supplements. Follow [figure placement](latex_manuscript_editing.md#figure-placement) for source corrections.
+
 Review scientific fidelity and visual clarity independently. Inspect source exports and, when integration is in scope, their actual document placement for reading order, glyph collisions, colour contrast, line weights, caption association, and effective text size. Preserve aspect ratio and required caption spacing. Place interpretation close enough to its figure that the reader can connect them; do not impose a fixed maximum footprint or a universal paragraph-after-float rule.
 
 Mathematical or conceptual diagrams need traceable correspondences and valid illustrated properties. They explain a construction; empirical performance requires separate evidence. An available `graph-plotting` skill supplies deeper representation and schematic guidance without being a prerequisite for manuscript editing.
