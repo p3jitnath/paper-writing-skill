@@ -44,7 +44,7 @@ Read only relevant sections. Paths in backticks are relative to this skill direc
 | Task | Guidance |
 |---|---|
 | Draft, edit, or review prose | [Prose conventions](references/prose_style.md), including academic narrative, first-use definitions and confident evidence-based framing. Preserve the manuscript's voice. |
-| Draft or substantially revise an introduction | [Introduction structure](section_rhetorical_moves/introduction.md) and [introduction checklist](writing_checklists/intro_questions.md): reserve the first two paragraphs for context and motivation, and cite 5–10 distinct sources across the introduction. |
+| Draft or substantially revise an introduction | [Introduction structure](section_rhetorical_moves/introduction.md) and [introduction checklist](writing_checklists/intro_questions.md). Reserve the first two paragraphs for context and motivation, and cite 5–10 distinct works across the introduction, each only once. |
 | Create a paper folder or resolve draft clutter | [Paper workspace](references/paper_workspace.md), including the required flat layout and Git revision policy. |
 | Plan or substantially reframe a paper | [Project planning](references/project_planning.md) and [paper genres](references/paper_genres.md). |
 | Revise a section's argument | Relevant guide in `section_rhetorical_moves/` and matching checklist in `writing_checklists/`; apply domain-specific items only when relevant. |

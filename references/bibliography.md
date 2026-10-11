@@ -8,6 +8,8 @@ For a full integrity audit, enumerate active citations, missing keys, unused rec
 
 When authoritative records disagree, inspect the underlying primary records and distinguish versions. Record an unresolved disagreement rather than guessing a merged name or date. Prefer the requested publication version; merge preprint and journal duplicates only when they represent the same cited work and the citation's meaning is preserved. Never invent missing fields.
 
+For introductions, enforce [the citation requirements](../section_rhetorical_moves/introduction.md#opening-and-citation-requirements) by checking publication identity as well as citation keys. Detect reused references hidden behind duplicate records or different versions, and verify that each replacement is a different work supporting the specific claim.
+
 ## Citation keys
 
 For created or edited `.bib` files, the house key form is `author_papershortname_year`, for example `nath_replacing_2026`, unless the user or project protects another scheme.

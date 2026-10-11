@@ -11,11 +11,13 @@ When drafting or substantially revising a complete introduction, reserve the fir
 
 Relevant background citations belong in these paragraphs. Begin the explicit research gap, proposed approach or model, novelty, contributions, and results preview from the third paragraph onward. Do not compress the setup into one paragraph or introduce the paper's own method or findings during the opening two paragraphs.
 
-Use a minimum of five and a maximum of ten distinct cited sources across the entire introduction. Count unique works, not citation commands: each source in a grouped citation counts separately, repeated citations to the same work count once, and duplicate bibliography records for one publication do not increase the count. The limit applies to the whole introduction, not to each paragraph.
+Use a minimum of five and a maximum of ten distinct cited works across the entire introduction, citing each work only once. Count unique publications, expanding grouped citations to count each included work separately. Duplicate bibliography records for one publication do not increase the count. The limit applies to the whole introduction.
+
+Do not reuse a reference within the introduction. When a later claim needs a citation, choose a different verified, relevant work that has not already been cited in the introduction and supports that claim. A different citation key, duplicate record or another version of the same work does not satisfy this requirement. If no verified alternative supports the claim, identify the missing alternative and complete independent drafting without presenting the introduction as satisfying the citation requirement.
 
 Use verified, relevant sources and place each citation beside the claim it supports. Do not pad the count with irrelevant references, invent sources, or remove necessary support merely to meet the maximum. Select the most pertinent sources and consolidate overlapping claims where appropriate. If five verified sources are unavailable, identify the missing support and complete independent drafting without presenting the citation requirement as satisfied.
 
-Before delivery, inspect the first two paragraphs for their setup role and mechanically count the distinct sources cited in the intended accepted introduction, excluding comments, deleted review text, and uncited bibliography entries. A local wording correction does not authorise restructuring unrelated paragraphs; flag any relevant existing shortfall instead.
+Before delivery, inspect the first two paragraphs for their setup role and mechanically count the distinct works and their citation occurrences in the intended accepted introduction. Confirm that each cited work occurs only once, excluding comments, deleted review text and uncited bibliography entries. A local wording correction does not authorise restructuring unrelated paragraphs, so flag any relevant existing shortfall instead.
 
 Write Introduction 0 before finalizing experiments, then rewrite the final introduction after Results and Discussion stabilize.
 
