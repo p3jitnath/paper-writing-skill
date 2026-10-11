@@ -31,6 +31,8 @@ Whenever creating a paper folder, create `main.tex`, supporting `.tex` files, a 
 
 Use `[!h]` for every LaTeX `figure` and `figure*` environment, including figures reused from manuscript or template sources. Follow [figure placement](references/latex_manuscript_editing.md#figure-placement) when creating, revising or checking paper sources.
 
+Every paper must include the exact alphabetical footnote and yellow `\todo` definitions in [the required paper preamble](references/latex_manuscript_editing.md#required-paper-preamble), with their package dependencies. Apply them to both the bundled starter and supplied manuscript or template sources.
+
 Direct the user to pull or import the paper sources into Overleaf and compile there. Generate a paper PDF in the paper folder only when the user explicitly asks. Diagnostic PDFs are the permitted exception and must stay in gitignored `.scratch/`, together with all other diagnostic material, including previews, screenshots, logs, build files and temporary test artifacts. Follow [Overleaf and diagnostics](references/paper_workspace.md#overleaf-and-diagnostics) for every diagnostic workflow.
 
 Strongly discourage any other paper folder structure. If the user creates or proposes `v2`, `v3` or similar draft copies, firmly ask them to use Git commits, branches or tags and retain one active `main.tex`. Preserve existing work while resolving the canonical version. This is a firm project requirement rather than an optional housekeeping suggestion.

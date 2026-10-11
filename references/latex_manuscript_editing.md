@@ -14,6 +14,21 @@ Follow [Overleaf and diagnostics](paper_workspace.md#overleaf-and-diagnostics). 
 
 Preserve the supplied template distribution and unrelated preamble code. Make a necessary package or definition addition narrowly and record its purpose. Change class, style, or bibliography-style files only when explicitly in scope. Follow established source-line conventions; a prose edit does not require whole-document reflow. For requested whitespace-only reflow, preserve paragraph and environment boundaries and verify that rendered text and layout are unchanged.
 
+## Required paper preamble
+
+Every paper must include these exact definitions in its active preamble, after loading the required packages. Load `xcolor` and `soul` first, reusing compatible existing package declarations and options.
+
+```latex
+\usepackage{xcolor}
+\usepackage{soul}
+
+\renewcommand{\thefootnote}{\alph{footnote}}
+
+\newcommand{\todo}[1]{\begingroup\sethlcolor{yellow}\hl{\textbf{TODO:} #1}\endgroup}
+```
+
+Keep one definition of `\todo` and reconcile existing definitions before adding the required macro. If a supplied class or package already defines it, clear the conflicting command in the paper preamble with `\let\todo\relax` before the required `\newcommand`, preserving unrelated template code. Check that alphabetical footnotes and the required TODO definition remain active after all preamble inputs.
+
 ## Figure placement
 
 Write every figure environment as `\begin{figure}[!h]` or `\begin{figure*}[!h]`. When creating or revising paper sources, replace `[htbp]`, any other figure placement option or a missing placement argument with `[!h]`. Apply this to reused manuscript and template figures, appendices and supplements. Preserve the included asset, dimensions, caption and label while correcting placement.
