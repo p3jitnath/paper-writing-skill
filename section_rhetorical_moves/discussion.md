@@ -4,7 +4,7 @@ Use only the moves relevant to the requested argument and genre; the weather/cli
 
 ## Subsection structure and balance
 
-Divide every Discussion into distinct, meaningfully titled subsections. Use strong, informative names that identify each subsection's scientific purpose or supported finding. Choose the number and order to fit the argument. The moves below guide the content and do not require one subsection per move.
+Divide every Discussion into distinct, meaningfully titled subsections. Use neutral, descriptive names that identify each subsection's scientific topic or purpose without evaluative claims. Choose the number and order to fit the argument. The moves below guide the content and do not require one subsection per move.
 
 Explain the supported strengths, contributions and scientific or practical value alongside honest criticism of limitations, adverse findings and unresolved questions. Recognise benefits only where the paper established them. Relate criticism to the interpretations or uses it constrained, using diplomatic and constructive wording while preserving material weaknesses and uncertainty.
 
