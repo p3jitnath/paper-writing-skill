@@ -32,6 +32,16 @@ For substantial drafting, give each paragraph and section a distinct job within 
 
 Introduce an equation's purpose, define new notation, and explain a useful sign, limit, invariant, or consequence. Avoid word-for-word restatement of symbols. Use [mathematical methods](mathematical-methods.md) when changing formulas, assumptions, or computational claims.
 
+## Tone and subsection titles
+
+Use diplomatic, measured language when clarifying distinctions, nuances, limitations or uncertain interpretations. Apply the same tone to author queries, review comments and explanatory replies. Explain the scientific reason and necessary repair respectfully, without blunt or forceful corrections. Wording such as “A useful distinction here was…” or “This interpretation would benefit from clarifying…” can introduce a qualification when it fits the evidence. Keep material limitations and needed corrections clear.
+
+Use strong, concise and informative subsection names that identify the scientific question, mechanism or supported finding. Prefer a title such as “Regional skill and transfer limits” to an undifferentiated topic label. Match the title's claim to the evidence and preserve the requested heading hierarchy and formatting.
+
+## Conclusions and descriptions of papers
+
+Always write Conclusion sections and descriptions or summaries of papers in past tense, whether describing this study or cited work. Use verbs such as “developed”, “evaluated”, “found”, “showed” or “suggested”, retaining the evidence's actual certainty. Apply this to descriptions in abstracts, introductions, related work, captions and supporting summaries. Frame implications as what the completed study established or suggested. Describe future work as what the paper proposed or identified, preserving the distinction between completed and planned work.
+
 ## Claims and language
 
 Prefer concrete scientific subjects and documented operations. Use active or passive voice according to the object in focus; first-person plural is useful for author choices when it fits the manuscript. Keep one term per defined concept and resolve ambiguous pronouns. Explain rather than replace necessary specialist terminology.

@@ -52,7 +52,7 @@ When creating or consolidating a paper folder, check the [paper workspace contra
 
 Apply [Overleaf and diagnostics](paper_workspace.md#overleaf-and-diagnostics) to every review. Direct normal compilation to Overleaf, keep all diagnostic artifacts in gitignored `.scratch/` and verify their actual output paths and index status. A review or submission preparation request does not itself request a paper PDF in the paper folder.
 
-Firmly ask users who keep `v2`, `v3` or alternative paper layouts to use Git and the prescribed structure. Resolve the active source from evidence or a necessary author choice before consolidating existing copies.
+Explain the prescribed paper layout and Git revision policy diplomatically when users keep `v2`, `v3` or alternative layouts. Resolve the active source from evidence or a necessary author choice before consolidating existing copies.
 
 ## Verification and submission
 

@@ -25,7 +25,7 @@ The Claude installation uses `${CLAUDE_HOME:-$HOME/.claude}/skills/paper-writing
 ## What It Does
 
 - Builds or extends a gitignored project context for manuscript planning and handles local edits directly.
-- Creates paper folders with root LaTeX inputs, a flat `figures/` directory and an explicit Git allowlist. Strongly discourages other layouts and numbered draft copies, using Git for revision history.
+- Creates paper folders with root LaTeX inputs, a flat `figures/` directory and an explicit Git allowlist. Keeps one active manuscript and uses Git for revision history, explaining layout requirements diplomatically.
 - Directs normal manuscript compilation to Overleaf and generates a paper PDF in the paper folder only on an explicit request. Keeps all diagnostic artifacts in gitignored `.scratch/`.
 - Routes the paper by scientific task and publication culture.
 - Retains the user's words-to-avoid list and limits abstracts to 2,000 characters including spaces, verified mechanically.

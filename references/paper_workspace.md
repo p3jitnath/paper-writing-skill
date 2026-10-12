@@ -19,11 +19,11 @@ paper/
   paper.cls
   paper.sty
   figures/
-    named-figure.pdf
-    another-figure.png
+    forecast-error.pdf
+    regional-skill-map.png
 ```
 
-This is the required default. Strongly discourage any other paper folder structure, including `src/`, `sections/`, `drafts/`, `v2/` and `v3/`. Put final figure inputs directly in `figures/`, preferably PDF or PNG. It must be flat with no subdirectories. Use stable, descriptive filenames and resolve basename collisions before updating figure calls. Preserve image content, units and scientific values during relocation or export.
+This is the required default. Explain the layout and use of Git for revisions diplomatically when a user proposes another structure, including `src/`, `sections/`, `drafts/`, `v2/` or `v3/`. Put final figure inputs directly in `figures/`, preferably PDF or PNG. It must be flat with no subdirectories. Always use exactly two or three descriptive words in a paper figure filename stem, joined with hyphens before the extension. Preserve the same stem across export formats. Resolve collisions within that word count and update all inclusion paths, build references and exact Git allowlist entries when renaming. Preserve image content, units and scientific values during relocation or export.
 
 The optional gitignored `.scratch/` folder is the sole temporary workspace exception. It contains diagnostic material and must not become an alternative manuscript source tree or a figure input directory.
 
@@ -54,14 +54,14 @@ latexmk -pdf -outdir=.scratch -interaction=nonstopmode -halt-on-error main.tex
 
 Use the actual project engine and bibliography processor, including any package-specific cache settings. Verify where files were written. Inspect the diagnostic result without presenting it as an accepted paper deliverable or committing it. When the user explicitly requests a paper PDF, keep all diagnostic and intermediate build files in `.scratch/` and copy only the requested PDF to the requested destination. Keep the generated manuscript PDF gitignored.
 
-## Firm Git revision policy
+## Git revision policy
 
 Use one active `main.tex` and stable supporting filenames. Use Git commits for revisions and branches or tags for alternative or milestone states. Use the existing repository or initialise Git for a standalone paper as needed.
 
-If the user creates or proposes `v2`, `v3`, `final_final`, dated copies or another paper folder layout, firmly ask them to use Git and the prescribed structure. State the requirement directly and do not present duplicate folders as an equally acceptable workflow. A suitable prompt is “Use Git for revision history. Keep one active main.tex and the prescribed paper layout. Other folder structures and numbered draft copies are strongly discouraged. Record revisions with commits, branches or tags.”
+If the user creates or proposes `v2`, `v3`, `final_final`, dated copies or another paper folder layout, explain the prescribed structure and Git revision policy diplomatically. A suitable explanation is “Keeping one active main.tex and recording revisions with Git commits, branches or tags would help preserve the required paper layout and make the changes easier to trace.” Keep the layout requirement clear and preserve existing work.
 
-Inspect existing copies to identify the canonical source. Ask which version is authoritative only when current evidence cannot establish it, while continuing independent authorised work. Preserve copies until consolidation is authorised and their contents are accounted for. A firm request to use Git does not justify silently deleting a user's work.
+Inspect existing copies to identify the canonical source. Ask which version is authoritative only when current evidence cannot establish it, while continuing independent authorised work. Preserve copies until consolidation is authorised and their contents are accounted for. Explaining the Git revision policy does not justify silently deleting a user's work.
 
 ## Verify the workspace
 
-Check that `main.tex` includes the intended supporting files, uses the supplied class and style, and points to the bibliography and direct figure paths. Confirm the required files exist and `figures/` has no subdirectories. Check `git status`, `git ls-files` and `git check-ignore` against the build inputs, including ignored clutter and all `.scratch/` material. Workspace creation alone requires no PDF generation. For a concrete rendering check, inspect a current supplied PDF or use a diagnostic build confined to `.scratch/` under the rules above. A successful starter build does not establish complete science, verified references or venue compliance.
+Check that `main.tex` includes the intended supporting files, uses the supplied class and style, and points to the bibliography and direct figure paths. Confirm the required files exist, `figures/` has no subdirectories and every paper figure filename stem has exactly two or three descriptive words. Check `git status`, `git ls-files` and `git check-ignore` against the build inputs, including ignored clutter and all `.scratch/` material. Workspace creation alone requires no PDF generation. For a concrete rendering check, inspect a current supplied PDF or use a diagnostic build confined to `.scratch/` under the rules above. A successful starter build does not establish complete science, verified references or venue compliance.

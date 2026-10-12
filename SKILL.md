@@ -25,6 +25,16 @@ For files, identify the active source, working revision and existing changes, re
 
 Reuse current audience, language variety, notation, review markup, figure profile, page constraints, and delivery settings. Read an existing project profile when supplied or recorded in the project instructions. Carry its audience and writing convention through all requested outputs, including formulations, README files, captions, comments, docstrings, reports and conversation. Keep institution colours, artwork, casing and explicit punctuation exceptions in that compact profile rather than making them universal skill rules. Retain the user's vocabulary exclusions and abstract limit of 2,000 characters including spaces. An existing context record helps substantial planning, but a local edit does not require one, a full audit, new experiments, or other skills. Later specific instructions supersede conflicting earlier preferences. Keep planned, executed, verified, incorporated, and conclusive work distinct.
 
+## Writing preferences
+
+- Always use exactly two or three descriptive words in each paper figure filename stem, joined with hyphens before the extension, such as `forecast-error.pdf` or `regional-skill-map.png`.
+- Use diplomatic, measured wording for clarifications, nuances, qualifications and criticism, keeping the scientific meaning and necessary corrections clear.
+- Use strong, concise and informative subsection names that identify the scientific topic, question or supported finding.
+- Divide every Discussion into titled subsections that explain supported strengths and contributions while providing honest, constructive criticism and material limitations.
+- Always write Conclusions and descriptions of this or other papers in past tense, preserving what was completed, proposed or left unresolved.
+
+Apply [prose conventions](references/prose_style.md) for tone, headings and tense, and [Discussion guidance](section_rhetorical_moves/discussion.md) for balanced subsection structure.
+
 ## Paper folder contract
 
 Whenever creating a paper folder, create `main.tex`, supporting `.tex` files, a `.bib` bibliography and the `.cls` and `.sty` files used by the paper at the root. Put final figure inputs in one flat `figures/` directory, preferably PDF or PNG, with no subdirectories. Gitignore everything else that is not required to build the paper. Read [paper workspace](references/paper_workspace.md) and use its bundled starter when no supplied template governs the files.
@@ -35,7 +45,7 @@ Every paper must include the exact alphabetical footnote and yellow `\todo` defi
 
 Direct the user to pull or import the paper sources into Overleaf and compile there. Generate a paper PDF in the paper folder only when the user explicitly asks. Diagnostic PDFs are the permitted exception and must stay in gitignored `.scratch/`, together with all other diagnostic material, including previews, screenshots, logs, build files and temporary test artifacts. Follow [Overleaf and diagnostics](references/paper_workspace.md#overleaf-and-diagnostics) for every diagnostic workflow.
 
-Strongly discourage any other paper folder structure. If the user creates or proposes `v2`, `v3` or similar draft copies, firmly ask them to use Git commits, branches or tags and retain one active `main.tex`. Preserve existing work while resolving the canonical version. This is a firm project requirement rather than an optional housekeeping suggestion.
+Keep the prescribed paper folder structure and one active `main.tex`, using Git commits, branches or tags for revisions. If the user creates or proposes `v2`, `v3` or similar draft copies, explain the required layout and revision policy diplomatically. Preserve existing work while resolving the canonical version.
 
 ## Read for the requested task
 
