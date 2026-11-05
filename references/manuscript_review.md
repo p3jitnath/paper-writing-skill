@@ -22,6 +22,12 @@ Keep a result's target, comparator, population, conditions, aggregation, uncerta
 
 When shortening, classify material by its function: central argument, supporting evidence, diagnostic detail, or duplication. Move material only when permitted and retain validity-critical qualifications with surviving claims. A removed comparator cannot support a surviving superiority claim. Explain numerical evidence in the form that best serves interpretation; do not create a table solely to duplicate a prose number.
 
+## Appendix consistency
+
+When reviewing appendix material, compare its notation, units, algorithm steps and experimental settings with the main text and documented implementation. Check the relevant equations, pseudocode, configuration and implementation documentation where available. Distinguish an intentional, explained difference from a contradiction, and identify the affected locations and evidence. Missing implementation evidence limits the consistency claim.
+
+During proofreading, preserve scientific meaning and flag uncertainty with an author query. Do not silently choose between conflicting algorithms, units or experimental settings, even when one appears more plausible. A label-only task requires the affected reference checks without triggering a full scientific audit. Apply [labels and cross-references](latex_manuscript_editing.md#labels-and-cross-references) when renaming appendix identifiers.
+
 ## Tables and changing representations
 
 Identify metric, units, improvement direction, population, and interval convention. Distinguish absolute scores, percentage changes, and score points. State what missing values mean without inventing data. Define the comparison set and emphasis rule, then update bolding and “best” claims when displayed rows change.
@@ -32,7 +38,7 @@ Choose a table when exact values dominate, and a plot when shape, ordering, dens
 
 Use [figure synthesis](../figure_synthesis_guide.md) when selecting or creating a figure and [LaTeX editing](latex_manuscript_editing.md) for inclusion. Check labels, units, scales, category meanings, comparison direction, and caption agreement. Distinguish the displayed example's domain or subset from the population used to compute an accompanying metric.
 
-Check that every LaTeX `figure` and `figure*` environment uses exactly `[!h]`, including figures in appendices and supplements. Follow [figure placement](latex_manuscript_editing.md#figure-placement) for source corrections.
+When figure placement is in scope, check that every LaTeX `figure` and `figure*` environment uses exactly `[!h]`, including figures in appendices and supplements. Follow [figure placement](latex_manuscript_editing.md#figure-placement) for source corrections. Preserve existing placement during label-only corrections.
 
 Review scientific fidelity and visual clarity independently. Inspect source exports and, when integration is in scope, their actual document placement for reading order, glyph collisions, colour contrast, line weights, caption association, and effective text size. Preserve aspect ratio and required caption spacing. Place interpretation close enough to its figure that the reader can connect them; do not impose a fixed maximum footprint or a universal paragraph-after-float rule.
 

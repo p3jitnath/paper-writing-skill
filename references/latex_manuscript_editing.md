@@ -16,7 +16,7 @@ Preserve the supplied template distribution and unrelated preamble code. Make a 
 
 ## Required paper preamble
 
-Every paper must include these exact definitions in its active preamble, after loading the required packages. Load `xcolor` and `soul` first, reusing compatible existing package declarations and options.
+When creating a paper or editing its preamble, include these exact definitions in the active preamble, after loading the required packages. Load `xcolor` and `soul` first, reusing compatible existing package declarations and options. A label-only correction preserves existing preamble definitions.
 
 ```latex
 \usepackage{xcolor}
@@ -31,9 +31,17 @@ Keep one definition of `\todo` and reconcile existing definitions before adding 
 
 ## Figure placement
 
-Write every figure environment as `\begin{figure}[!h]` or `\begin{figure*}[!h]`. When creating or revising paper sources, replace `[htbp]`, any other figure placement option or a missing placement argument with `[!h]`. Apply this to reused manuscript and template figures, appendices and supplements. Preserve the included asset, dimensions, caption and label while correcting placement.
+When creating figures or changing their placement, write every figure environment as `\begin{figure}[!h]` or `\begin{figure*}[!h]`. Within that scope, replace `[htbp]`, any other figure placement option or a missing placement argument with `[!h]`. Apply this to reused manuscript and template figures, appendices and supplements. Preserve the included asset, dimensions, caption and label while correcting placement. A label-only correction preserves existing placement.
 
-Check every included `.tex` source to confirm that each `figure` and `figure*` declaration has exactly `[!h]`. Inspect the rendered reading order and caption association when rendering verification is in scope, following the diagnostic build rules above.
+When figure placement is in scope, check every included `.tex` source to confirm that each `figure` and `figure*` declaration has exactly `[!h]`. Inspect the rendered reading order and caption association when rendering verification is in scope, following the diagnostic build rules above.
+
+## Labels and cross-references
+
+Use a consistent appendix namespace with object-type prefixes, such as `fig:app-tensor-exchange`, `tab:app-settings`, `eq:app-update` and `sec:app-methods`. Keep main-text and appendix identifiers distinct. When correcting identifiers, record the old-to-new mapping and update every dependent reference together, including references in the main text, captions, supplements and custom reference macros. Preserve the manuscript's established reference commands.
+
+A label correction must preserve prose, equations, numerical results, captions, object order, preamble definitions and layout settings. Do not apply unrelated figure-placement or style defaults. Flag scientific uncertainty separately rather than resolving it during the correction.
+
+Before editing, retain a current baseline or build the unmodified source diagnostically in `.scratch/`. After editing, search the affected sources for stale identifiers, missing targets and duplicate label definitions. Compile the active root through the necessary bibliography and cross-reference passes in `.scratch/`, then inspect the logs for undefined or multiply defined references. Compare displayed text page by page, reference numbering and pagination with the baseline. PDF metadata or byte differences alone do not establish a visible change. Inspect affected pages if the comparison reveals a difference. Report any unavailable baseline, tooling or failed build and limit the verification claim accordingly.
 
 ## Structure and evidence dependencies
 

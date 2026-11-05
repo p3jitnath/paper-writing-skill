@@ -29,7 +29,7 @@ The optional gitignored `.scratch/` folder is the sole temporary workspace excep
 
 The [bundled starter](../examples/paper_latex/main.tex) supplies a standard research article with local [class](../examples/paper_latex/paper.cls), [style](../examples/paper_latex/paper.sty), [bibliography](../examples/paper_latex/references.bib) and supporting `.tex` files. Copy the complete `examples/paper_latex/` contents, including `.gitignore`, into the new paper folder and create `figures/`. The generic class extends `article` and does not claim venue compliance. Follow a supplied template and adapt the section files to the selected genre. Complete the scientific text and verified references from evidence rather than treating starter comments as a finished paper.
 
-The starter includes the required alphabetical footnote and yellow `\todo` definitions and loads `xcolor` and `soul` through `paper.sty`. When using another manuscript or template, include [the same required preamble](latex_manuscript_editing.md#required-paper-preamble) in its active sources.
+The starter includes the required alphabetical footnote and yellow `\todo` definitions and loads `xcolor` and `soul` through `paper.sty`. When preparing another manuscript or template, include [the same required preamble](latex_manuscript_editing.md#required-paper-preamble) when preamble changes are in scope. Preserve existing definitions during label-only corrections.
 
 ## Keep only paper inputs tracked
 

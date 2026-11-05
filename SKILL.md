@@ -9,9 +9,11 @@ Develop a clear scientific argument whose claims match its evidence. Use polishe
 
 ## Mandatory GitHub refresh
 
-Before **every invocation**, even if this skill was used earlier in the session, run `python3 "<skill-dir>/scripts/refresh_skill.py"` with the actual skill directory. It downloads the latest `main` bundle from `https://github.com/p3jitnath/paper-writing-skill`, trying SSH through `git@github.com:p3jitnath/paper-writing-skill.git` first and HTTPS as the fallback. Read the printed `SKILL.md` and use that bundle's directory for references, scripts and packaged assets. Do not refresh again while rereading it within the same invocation.
+Before every invocation, even if this skill was used earlier in the session, run `python3 "<skill-dir>/scripts/refresh_skill.py"` using the actual skill directory. The helper attempts to download the latest `main` bundle from `https://github.com/p3jitnath/paper-writing-skill` through SSH Git, HTTPS Git with existing credential helpers, then an HTTPS archive for public access. Fallbacks can start while a slower attempt continues, and all workers share a five-second download deadline.
 
-The helper shares a five-second download budget across both transports and validates each downloaded bundle. It uses existing credentials without requesting passwords or tokens. If the refresh fails or the budget expires, it waits out the total five seconds and returns the current bundle. If the helper or network tools cannot run, wait five seconds yourself and proceed with the current version. Briefly disclose a fallback. Each invocation must attempt a fresh download. Runtime copies preserve unpublished edits and the installed fallback.
+The helper prints the path of the selected `SKILL.md`. Open that file and use its directory for references, scripts and packaged assets throughout this invocation. Run the helper only once per invocation, including when the selected bundle repeats this instruction. A successful refresh selects a validated runtime copy without overwriting the installed bundle or unpublished edits.
+
+Use existing credentials without requesting passwords or tokens. If all attempts fail, the helper reports the failure categories, waits out the total five seconds and selects the current bundle. Briefly disclose the fallback. If the helper cannot run, wait five seconds and use the current bundle. Attempt a fresh download on each new invocation.
 
 ## Prose punctuation
 
@@ -20,6 +22,8 @@ Do not use semicolons or colons in prose you draft or revise, including manuscri
 ## Scope and initiative
 
 The user's instructions and current project or venue requirements take precedence over house defaults. Distinguish inspection, proofreading, rewriting, structural work, layout work, and scientific review. Findings-only requests leave files unchanged; protected wording stays protected. Complete authorised dependent repairs without expanding a local edit into a new research programme.
+
+A label-only correction changes identifiers and their dependent references together while preserving prose, equations, results and layout. Do not apply unrelated preamble, float-placement or style changes during that correction. Proofreading flags scientific uncertainty with an author query rather than silently choosing an interpretation.
 
 For files, identify the active source, working revision and existing changes, relevant bibliography and assets, output, and build route. For a pasted passage, its supplied context can be sufficient. Infer routine choices from current evidence; ask only when a missing fact changes a scientific claim or another consequential decision, continuing independent work.
 
@@ -39,9 +43,9 @@ Apply [prose conventions](references/prose_style.md) for tone, headings and tens
 
 Whenever creating a paper folder, create `main.tex`, supporting `.tex` files, a `.bib` bibliography and the `.cls` and `.sty` files used by the paper at the root. Put final figure inputs in one flat `figures/` directory, preferably PDF or PNG, with no subdirectories. Gitignore everything else that is not required to build the paper. Read [paper workspace](references/paper_workspace.md) and use its bundled starter when no supplied template governs the files.
 
-Use `[!h]` for every LaTeX `figure` and `figure*` environment, including figures reused from manuscript or template sources. Follow [figure placement](references/latex_manuscript_editing.md#figure-placement) when creating, revising or checking paper sources.
+When creating paper sources or changing figure placement, use `[!h]` for every LaTeX `figure` and `figure*` environment, including figures reused from manuscript or template sources. Follow [figure placement](references/latex_manuscript_editing.md#figure-placement). Preserve existing placement during label-only corrections.
 
-Every paper must include the exact alphabetical footnote and yellow `\todo` definitions in [the required paper preamble](references/latex_manuscript_editing.md#required-paper-preamble), with their package dependencies. Apply them to both the bundled starter and supplied manuscript or template sources.
+When creating a paper or editing its preamble, include the exact alphabetical footnote and yellow `\todo` definitions in [the required paper preamble](references/latex_manuscript_editing.md#required-paper-preamble), with their package dependencies. Apply them to both the bundled starter and supplied manuscript or template sources within that scope. Preserve existing definitions during label-only corrections.
 
 Direct the user to pull or import the paper sources into Overleaf and compile there. Generate a paper PDF in the paper folder only when the user explicitly asks. Diagnostic PDFs are the permitted exception and must stay in gitignored `.scratch/`, together with all other diagnostic material, including previews, screenshots, logs, build files and temporary test artifacts. Follow [Overleaf and diagnostics](references/paper_workspace.md#overleaf-and-diagnostics) for every diagnostic workflow.
 
@@ -62,6 +66,7 @@ Read only relevant sections. Paths in backticks are relative to this skill direc
 | Explain or revise mathematics, algorithms, or computational claims | [Mathematical methods](references/mathematical-methods.md). |
 | Write a title, abstract, or required front matter | [Front matter](references/front_matter.md). |
 | Edit LaTeX or fit a page limit | [LaTeX editing](references/latex_manuscript_editing.md). |
+| Correct appendix labels or check appendix consistency | [Labels and cross-references](references/latex_manuscript_editing.md#labels-and-cross-references) and [appendix consistency](references/manuscript_review.md#appendix-consistency). |
 | Create or integrate figures | [Figure synthesis](figure_synthesis_guide.md); [integration checks](references/manuscript_review.md#figures) when placing them in a manuscript. |
 | Edit or audit a bibliography | [Bibliography requirements](references/bibliography.md), to the requested depth. |
 | Respond to reviewers | [Reviewer responses](references/reviewer_responses.md). |
@@ -71,6 +76,7 @@ Read only relevant sections. Paths in backticks are relative to this skill direc
 ## Scientific invariants
 
 - Preserve values, units, definitions, notation, citations, source lineage, and uncertainty. Locate conflicts and resolve them from evidence or flag the unresolved choice.
+- At first mention, identify a tool's role and cite its primary source. Compare appendix notation, units, algorithms and experimental settings with the main text and documented implementation when reviewing that material.
 - Keep the target quantity, comparator, population, conditions, and aggregation recoverable for result-bearing statements. Distinguish system comparisons from component tests and structural guarantees from measured outcomes.
 - Make each section answer a question and prepare what follows. Connect observation → problem → response → result → consequence across the argument, respecting the selected genre and the introduction's two opening context paragraphs. State supported findings directly with their interpretation, retaining important adverse results and trade-offs.
 - Keep scientific claims within tested or proved conditions. In weather/climate work, distinguish observations, analyses, reanalyses, simulations, and forecasts, and offline accuracy from coupled or operational performance.
@@ -79,5 +85,7 @@ Read only relevant sections. Paths in backticks are relative to this skill direc
 ## Verify and deliver
 
 Match verification to the change. Compare a prose edit with its source and read it continuously with its neighbours, check an edited formula's equivalence, mechanically verify the abstract's 2,000-character limit including spaces, and inspect evidence for changed scientific claims. For rendering changes, inspect a current supplied PDF or perform a diagnostic build confined to `.scratch/` under the compilation rules above. Read the intended accepted version of tracked edits separately from their markup. A successful build does not establish scientific correctness or coherent prose.
+
+For label changes, check for stale, missing and duplicate references, then compile through the required passes in `.scratch/`. Compare before and after output to confirm unchanged displayed text, numbering and pagination, following [labels and cross-references](references/latex_manuscript_editing.md#labels-and-cross-references). Report any unavailable build or comparison instead of claiming equivalence.
 
 After applicable checks pass, repeat or broaden them only after another edit, a failure, or a concrete concern. Missing tooling or evidence limits only the checks that require it. Return the requested text, findings, or files, with a brief account of material changes and checks actually performed for substantial work. Distinguish source inspection, compilation, visual review, numerical verification, experiment execution, local saving, and publication; an earlier success does not verify current inputs.
