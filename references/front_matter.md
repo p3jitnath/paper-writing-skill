@@ -22,8 +22,11 @@ Use this sequence, adapting it to genre:
 4. Evaluation setting: data/reference, scale, period, or physical case.
 5. Principal quantitative or mechanistic results.
 6. Important limitation and bounded implication when material.
+7. A constructive, future-facing synthesis as the final sentence.
 
-Do not turn the abstract into an architecture inventory. Give enough experimental coordinates to interpret headline numbers, or state the assumptions and scope of a theoretical result. Keep the abstract and concluding section aligned in their principal claim, certainty, assumptions, and scope. They should carry the same scientific message; repeat wording exactly only when the user requests it. A negative or unresolved finding can be the main contribution; do not force a positive ending.
+Always end an abstract on a high note for the future. Use the final-sentence pattern “Together, these experiments …”, adapting the subject to the actual contribution for nonexperimental papers, such as “these analyses” or “these results”. Connect the supported findings to a specific future scientific capability, application or next investigation. A schematic formulation is “Together, these experiments established a foundation for [specific future capability or investigation].” Keep completed-work claims in past tense and distinguish future potential from demonstrated outcomes. Retain material limitations and uncertainty. For negative or unresolved findings, close on the useful constraint, clarified question or next decisive test that the work identified.
+
+Do not turn the abstract into an architecture inventory. Give enough experimental coordinates to interpret headline numbers, or state the assumptions and scope of a theoretical result. Keep the abstract and concluding section aligned in their principal claim, certainty, assumptions, and scope. They should carry the same scientific message; repeat wording exactly only when the user requests it.
 
 ## AGU/JAMES Key Points
 

@@ -36,6 +36,7 @@ Reuse current audience, language variety, notation, review markup, figure profil
 - Use neutral, concise and descriptive subsection names that identify the topic or analysis without evaluative claims.
 - Divide every Discussion into titled subsections that explain supported strengths and contributions while providing honest, constructive criticism and material limitations.
 - Always write Conclusions and descriptions of this or other papers in past tense, preserving what was completed, proposed or left unresolved.
+- Always end an abstract on a high note with a supported, future-facing synthesis, following the “Together, these experiments …” pattern in [abstract guidance](references/front_matter.md#abstract).
 
 Apply [prose conventions](references/prose_style.md) for tone, headings and tense, and [Discussion guidance](section_rhetorical_moves/discussion.md) for balanced subsection structure.
 
