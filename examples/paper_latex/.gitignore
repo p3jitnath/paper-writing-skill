@@ -2,11 +2,11 @@
 *
 !/.gitignore
 !/main.tex
-!/abstract.tex
-!/introduction.tex
-!/methods.tex
-!/results.tex
-!/discussion.tex
+!/s01_abstract.tex
+!/s02_introduction.tex
+!/s03_methods.tex
+!/s04_results.tex
+!/s05_discussion.tex
 !/references.bib
 !/paper.cls
 !/paper.sty

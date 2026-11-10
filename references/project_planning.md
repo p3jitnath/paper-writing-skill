@@ -4,7 +4,7 @@ Use for new manuscript planning, a new section that lacks scientific context, or
 
 ## Create the paper workspace
 
-Apply the [paper folder contract](paper_workspace.md) whenever creating a paper folder. Create the actual `main.tex`, supporting `.tex`, bibliography, class and style files at the root, with one flat `figures/` directory and a `.gitignore` that excludes every nonessential file. Strongly discourage alternative layouts and firmly ask users with numbered draft copies to use Git. A plan or context record does not satisfy the requirement to create the LaTeX files.
+Apply the [paper folder contract](paper_workspace.md) whenever creating a paper folder. Create the actual `main.tex`, supporting files named `s01_abstract.tex`, `s02_introduction.tex` and so on, bibliography, class and style files at the root, with one flat `figures/` directory. Put all non-build material inside hidden `.scratch/` and gitignore that folder in full. Strongly discourage alternative layouts and firmly ask users with numbered draft copies to use Git. A plan or context record does not satisfy the requirement to create the LaTeX files.
 
 ## Project profile
 
@@ -65,7 +65,7 @@ Preserve the existing manuscript voice. For a new weather/climate draft, the fol
 | Dennis Hartmann | Climate dynamics, feedbacks, variability, physical interpretation | `author_profile/hartmann_voice_profile.md` |
 | Kerry Emanuel | Tropical convection, cyclones, theory-led tropical weather | `author_profile/emanuel_voice_profile.md` |
 
-An explicit `voice_profile` in `project_context.md` overrides automatic routing. Profiles control exposition, not conclusions. Never copy signature phrases or imitate personal biography. Preserve the authors' scientific reasoning patterns while keeping the paper's own terminology.
+An explicit `voice_profile` in an existing project context or a new `.scratch/project_context.md` overrides automatic routing. Profiles control exposition, not conclusions. Never copy signature phrases or imitate personal biography. Preserve the authors' scientific reasoning patterns while keeping the paper's own terminology.
 
 ## Build the Evidence Contract
 

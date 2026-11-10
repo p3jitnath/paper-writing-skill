@@ -42,7 +42,7 @@ Apply [prose conventions](references/prose_style.md) for tone, headings and tens
 
 ## Paper folder contract
 
-Whenever creating a paper folder, create `main.tex`, supporting `.tex` files, a `.bib` bibliography and the `.cls` and `.sty` files used by the paper at the root. Put final figure inputs in one flat `figures/` directory, preferably PDF or PNG, with no subdirectories. Gitignore everything else that is not required to build the paper. Read [paper workspace](references/paper_workspace.md) and use its bundled starter when no supplied template governs the files.
+Whenever creating a paper folder, create `main.tex`, supporting `.tex` files named `s01_abstract.tex`, `s02_introduction.tex` and so on, a `.bib` bibliography and the `.cls` and `.sty` files used by the paper at the root. Put final figure inputs in one flat `figures/` directory, preferably PDF or PNG, with no subdirectories. Apart from `.gitignore` and Git metadata, keep everything not required to build the paper inside the hidden, gitignored `.scratch/` folder. Read [paper workspace](references/paper_workspace.md) for naming, migration and storage rules, and use its bundled starter when no supplied template governs the files.
 
 When creating paper sources or changing figure placement, use `[!h]` for every LaTeX `figure` and `figure*` environment, including figures reused from manuscript or template sources. Follow [figure placement](references/latex_manuscript_editing.md#figure-placement). Preserve existing placement during label-only corrections.
 

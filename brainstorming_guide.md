@@ -1,6 +1,6 @@
 # Structured Brainstorming for AI Weather and Climate Papers
 
-Use the relevant questions to create or extend `project_context.md` for requested planning. Fill known answers from supplied material, skip inapplicable questions, and ask a small batch only when missing answers affect the next scientific decision. Record “unknown” as an open item and keep working on independent parts. Do not invent results, dataset properties, or venue requirements.
+Use the relevant questions to create `.scratch/project_context.md` or extend an existing context record for requested planning. Fill known answers from supplied material, skip inapplicable questions, and ask a small batch only when missing answers affect the next scientific decision. Record “unknown” as an open item and keep working on independent parts. Do not invent results, dataset properties, or venue requirements.
 
 ## Phase 1: Scientific problem
 
@@ -97,4 +97,4 @@ Use the relevant questions to create or extend `project_context.md` for requeste
 
 ## Output
 
-Reuse an existing project context or adapt the relevant domain example in `examples/` when a context record is useful. Keep strategic notes gitignored. When creating a paper folder, follow [paper workspace](references/paper_workspace.md) and create the actual LaTeX inputs in the prescribed layout. Draft the initial introduction in its canonical `.tex` file and use Git for revisions. Leave unsupported numerical claims as placeholders.
+Reuse an existing project context or adapt the relevant domain example in `examples/` when a context record is useful. Keep new strategic notes inside gitignored `.scratch/`. When creating a paper folder, follow [paper workspace](references/paper_workspace.md) and create the actual LaTeX inputs in the prescribed layout. Draft the initial introduction in its canonical `.tex` file and use Git for revisions. Leave unsupported numerical claims as placeholders.

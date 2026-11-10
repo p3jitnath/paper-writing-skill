@@ -4,7 +4,7 @@ Use only for the requested source, structure, or layout change. Follow current u
 
 ## Paper workspace
 
-For a new paper folder, follow [paper workspace](paper_workspace.md). Keep `main.tex`, supporting `.tex`, `.bib`, `.cls` and `.sty` inputs at the root and all final figure inputs directly in `figures/`, with no child directories. Strongly discourage other folder layouts and use Git for revision history. A local edit to an existing manuscript must preserve the current source until a requested consolidation or conversion is authorised.
+For a new paper folder, follow [paper workspace](paper_workspace.md). Keep `main.tex`, supporting files named `s01_abstract.tex`, `s02_introduction.tex` and so on, and the `.bib`, `.cls` and `.sty` build inputs at the root. Keep all final figure inputs directly in `figures/`, with no child directories, and all non-build material inside hidden, gitignored `.scratch/`. Strongly discourage other folder layouts and use Git for revision history. A local edit to an existing manuscript must preserve the current source until a requested consolidation or conversion is authorised.
 
 ## Establish the active build
 

@@ -1,6 +1,6 @@
 # Resumable Paper Audit
 
-For a requested long or resumable audit, use an existing tracking record when available, or `notes/AUDIT_LEDGER.md` when a new record is useful. Use one row per section or other meaningful unit; a local revision does not require a ledger.
+For a requested long or resumable audit, use an existing tracking record when available, or `.scratch/notes/AUDIT_LEDGER.md` when a new record is useful. Keep new records inside the hidden, gitignored work folder. Use one row per section or other meaningful unit; a local revision does not require a ledger.
 
 | Section | Claim/evidence | Data/leakage | Verification | Physics/uncertainty | Reproducibility | Prose | Status |
 |---|---|---|---|---|---|---|---|

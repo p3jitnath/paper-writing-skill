@@ -25,7 +25,7 @@ The Claude installation uses `${CLAUDE_HOME:-$HOME/.claude}/skills/paper-writing
 ## What It Does
 
 - Builds or extends a gitignored project context for manuscript planning and handles local edits directly.
-- Creates paper folders with root LaTeX inputs, a flat `figures/` directory and an explicit Git allowlist. Keeps one active manuscript and uses Git for revision history, explaining layout requirements diplomatically.
+- Creates paper folders with `main.tex`, numbered section files such as `s01_abstract.tex` and `s02_introduction.tex`, related root build inputs, a flat `figures/` directory and an explicit Git allowlist. Stores all non-build material inside hidden, gitignored `.scratch/`. Keeps one active manuscript and uses Git for revision history, explaining layout requirements diplomatically.
 - Directs normal manuscript compilation to Overleaf and generates a paper PDF in the paper folder only on an explicit request. Keeps all diagnostic artifacts in gitignored `.scratch/`.
 - Routes the paper by scientific task and publication culture.
 - Retains the user's words-to-avoid list and limits abstracts to 2,000 characters including spaces, verified mechanically.
@@ -90,14 +90,14 @@ examples/                      Template plus three domain examples
 
 ## Voice Profiles
 
-The profiles encode recurring reasoning and exposition patterns, not phrases to copy. Scientific truth and the paper's evidence always override stylistic preference. Select a profile explicitly in `project_context.md` or allow task routing to choose the default.
+The profiles encode recurring reasoning and exposition patterns, not phrases to copy. Scientific truth and the paper's evidence always override stylistic preference. Select a profile explicitly in the project context, using `.scratch/project_context.md` for a new record, or allow task routing to choose the default.
 
 ## Customize
 
 - Edit `author_profile/voice_profile.md` for group-wide prose conventions.
 - Extend `references/scientific_rigor.md` with project- or subfield-specific diagnostics.
 - Add venue conventions only after checking the current author instructions.
-- Keep strategic `project_context.md` files untracked unless the research team explicitly wants them shared.
+- Keep new strategic context records inside gitignored `.scratch/project_context.md`.
 
 ## Validate
 
