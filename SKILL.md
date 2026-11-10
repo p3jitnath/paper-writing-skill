@@ -78,7 +78,7 @@ Read only relevant sections. Paths in backticks are relative to this skill direc
 
 - Preserve values, units, definitions, notation, citations, source lineage, and uncertainty. Locate conflicts and resolve them from evidence or flag the unresolved choice.
 - At first mention, identify a tool's role and cite its primary source. Compare appendix notation, units, algorithms and experimental settings with the main text and documented implementation when reviewing that material.
-- Keep the target quantity, comparator, population, conditions, and aggregation recoverable for result-bearing statements. Distinguish system comparisons from component tests and structural guarantees from measured outcomes.
+- Keep the target quantity, reference case, population, conditions, and aggregation recoverable for result-bearing statements. Distinguish system comparisons from component tests and structural guarantees from measured outcomes.
 - Make each section answer a question and prepare what follows. Connect observation → problem → response → result → consequence across the argument, respecting the selected genre and the introduction's two opening context paragraphs. State supported findings directly with their interpretation, retaining important adverse results and trade-offs.
 - Keep scientific claims within tested or proved conditions. In weather/climate work, distinguish observations, analyses, reanalyses, simulations, and forecasts, and offline accuracy from coupled or operational performance.
 - When replacing a result, update its dependent text, tables, figures, captions, and conclusions together. When shortening, preserve the evidence and qualifications needed by the surviving claims.

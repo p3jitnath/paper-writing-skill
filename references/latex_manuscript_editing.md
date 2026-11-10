@@ -49,7 +49,7 @@ Adapt headings and section lengths to their jobs and the research genre. Merge g
 
 Connect claims to recoverable evidence and cite relevant figures, tables, and appendices. Numerical evidence may be explained directly in prose when a table or plot adds no interpretive value. Organise supplements by reader needs such as reproducibility, proofs, controls, and detailed results; keep incidental run bookkeeping in technical documentation.
 
-Before removing a paragraph, row, figure, or comparator, identify the claims that depend on it. Keep necessary qualifications and revise dependent emphasis and references. Within a local task, flag an unsupported dependency rather than restoring whole sections or running an experiment without authorisation.
+Before removing a paragraph, row, figure, or reference case, identify the claims that depend on it. Keep necessary qualifications and revise dependent emphasis and references. Within a local task, flag an unsupported dependency rather than restoring whole sections or running an experiment without authorisation.
 
 ## Fit a page constraint
 

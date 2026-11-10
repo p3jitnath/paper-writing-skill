@@ -36,7 +36,7 @@ For mechanism papers, test the proposed constraint against the competing explana
 
 ## Move 6: Bounded takeaway
 
-State the supported finding positively, precisely and confidently, then explain its scientific consequence. Retain the comparator, conditions, uncertainty and important exceptions needed to interpret it. Do not use aggregate score gains to claim mechanism, climate credibility or operational readiness.
+State the supported finding positively, precisely and confidently, then explain its scientific consequence. Retain the reference case, conditions, uncertainty and important exceptions needed to interpret it. Do not use aggregate score gains to claim mechanism, climate credibility or operational readiness.
 
 Connect the measured result to its supported physical or methodological interpretation and the trade-off or distinction that motivates the next step. Keep general limitations and scope exclusions neutral and concentrated in Discussion or Scope, alongside cross-result synthesis and competing explanations. Avoid repeatedly qualifying an already bounded result with generic caveats.
 

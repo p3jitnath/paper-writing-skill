@@ -5,7 +5,7 @@ Use on changed prose when substantial editing or a readability review warrants i
 ## Inspect in context
 
 - Repeated motivation, duplicated conclusions, and paragraph endings that add no implication.
-- Vague subjects, remote pronouns, unexplained changes of comparator or population, and missing logical links.
+- Vague subjects, remote pronouns, unexplained changes of reference case or population, and missing logical links.
 - Promotional claims or intensifiers without a supported magnitude, comparison, or consequence.
 - Abstract operation words whose intended technical meaning is not defined.
 - Choppy fragments or overloaded qualification chains that raise reading effort.

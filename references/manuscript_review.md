@@ -18,9 +18,9 @@ Choose the progression for the genre. Theory may follow assumptions, constructio
 
 Compare the abstract's takeaway with the concluding section: retain the same supported claim and scope, including material assumptions and limitations. Preserve an explicit request for identical wording; otherwise adapt phrasing to each section's purpose without changing the message.
 
-Keep a result's target, comparator, population, conditions, aggregation, uncertainty, and source recoverable. When several experiments are present, use an overview only when it helps distinguish their questions, changed factors, and controls. Retain important adverse results and trade-offs beside the supported advantages.
+Keep a result's target, reference case, population, conditions, aggregation, uncertainty, and source recoverable. When several experiments are present, use an overview only when it helps distinguish their questions, changed factors, and controls. Retain important adverse results and trade-offs beside the supported advantages.
 
-When shortening, classify material by its function: central argument, supporting evidence, diagnostic detail, or duplication. Move material only when permitted and retain validity-critical qualifications with surviving claims. A removed comparator cannot support a surviving superiority claim. Explain numerical evidence in the form that best serves interpretation; do not create a table solely to duplicate a prose number.
+When shortening, classify material by its function: central argument, supporting evidence, diagnostic detail, or duplication. Move material only when permitted and retain validity-critical qualifications with surviving claims. A removed reference case cannot support a surviving superiority claim. Explain numerical evidence in the form that best serves interpretation; do not create a table solely to duplicate a prose number.
 
 ## Appendix consistency
 

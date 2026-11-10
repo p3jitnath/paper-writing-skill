@@ -4,7 +4,7 @@ Use only the sections relevant to the claim being written or reviewed. The first
 
 ## Claims, controls, and output objects
 
-For result-bearing statements, keep the estimand, comparator, population, conditions, aggregation, uncertainty, and source recoverable. A small edit needs only enough context to preserve those meanings. Distinguish a whole-system comparison from a component test: shared inputs alone do not hold objectives, capacity, training budget, or inference fixed. Describe what changed and what the design can isolate.
+For result-bearing statements, keep the estimand, reference case, population, conditions, aggregation, uncertainty, and source recoverable. A small edit needs only enough context to preserve those meanings. Distinguish a whole-system comparison from a component test: shared inputs alone do not hold objectives, capacity, training budget, or inference fixed. Describe what changed and what the design can isolate.
 
 Connect the output object to the scientific objective. A point estimate, interval, distribution, ranking, representation, or decision rule is useful according to the information the task needs. A richer output is not inherently better; under suitable objectives a point estimate is sufficient. Means and medians answer different questions.
 
@@ -26,7 +26,7 @@ Before treating threshold statements as contradictory, distinguish a pooled cros
 
 Define a difficulty, similarity, uncertainty, or mechanism proxy operationally. Examine leakage, confounding, normalisation, and the population used to build it. For neighbour-based diagnostics, identify eligible references and the similarity representation; examine sensitivity when it matters to the claim. Association with a proxy does not establish direct measurement of the underlying property or calibration of uncertainty.
 
-For grouped diagnostics, state binning, weights, units, and summary statistic. Inspect influential observations when a sharp change in a group mean drives the conclusion. Use consistent conventions before comparing absolute quantities and retain relevant comparator patterns.
+For grouped diagnostics, state binning, weights, units, and summary statistic. Inspect influential observations when a sharp change in a group mean drives the conclusion. Use consistent conventions before comparing absolute quantities and retain relevant patterns in the reference case.
 
 Distinguish an illustrated subset from the population behind its accompanying score. A specimen, time window, region, or selected sample can explain behaviour but cannot establish aggregate performance. Preserve prescribed examples and scales during presentation changes.
 
@@ -58,7 +58,7 @@ Build a reference hierarchy. State whether each target is an observation, operat
 
 When an observation-initialized system is trained or verified against a reanalysis, evaluate the estimated initial state at lead time zero and separate initialization error from subsequent forecast growth. Where possible, verify state estimation against withheld independent observations as well as the supervising reanalysis. Note when the chosen verification product is closer to one system's training target or older than a competing operational analysis.
 
-Label every baseline by its scientific role: probabilistic reference, deterministic stress test, persistence control, operational comparator, ablation, or upper or lower bound. A deterministic persistence forecast is not a matched probabilistic baseline. For each comparison, check issue time, information age, target dates, calibration opportunity, resolution, postprocessing, product maturity, and date-subset symmetry. State asymmetries beside the result rather than only in Limitations. When one input replaces another, describe a separate pathway rather than an additional predictor, and avoid algorithm-ranking claims across unequal routes.
+Label every baseline by its scientific role: probabilistic reference, deterministic stress test, persistence control, operational reference, ablation, or upper or lower bound. A deterministic persistence forecast is not a matched probabilistic baseline. For each comparison, check issue time, information age, target dates, calibration opportunity, resolution, postprocessing, product maturity, and date-subset symmetry. State asymmetries beside the result rather than only in Limitations. When one input replaces another, describe a separate pathway rather than an additional predictor, and avoid algorithm-ranking claims across unequal routes.
 
 ## 4. Forecast verification
 
