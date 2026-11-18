@@ -14,5 +14,5 @@ Select questions relevant to the requested change and research genre. Weather/cl
 - Are limitations tied to the conclusions or uses they restrict?
 - Are general limitations and scope qualifications neutral and concentrated in Discussion or Scope, with validity-critical conditions retained beside their results?
 - Is societal or operational value supported by decision-relevant evidence?
-- Does the final paragraph name the next decisive test rather than a generic future-work list?
-- Does the final sentence of the Conclusion, or the concluding Discussion, end on the strongest evidence-supported implication in concise and impactful language without introducing a new claim or exceeding the paper's scope?
+- Do the final paragraph or closing sentences of the Conclusion, or of the concluding Discussion, match the abstract's main finding, scope, certainty and future direction?
+- Does the last sentence connect a concrete, evidence-supported opportunity for future progress to the broader problem that motivated the study?

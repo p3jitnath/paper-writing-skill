@@ -35,8 +35,10 @@ Reuse current audience, language variety, notation, review markup, figure profil
 - Use diplomatic, measured wording for clarifications, nuances, qualifications and criticism, keeping the scientific meaning and necessary corrections clear.
 - Use neutral, concise and descriptive subsection names that identify the topic or analysis without evaluative claims.
 - Divide every Discussion into titled subsections that explain supported strengths and contributions while providing honest, constructive criticism and material limitations.
+- Introduce the paper's own work with “In this study, we …” after establishing the context. Use “investigate” to state the research question, as in “In this study, we investigated whether …” for completed work.
 - Always write Conclusions and descriptions of this or other papers in past tense, preserving what was completed, proposed or left unresolved.
 - Always end an abstract on a high note with a supported, future-facing synthesis, following the “Together, these experiments …” pattern in [abstract guidance](references/front_matter.md#abstract).
+- Match the final Conclusion paragraph to the abstract's main finding, scope and outlook. End on an optimistic line that connects a specific future opportunity to the broader problem motivating the paper. See [the closing guidance](section_rhetorical_moves/discussion.md#move-7-end-on-the-consequential-implication).
 - Every paper must include an overview figure. Reuse a suitable existing figure or generate a faithful, editable overview using [TikZ, a LaTeX graphics system](https://ctan.org/pkg/pgf), when one is missing. Follow [the overview workflow](figure_synthesis_guide.md#required-overview-figure).
 
 Apply [prose conventions](references/prose_style.md) for tone, headings and tense, and [Discussion guidance](section_rhetorical_moves/discussion.md) for balanced subsection structure.

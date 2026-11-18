@@ -35,7 +35,7 @@ State the physical or methodological insight that makes progress possible. Do no
 
 ## Move 4: Approach
 
-Explain how the data, model, or diagnostic operationalizes the insight. Include the task, scale, and evidence boundary.
+After the opening context and research gap, use “In this study, we …” to introduce the paper's own work. State the question with “investigate”, as in “In this study, we investigated whether …” for a completed study. Explain how the data, model, or diagnostic operationalised the insight. Include the task, scale and evidence boundary.
 
 ## Move 5: Contributions as findings
 

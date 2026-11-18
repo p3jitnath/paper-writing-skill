@@ -16,7 +16,7 @@ For substantial structural work, trace observation → problem → response → 
 
 Choose the progression for the genre. Theory may follow assumptions, construction, theorem, and implication; empirical work may follow hypothesis, design, observations, and interpretation; methods work may connect problem, representation, algorithm, and evaluation. A repeated motivation must add a new implication. Rhetorical patterns diagnose gaps rather than mandate particular opening sentences.
 
-Compare the abstract's takeaway with the concluding section: retain the same supported claim and scope, including material assumptions and limitations. Preserve an explicit request for identical wording; otherwise adapt phrasing to each section's purpose without changing the message.
+Compare the abstract's takeaway with the final paragraph or closing sentences of the Conclusion. Match the supported claim, certainty, scope and future direction, including material assumptions and limitations. Check that the last sentence ties a concrete opportunity for future progress to the broader problem. See [the closing guidance](../section_rhetorical_moves/discussion.md#move-7-end-on-the-consequential-implication).
 
 Keep a result's target, reference case, population, conditions, aggregation, uncertainty, and source recoverable. When several experiments are present, an additional experiment-comparison summary can help distinguish their questions, changed factors, and controls. This optional summary is separate from the required paper overview figure. Retain important adverse results and trade-offs beside the supported advantages.
 

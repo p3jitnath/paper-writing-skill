@@ -34,10 +34,10 @@ Propose the experiment or observation that would resolve the most important rema
 
 ## Move 7: End on the consequential implication
 
-Make the final sentence of a standalone Conclusion, or of the Discussion when it serves as the conclusion, concise, specific, and impactful. State the strongest scientific understanding, forecasting capability, modeling consequence, or decision-relevant implication established by the evidence. Preserve the paper's scope and uncertainty, but do not end with administrative detail, a citation, a generic call for more research, a repeated limitation, or a claim introduced only for rhetorical force.
+In the final paragraph or closing sentences of a standalone Conclusion, or of the Discussion when it serves as the conclusion, match the abstract's main finding, scope, certainty and outlook. Bring the reader back to the broader scientific or practical problem that motivated the study. Use the final sentence to name a specific, evidence-supported opportunity for future progress on that problem. An unresolved finding can support an optimistic ending by identifying the next test or clarifying what future work can resolve.
 
 Write a standalone Conclusion and any concluding Discussion passage in past tense. Follow [the tense requirements](../references/prose_style.md#conclusions-and-descriptions-of-papers) when recounting the contribution, findings, implications and unresolved questions.
 
-Read the final sentence independently. It should answer why the established result matters and leave the reader with the paper's durable contribution, not merely restate that the study was conducted.
+Read the abstract and Conclusion endings together. Check that both point to the same future direction and keep the limits of the evidence clear. Repeat the wording when the user requests a verbatim match.
 
 Results and Discussion may be combined when the genre or venue benefits from immediate process interpretation. Divide the combined section into meaningful titled subsections as well, preserving the distinction between observation, local interpretation, synthesis and limitation.
