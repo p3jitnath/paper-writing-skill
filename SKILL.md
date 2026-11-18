@@ -31,18 +31,19 @@ Reuse current audience, language variety, notation, review markup, figure profil
 
 ## Writing preferences
 
-- Always use exactly two or three descriptive words in each paper figure filename stem, joined with hyphens before the extension, such as `forecast-error.pdf` or `regional-skill-map.png`.
+- Always use exactly two or three descriptive words in each exported figure asset filename stem, joined with hyphens before the extension, such as `forecast-error.pdf` or `regional-skill-map.png`. Active TikZ source fragments follow the numbered `.tex` naming convention.
 - Use diplomatic, measured wording for clarifications, nuances, qualifications and criticism, keeping the scientific meaning and necessary corrections clear.
 - Use neutral, concise and descriptive subsection names that identify the topic or analysis without evaluative claims.
 - Divide every Discussion into titled subsections that explain supported strengths and contributions while providing honest, constructive criticism and material limitations.
 - Always write Conclusions and descriptions of this or other papers in past tense, preserving what was completed, proposed or left unresolved.
 - Always end an abstract on a high note with a supported, future-facing synthesis, following the “Together, these experiments …” pattern in [abstract guidance](references/front_matter.md#abstract).
+- Every paper must include an overview figure. Reuse a suitable existing figure or generate a faithful, editable overview using [TikZ, a LaTeX graphics system](https://ctan.org/pkg/pgf), when one is missing. Follow [the overview workflow](figure_synthesis_guide.md#required-overview-figure).
 
 Apply [prose conventions](references/prose_style.md) for tone, headings and tense, and [Discussion guidance](section_rhetorical_moves/discussion.md) for balanced subsection structure.
 
 ## Paper folder contract
 
-Whenever creating a paper folder, create `main.tex`, supporting `.tex` files named `s01_abstract.tex`, `s02_introduction.tex` and so on, a `.bib` bibliography and the `.cls` and `.sty` files used by the paper at the root. Put final figure inputs in one flat `figures/` directory, preferably PDF or PNG, with no subdirectories. Apart from `.gitignore` and Git metadata, keep everything not required to build the paper inside the hidden, gitignored `.scratch/` folder. Read [paper workspace](references/paper_workspace.md) for naming, migration and storage rules, and use its bundled starter when no supplied template governs the files.
+Whenever creating a paper folder, create `main.tex`, supporting `.tex` files named `s01_abstract.tex`, `s02_introduction.tex` and so on, a `.bib` bibliography and the `.cls` and `.sty` files used by the paper at the root. Put final exported figure assets in one flat `figures/` directory, preferably PDF or PNG, with no subdirectories. Apart from `.gitignore` and Git metadata, keep everything not required to build the paper inside the hidden, gitignored `.scratch/` folder. Read [paper workspace](references/paper_workspace.md) for naming, migration and storage rules, and use its bundled starter when no supplied template governs the files.
 
 When creating paper sources or changing figure placement, use `[!h]` for every LaTeX `figure` and `figure*` environment, including figures reused from manuscript or template sources. Follow [figure placement](references/latex_manuscript_editing.md#figure-placement). Preserve existing placement during label-only corrections.
 

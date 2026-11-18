@@ -28,6 +28,7 @@ The Claude installation uses `${CLAUDE_HOME:-$HOME/.claude}/skills/paper-writing
 - Creates paper folders with `main.tex`, numbered section files such as `s01_abstract.tex` and `s02_introduction.tex`, related root build inputs, a flat `figures/` directory and an explicit Git allowlist. Stores all non-build material inside hidden, gitignored `.scratch/`. Keeps one active manuscript and uses Git for revision history, explaining layout requirements diplomatically.
 - Directs normal manuscript compilation to Overleaf and generates a paper PDF in the paper folder only on an explicit request. Keeps all diagnostic artifacts in gitignored `.scratch/`.
 - Routes the paper by scientific task and publication culture.
+- Requires an overview figure in every paper, reusing a suitable existing figure or generating and integrating an editable TikZ overview when one is missing.
 - Retains the user's words-to-avoid list and limits abstracts to 2,000 characters including spaces, verified mechanically.
 - Routes benchmark, flagship-result, model-development, calibration, intercomparison, review, theory/mechanism, foundation-model, and standard research papers separately.
 - Audits temporal and spatial leakage, product provenance, baseline fairness, physical consistency, uncertainty, and reproducibility.

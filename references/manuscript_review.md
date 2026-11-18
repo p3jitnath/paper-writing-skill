@@ -18,7 +18,7 @@ Choose the progression for the genre. Theory may follow assumptions, constructio
 
 Compare the abstract's takeaway with the concluding section: retain the same supported claim and scope, including material assumptions and limitations. Preserve an explicit request for identical wording; otherwise adapt phrasing to each section's purpose without changing the message.
 
-Keep a result's target, reference case, population, conditions, aggregation, uncertainty, and source recoverable. When several experiments are present, use an overview only when it helps distinguish their questions, changed factors, and controls. Retain important adverse results and trade-offs beside the supported advantages.
+Keep a result's target, reference case, population, conditions, aggregation, uncertainty, and source recoverable. When several experiments are present, an additional experiment-comparison summary can help distinguish their questions, changed factors, and controls. This optional summary is separate from the required paper overview figure. Retain important adverse results and trade-offs beside the supported advantages.
 
 When shortening, classify material by its function: central argument, supporting evidence, diagnostic detail, or duplication. Move material only when permitted and retain validity-critical qualifications with surviving claims. A removed reference case cannot support a surviving superiority claim. Explain numerical evidence in the form that best serves interpretation; do not create a table solely to duplicate a prose number.
 
@@ -37,6 +37,8 @@ Choose a table when exact values dominate, and a plot when shape, ordering, dens
 ## Figures
 
 Use [figure synthesis](../figure_synthesis_guide.md) when selecting or creating a figure and [LaTeX editing](latex_manuscript_editing.md) for inclusion. Check labels, units, scales, category meanings, comparison direction, and caption agreement. Distinguish the displayed example's domain or subset from the population used to compute an accompanying metric.
+
+Verify that the main paper includes a scientifically faithful overview figure with a self-contained caption, unique label and resolved text reference. Reuse a suitable existing overview. If it is missing during authorised manuscript revision, generate and integrate an editable TikZ overview using [the required overview workflow](../figure_synthesis_guide.md#required-overview-figure), then check the compiled placement and legibility. For findings-only or protected local work, report the missing figure and required repair. An unused asset, planned figure or unchanged generic skeleton does not establish completion.
 
 When figure placement is in scope, check that every LaTeX `figure` and `figure*` environment uses exactly `[!h]`, including figures in appendices and supplements. Follow [figure placement](latex_manuscript_editing.md#figure-placement) for source corrections. Preserve existing placement during label-only corrections.
 

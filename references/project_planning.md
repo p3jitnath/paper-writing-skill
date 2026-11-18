@@ -102,6 +102,8 @@ Use `brainstorming_guide.md` and the relevant domain example in `examples/` when
 
 For a substantial outline, give each section a question or job and show how it prepares the next. Map claims to evidence and figures where helpful, using the current word/page budget. A provisional introduction can expose framing gaps. Keep definitions, transitions, and qualifications that make the argument understandable; do not add administrative artefacts to a narrow task.
 
+Reserve space for the required paper overview figure. Reuse a suitable existing overview or create and integrate an editable TikZ figure from the actual paper content using [the overview workflow](../figure_synthesis_guide.md#required-overview-figure). A planned figure or generic placeholder does not satisfy the requirement for a completed paper.
+
 ### 3. Data, methods, and results
 
 Draft topic sentences before paragraphs. Use:
