@@ -16,4 +16,4 @@ Select questions relevant to the requested change and research genre. Weather/cl
 - Is societal or operational value supported by decision-relevant evidence?
 - Does the final paragraph of the Conclusion, or of the concluding Discussion, begin with “This study established …” and match the abstract's main finding, scope, certainty and future direction?
 - Does the abstract's final sentence begin with “Together, …”?
-- Does the last sentence connect a concrete, evidence-supported opportunity for future progress to the broader problem that motivated the study?
+- Does the last sentence use the exact phrase “in the future” and connect a concrete, evidence-supported opportunity to the broader problem that motivated the study?
