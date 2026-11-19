@@ -34,7 +34,7 @@ Propose the experiment or observation that would resolve the most important rema
 
 ## Move 7: End on the consequential implication
 
-In the final paragraph or closing sentences of a standalone Conclusion, or of the Discussion when it serves as the conclusion, match the abstract's main finding, scope, certainty and outlook. Bring the reader back to the broader scientific or practical problem that motivated the study. Use the final sentence to name a specific, evidence-supported opportunity for future progress on that problem. An unresolved finding can support an optimistic ending by identifying the next test or clarifying what future work can resolve.
+Begin the final paragraph of the Conclusion with “This study established …”. Use the same opening when the Discussion serves as the conclusion. State what the evidence established, matching the abstract's main finding, scope, certainty and outlook. Close with a specific opportunity for future progress on the broader problem motivating the study. A one-sentence paragraph can use “This study established [supported finding], providing a basis for [specific advance] in the future.” An unresolved finding can support an optimistic ending by identifying the next test or clarifying what future work can resolve.
 
 Write a standalone Conclusion and any concluding Discussion passage in past tense. Follow [the tense requirements](../references/prose_style.md#conclusions-and-descriptions-of-papers) when recounting the contribution, findings, implications and unresolved questions.
 
