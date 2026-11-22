@@ -45,7 +45,7 @@ Apply [prose conventions](references/prose_style.md) for tone, headings and tens
 
 ## Paper folder contract
 
-Whenever creating a paper folder, create `main.tex`, supporting `.tex` files named `s01_abstract.tex`, `s02_introduction.tex` and so on, a `.bib` bibliography and the `.cls` and `.sty` files used by the paper at the root. Put final exported figure assets in one flat `figures/` directory, preferably PDF or PNG, with no subdirectories. Apart from `.gitignore` and Git metadata, keep everything not required to build the paper inside the hidden, gitignored `.scratch/` folder. Read [paper workspace](references/paper_workspace.md) for naming, migration and storage rules, and use its bundled starter when no supplied template governs the files.
+Keep exactly one manuscript entry point per paper, named `main.tex`. When preparing reviewer replies, use one `review-response.tex` at the paper root and update it across rounds. Keep numbered supporting sources such as `s01_abstract.tex` and the local bibliography, class and style dependencies at the root. Place final figure assets directly in flat `figures/`, preferably as PDFs or PNGs. Keep other material still needed in hidden, gitignored `.scratch/`. Use the bundled starter when no supplied template governs the files. [Paper workspace](references/paper_workspace.md)
 
 When creating paper sources or changing figure placement, use `[!h]` for every LaTeX `figure` and `figure*` environment, including figures reused from manuscript or template sources. Follow [figure placement](references/latex_manuscript_editing.md#figure-placement). Preserve existing placement during label-only corrections.
 
@@ -53,7 +53,7 @@ When creating a paper or editing its preamble, include the exact alphabetical fo
 
 Direct the user to pull or import the paper sources into Overleaf and compile there. Generate a paper PDF in the paper folder only when the user explicitly asks. Diagnostic PDFs are the permitted exception and must stay in gitignored `.scratch/`, together with all other diagnostic material, including previews, screenshots, logs, build files and temporary test artifacts. Follow [Overleaf and diagnostics](references/paper_workspace.md#overleaf-and-diagnostics) for every diagnostic workflow.
 
-Keep the prescribed paper folder structure and one active `main.tex`, using Git commits, branches or tags for revisions. If the user creates or proposes `v2`, `v3` or similar draft copies, explain the required layout and revision policy diplomatically. Preserve existing work while resolving the canonical version.
+When you find versioned drafts such as `v2` or `v3`, politely state that the paper will have one `main.tex` and ask which draft or changes to retain before consolidating, unless the user has already made that choice. Use Git for recoverable revisions. Remove every confirmed stale file during the authorised cleanup after accounting for unique work. [Revision and cleanup policy](references/paper_workspace.md#git-revision-policy)
 
 ## Read for the requested task
 

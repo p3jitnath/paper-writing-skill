@@ -2,6 +2,7 @@
 *
 !/.gitignore
 !/main.tex
+!/review-response.tex
 !/s01_abstract.tex
 !/s02_introduction.tex
 !/s03_methods.tex
@@ -11,6 +12,6 @@
 !/paper.cls
 !/paper.sty
 !/figures/
-# Add exact entries for figure files and dependencies used by main.tex.
+# Add exact entries for figure files and dependencies used by either LaTeX root.
 # Keep all diagnostic material ignored.
 /.scratch/

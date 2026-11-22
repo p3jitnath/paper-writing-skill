@@ -4,7 +4,7 @@ Use for new manuscript planning, a new section that lacks scientific context, or
 
 ## Create the paper workspace
 
-Apply the [paper folder contract](paper_workspace.md) whenever creating a paper folder. Create the actual `main.tex`, supporting files named `s01_abstract.tex`, `s02_introduction.tex` and so on, bibliography, class and style files at the root, with one flat `figures/` directory. Put all non-build material inside hidden `.scratch/` and gitignore that folder in full. Strongly discourage alternative layouts and firmly ask users with numbered draft copies to use Git. A plan or context record does not satisfy the requirement to create the LaTeX files.
+Apply the [paper folder contract](paper_workspace.md) whenever creating a paper folder. Create one `main.tex`, numbered supporting files such as `s01_abstract.tex` and `s02_introduction.tex`, bibliography, class and style files at the root, and one flat `figures/` directory. Use one `review-response.tex` when preparing reviewer replies. Put needed non-build material inside hidden, gitignored `.scratch/`. If numbered drafts already exist, follow the user's choice of which draft or changes to retain, asking before consolidation if that choice is pending.
 
 ## Project profile
 

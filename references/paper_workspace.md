@@ -4,12 +4,13 @@ Use whenever creating a paper folder, compiling a manuscript, producing diagnost
 
 ## Required layout
 
-Create the files, rather than returning only a plan. Keep all active LaTeX sources and local dependencies at the paper root, with `main.tex` as the entry point. Name supporting `.tex` files using the `s0x_abc.tex` convention, with a two-digit sequence in reading order and a descriptive lowercase topic separated by underscores, such as `s01_abstract.tex` and `s02_introduction.tex`. Continue with `s10_...` when more than nine supporting files are needed. Apply the same convention to appendix and other included manuscript sources. The paper must have a `.bib` bibliography and the `.cls` and `.sty` files actually used by its build. Use supplied or verified venue files where available, retaining permitted attribution and licensing. Adapt topics and section order to the research genre while preserving this naming convention and folder layout.
+Create the actual paper files. Keep exactly one manuscript entry point named `main.tex` at the paper root. When preparing replies to reviewers, create or update the single `review-response.tex` at the same root and reuse it across rounds. Keep active LaTeX sources and local dependencies at that root. Name supporting `.tex` files using the `s0x_abc.tex` convention, with a two-digit sequence in reading order and a descriptive lowercase topic separated by underscores, such as `s01_abstract.tex` and `s02_introduction.tex`. Continue with `s10_...` when more than nine supporting files are needed. Apply the same convention to appendix and other included manuscript sources. The paper must have a `.bib` bibliography and the `.cls` and `.sty` files actually used by its build. Use supplied or verified venue files where available, retaining permitted attribution and licensing. Adapt topics and section order to the research genre while preserving this naming convention and folder layout.
 
 ```text
 paper/
   .gitignore
   main.tex
+  review-response.tex       Created when preparing reviewer replies
   s01_abstract.tex
   s02_introduction.tex
   s03_methods.tex
@@ -24,11 +25,11 @@ paper/
   .scratch/                 Hidden and gitignored, created when needed
 ```
 
-This is the required default. Explain the layout and use of Git for revisions diplomatically when a user proposes another structure, including `src/`, `sections/`, `drafts/`, `v2/` or `v3/`. Put final exported figure assets directly in `figures/`, preferably PDF or PNG. It must be flat with no subdirectories. Always use exactly two or three descriptive words in an exported figure asset filename stem, joined with hyphens before the extension. Preserve the same stem across export formats. Resolve collisions within that word count and update all inclusion paths, build references and exact Git allowlist entries when renaming. Preserve image content, units and scientific values during relocation or export.
+Put final exported figure assets directly in `figures/`, preferably PDF or PNG. It must be flat with no subdirectories. Always use exactly two or three descriptive words in an exported figure asset filename stem, joined with hyphens before the extension. Preserve the same stem across export formats. Resolve collisions within that word count and update all inclusion paths, build references and exact Git allowlist entries when renaming. Preserve image content, units and scientific values during relocation or export.
 
-Apart from `.gitignore` and Git metadata, the only visible root contents are the actual paper build inputs and the flat `figures/` folder. Put all other material inside the hidden, gitignored `.scratch/` folder, including planning records, notes, code, raw data, unused assets, archived drafts and generated output. Create it when such material is needed. Active manuscript inputs and final included figures must stay in their prescribed root and `figures/` locations.
+Apart from `.gitignore` and Git metadata, the visible root contains the manuscript and any response build inputs and the flat `figures/` folder. Create hidden, gitignored `.scratch/` as needed for non-build material still in use, such as planning records, data, scripts and generated output. Keep retired drafts recoverable in Git history.
 
-When creating or explicitly reorganising a paper, update every `\input`, `\include`, build reference and exact Git allowlist entry together with a supporting-file rename. Preserve contents, inclusion order, displayed text and layout. A local proofreading or label-only task does not rename existing files or move unrelated material. Preserve venue-mandated filenames when required by the supplied template and report that exception.
+When creating or reorganising a paper, update every affected `\input`, `\include`, build reference and exact Git allowlist entry together with any rename. Preserve inclusion order, contents, displayed text and layout for a file-only move. Keep local proofreading and label corrections scoped to their requested edits. Apply venue-mandated alternate entry filenames in a submission copy under `.scratch/` while keeping the canonical roots at the paper root.
 
 The [bundled starter](../examples/paper_latex/main.tex) supplies a standard research article with local [class](../examples/paper_latex/paper.cls), [style](../examples/paper_latex/paper.sty), [bibliography](../examples/paper_latex/references.bib) and supporting `.tex` files. Copy the complete `examples/paper_latex/` contents, including `.gitignore`, into the new paper folder and create `figures/`. The generic class extends `article` and does not claim venue compliance. Follow a supplied template and adapt the section files to the selected genre. Complete the scientific text and verified references from evidence rather than treating starter comments as a finished paper.
 
@@ -36,9 +37,9 @@ The starter includes the required alphabetical footnote and yellow `\todo` defin
 
 ## Keep only paper inputs tracked
 
-Start with the bundled [.gitignore](../examples/paper_latex/.gitignore), which ignores everything except the named paper inputs and `.gitignore` itself. Add an exact allowlist entry for each figure or additional local dependency actually used by the LaTeX build. Keep `.bst` or a venue-required `.bbl` only when needed. Keep figure allowlist entries at the direct `figures/filename` level, with no recursive figure patterns.
+Start with the bundled [.gitignore](../examples/paper_latex/.gitignore), which ignores everything except the named paper inputs and `.gitignore` itself. Add an exact allowlist entry for each figure or additional local dependency used by the manuscript or response build. Keep `.bst` or a venue-required `.bbl` only when needed. Keep figure allowlist entries at the direct `figures/filename` level, with no recursive figure patterns.
 
-Store and gitignore everything not required for the paper LaTeX inside `.scratch/`. This includes unused figures, archived drafts, compiled manuscript PDFs, build auxiliaries, logs, notebooks, scripts, raw data, checkpoints, environments, profiles, strategic notes and previews. New project context records belong at `.scratch/project_context.md` and new audit ledgers at `.scratch/notes/AUDIT_LEDGER.md`. Inspect actual inclusion paths and the tracked file set rather than assuming that every file with a LaTeX extension is required. Changing ignore rules does not move files or remove them from the Git index. During authorised workspace consolidation, relocate non-build material into `.scratch/`, update dependent paths and preserve working files when cleaning the index.
+Keep needed non-build files in gitignored `.scratch/`. New project context records belong at `.scratch/project_context.md` and new audit ledgers at `.scratch/notes/AUDIT_LEDGER.md`. During authorised consolidation, move non-build material still in use into `.scratch/`, update dependent paths and remove those paths from tracking while preserving their working copies. Remove confirmed stale files under the revision policy below.
 
 ## Overleaf and diagnostics
 
@@ -59,12 +60,20 @@ Use the actual project engine and bibliography processor, including any package-
 
 ## Git revision policy
 
-Use one active `main.tex` and stable supporting filenames. Use Git commits for revisions and branches or tags for alternative or milestone states. Use the existing repository or initialise Git for a standalone paper as needed.
+Use stable filenames for `main.tex`, `review-response.tex` and supporting sources. Store revisions in Git commits and use branches or tags for alternative or milestone states. Use the existing repository or initialise Git for a standalone paper as needed.
 
-If the user creates or proposes `v2`, `v3`, `final_final`, dated copies or another paper folder layout, explain the prescribed structure and Git revision policy diplomatically. A suitable explanation is “Keeping one active main.tex and recording revisions with Git commits, branches or tags would help preserve the required paper layout and make the changes easier to trace.” Keep the layout requirement clear and preserve existing work.
+If you find competing manuscript or response drafts, including files or folders marked `v2`, `v3`, `final_final` or dated variants, state the one-root policy politely. Ask how to consolidate and wait for the user's decision unless they have already specified what to keep. Continue independent authorised work while waiting.
 
-Inspect existing copies to identify the canonical source. Ask which version is authoritative only when current evidence cannot establish it, while continuing independent authorised work. Preserve copies until consolidation is authorised and their contents are accounted for. Explaining the Git revision policy does not justify silently deleting a user's work.
+> I found several versions of the manuscript. I’ll maintain one `main.tex` and keep earlier versions in Git. Which draft should I use, and which changes from the other copies should I bring across?
+
+Use these steps for authorised consolidation.
+
+1. Inventory the paper folder, including tracked, modified, untracked and ignored candidates. Trace the active LaTeX inputs, assets and build paths for both roots where present. Compare draft contents and check how any apparently unused file is used before classifying it as stale.
+2. Apply the user's decision and confirm that the content of retired source copies is recoverable from Git or has been incorporated in the retained sources. Check uncommitted and untracked work explicitly. Preserve unique work in an authorised Git checkpoint when needed, or obtain the user's direction on any material without a recovery path before deleting it.
+3. Remove every confirmed stale file from the working tree and, for tracked files, from the Git index. Include retired draft copies, superseded assets and obsolete generated files within the authorised paper folder. Use explicit file paths and remove stale allowlist entries and build references. Retain needed inputs and active non-build work in their prescribed locations.
 
 ## Verify the workspace
 
-Check that `main.tex` includes the intended supporting files, uses the supplied class and style, and points to the bibliography and direct figure paths. Confirm supporting filenames follow the numbered topic convention and all renamed-file references resolve. Verify that only build inputs and `figures/` remain visible at the root and that all non-build material is inside gitignored `.scratch/`. Confirm `figures/` has no subdirectories and every exported figure asset filename stem has exactly two or three descriptive words. Check `git status`, `git ls-files` and `git check-ignore` against the build inputs and all `.scratch/` material. Workspace creation alone requires no PDF generation. For a concrete rendering check, inspect a current supplied PDF or use a diagnostic build confined to `.scratch/` under the rules above. After supporting-file renames, compare the before and after output for unchanged displayed text, numbering and pagination. A successful starter build does not establish complete science, verified references or venue compliance.
+Verify exactly one `main.tex`. Once a reply has been prepared, verify there is also exactly one `review-response.tex`. Confirm that both roots, where present, resolve their intended supporting files, bibliography, class and style, and figure paths. Check the numbered supporting names, flat `figures/` and two- or three-word figure filenames. Check the working tree, including ignored paths, for retired copies. Use `git status`, `git ls-files` and `git check-ignore` to verify that only needed build inputs and `.gitignore` are tracked and that all of `.scratch/` is ignored.
+
+After consolidation or build-path changes, compile each affected root diagnostically in `.scratch/` and inspect the logs for missing inputs and unresolved or duplicate references. For file-only moves, compare displayed text, numbering and pagination with the baseline. Report any unavailable build or comparison. Workspace creation alone requires no PDF generation.

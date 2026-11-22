@@ -4,7 +4,7 @@ Use only for the requested source, structure, or layout change. Follow current u
 
 ## Paper workspace
 
-For a new paper folder, follow [paper workspace](paper_workspace.md). Keep `main.tex`, supporting files named `s01_abstract.tex`, `s02_introduction.tex` and so on, and the `.bib`, `.cls` and `.sty` build inputs at the root. Keep all final exported figure assets directly in `figures/`, with no child directories, and all non-build material inside hidden, gitignored `.scratch/`. Strongly discourage other folder layouts and use Git for revision history. A local edit to an existing manuscript must preserve the current source until a requested consolidation or conversion is authorised.
+For a new paper folder, follow [paper workspace](paper_workspace.md). Keep one `main.tex` and one `review-response.tex` when replying to reviewers. Keep the numbered supporting sources and required bibliography, class and style files at the root. Keep final exported figure assets directly in flat `figures/` and needed non-build material inside hidden, gitignored `.scratch/`. Use Git for revisions. Keep existing sources in place during local edits until consolidation is authorised.
 
 ## Establish the active build
 

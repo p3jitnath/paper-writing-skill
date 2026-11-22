@@ -56,11 +56,9 @@ Before replacing a result, identify its canonical source, comparison, population
 
 ## Paper workspace verification
 
-When creating or consolidating a paper folder, check the [paper workspace contract](paper_workspace.md). Verify the actual root `main.tex`, supporting `.tex` files with numbered topic names, `.bib`, `.cls` and `.sty` files, their inclusion paths and the flat `figures/` directory. Confirm all non-build material is physically inside hidden `.scratch/` and gitignored, including generated output, unused assets, notes, data, code, logs and archived drafts. Inspect `git status`, `git ls-files` and `git check-ignore` to confirm that only the required LaTeX inputs and `.gitignore` are tracked. A `.gitignore` does not move or untrack files already committed, so any relocation and index cleanup must preserve working files and stay within the authorised scope.
+When creating or consolidating a paper folder, verify one `main.tex`, one `review-response.tex` if applicable, their numbered supporting files and resolved dependencies. Check the flat `figures/` directory and Git tracking and ignore rules. For competing versions, apply the user's choice before removing confirmed stale copies. [Workspace verification](paper_workspace.md#verify-the-workspace)
 
 Apply [Overleaf and diagnostics](paper_workspace.md#overleaf-and-diagnostics) to every review. Direct normal compilation to Overleaf, keep all diagnostic artifacts in gitignored `.scratch/` and verify their actual output paths and index status. A review or submission preparation request does not itself request a paper PDF in the paper folder.
-
-Explain the prescribed paper layout and Git revision policy diplomatically when users keep `v2`, `v3` or alternative layouts. Resolve the active source from evidence or a necessary author choice before consolidating existing copies.
 
 ## Verification and submission
 

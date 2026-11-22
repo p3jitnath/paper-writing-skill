@@ -1,5 +1,7 @@
 # Responding to reviewers
 
+When preparing replies in a paper workspace, create or update the root `review-response.tex`. Keep this single response file through later rounds and use Git to recover earlier versions. Store any saved working matrix and review materials still needed in gitignored `.scratch/`. [Revision and cleanup policy](paper_workspace.md#git-revision-policy)
+
 Before revising, build a response matrix with one row per comment and these columns:
 
 - Reviewer request.
